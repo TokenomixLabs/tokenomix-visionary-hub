@@ -17,20 +17,20 @@ export const VideoHero = () => {
           {/* Add your video source here */}
           <source src="/path-to-your-video.mp4" type="video/mp4" />
         </video>
-        {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/50 to-primary"></div>
+        {/* Overlay gradient - reduced opacity */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/30 to-primary"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 h-screen flex items-center">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 font-orbitron animate-glow">
+          <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 font-orbitron animate-glow drop-shadow-[0_0_25px_rgba(14,165,233,0.3)]">
             TOKENOMIX
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 font-orbitron font-light">
+          <p className="text-xl md:text-2xl text-gray-100 mb-8 font-orbitron font-light drop-shadow-lg">
             Shaping the Future of Decentralized Economies
           </p>
-          <Button className="bg-neon-blue hover:bg-neon-purple text-white px-8 py-6 text-lg rounded-lg transition-all duration-300 font-orbitron">
+          <Button className="bg-neon-blue hover:bg-neon-purple text-white px-8 py-6 text-lg rounded-lg transition-all duration-300 font-orbitron shadow-lg shadow-neon-blue/20">
             Get Started
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
