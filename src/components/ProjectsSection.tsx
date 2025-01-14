@@ -13,7 +13,7 @@ const projects = [
   {
     title: "InsiderDAO",
     logo: "/lovable-uploads/d8031f73-2ada-4016-be4b-c789b6674981.png",
-    description: "Unlocking Knowledge and Opportunities for Digital Sovereignty.",
+    description: "Empowering members with exclusive opportunities, tools, and strategies to thrive in the new digital age.",
     url: "#", // Replace with actual InsiderDAO URL
     isComingSoon: false,
   },
