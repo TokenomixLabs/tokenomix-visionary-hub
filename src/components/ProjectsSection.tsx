@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Societi",
     logo: "/lovable-uploads/370cdaf8-407f-4434-ba46-9dd119016abd.png",
-    description: "Empowering the future of decentralized communities through tokenized ownership and engagement.",
+    description: "Redefining how communities create and share value through decentralized ownership and tokenized engagement",
     url: "#", // Replace with actual Societi URL
     isComingSoon: false,
   },
