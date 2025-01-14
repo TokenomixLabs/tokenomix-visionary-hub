@@ -20,7 +20,7 @@ const projects = [
   {
     title: "Influati",
     logo: "/lovable-uploads/3d1e1097-d2c2-4378-b3ec-f6ce5241f97c.png",
-    description: "Empowering creators and influencers with cutting-edge strategies, tools, and opportunities to shape and lead the digital future.",
+    description: "Empowering creators with cutting-edge tools, strategies, and opportunities to shape the digital future.",
     url: "#",
     isComingSoon: true,
   },
