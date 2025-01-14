@@ -52,9 +52,13 @@ export const ProjectsSection = () => {
               <CardContent className="relative z-10">
                 <p className="text-gray-300 mb-6">{project.description}</p>
                 {project.isComingSoon ? (
-                  <div className="text-neon-purple font-orbitron animate-pulse">
+                  <Button
+                    variant="outline"
+                    className="w-full border-neon-purple/20 text-neon-purple/50 cursor-not-allowed opacity-70"
+                    disabled
+                  >
                     Coming Soon
-                  </div>
+                  </Button>
                 ) : (
                   <Button
                     variant="outline"
