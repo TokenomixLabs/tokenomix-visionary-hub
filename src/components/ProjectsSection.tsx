@@ -31,7 +31,7 @@ export const ProjectsSection = () => {
     <section className="py-20 bg-primary">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-white text-center mb-12 font-orbitron">
-          Our <span className="text-neon-blue animate-glow">Projects</span>
+          Current <span className="text-neon-blue animate-glow">Projects</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
