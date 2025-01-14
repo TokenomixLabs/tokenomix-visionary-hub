@@ -1,22 +1,26 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import Image from "@/components/ui/image";
 
 const projects = [
   {
     title: "Societi",
+    logo: "/lovable-uploads/370cdaf8-407f-4434-ba46-9dd119016abd.png",
     description: "Decentralizing Communities and Empowering Ownership.",
     url: "#", // Replace with actual Societi URL
     isComingSoon: false,
   },
   {
     title: "InsiderDAO",
+    logo: "/lovable-uploads/d8031f73-2ada-4016-be4b-c789b6674981.png",
     description: "Unlocking Knowledge and Opportunities for Digital Sovereignty.",
     url: "#", // Replace with actual InsiderDAO URL
     isComingSoon: false,
   },
   {
     title: "Influati",
+    logo: "/lovable-uploads/3d1e1097-d2c2-4378-b3ec-f6ce5241f97c.png",
     description: "Redefining Influence in the Digital Age.",
     url: "#",
     isComingSoon: true,
@@ -38,9 +42,12 @@ export const ProjectsSection = () => {
             >
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-neon-blue/10 to-neon-purple/10 transition-opacity duration-300" />
               <CardHeader className="relative z-10">
-                <div className="h-16 flex items-center justify-center">
-                  {/* Replace with actual project logos */}
-                  <h3 className="text-2xl font-orbitron text-white">{project.title}</h3>
+                <div className="h-24 flex items-center justify-center p-4">
+                  <img
+                    src={project.logo}
+                    alt={`${project.title} logo`}
+                    className="h-full w-auto object-contain filter brightness-200"
+                  />
                 </div>
               </CardHeader>
               <CardContent className="relative z-10">
