@@ -59,10 +59,10 @@ export const ProjectsSection = () => {
                   {project.isComingSoon ? (
                     <Button
                       variant="outline"
-                      className="w-full border-neon-purple/20 text-neon-purple/50 cursor-not-allowed opacity-70"
+                      className="w-full bg-primary/20 backdrop-blur-sm border-2 border-transparent bg-gradient-to-r from-neon-purple/50 to-neon-blue/50 bg-clip-border text-white/90 cursor-not-allowed opacity-80 hover:opacity-80 hover:bg-primary/20 shadow-[0_0_15px_rgba(139,92,246,0.2)] relative before:absolute before:inset-0 before:p-[2px] before:bg-gradient-to-r before:from-neon-purple before:to-neon-blue before:rounded-md before:-z-10 before:opacity-50"
                       disabled
                     >
-                      Coming Soon
+                      <span className="drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]">Coming Soon</span>
                     </Button>
                   ) : (
                     <Button
