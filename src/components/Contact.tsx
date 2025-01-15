@@ -2,14 +2,20 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
-export const Contact = () => {
+interface ContactProps {
+  isDialog?: boolean;
+}
+
+export const Contact = ({ isDialog = false }: ContactProps) => {
   return (
-    <section className="py-20 bg-primary bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-neon-purple/20 via-primary to-primary">
-      <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-12 font-orbitron">
-            Get in <span className="text-neon-blue">Touch</span>
-          </h2>
+    <div className={isDialog ? "" : "py-20 bg-primary bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-neon-purple/20 via-primary to-primary"}>
+      <div className={`${isDialog ? "" : "container mx-auto px-4"}`}>
+        <div className={`${isDialog ? "" : "max-w-2xl mx-auto"}`}>
+          {!isDialog && (
+            <h2 className="text-4xl font-bold text-white text-center mb-12 font-orbitron">
+              Get in <span className="text-neon-blue">Touch</span>
+            </h2>
+          )}
           <form className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Input 
@@ -36,6 +42,6 @@ export const Contact = () => {
           </form>
         </div>
       </div>
-    </section>
+    </div>
   );
 };

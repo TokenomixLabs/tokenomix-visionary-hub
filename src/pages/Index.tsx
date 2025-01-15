@@ -2,6 +2,7 @@ import { VideoHero } from "@/components/VideoHero";
 import { Contact } from "@/components/Contact";
 import { ExpertiseSection } from "@/components/ExpertiseSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -10,6 +11,7 @@ const Index = () => {
       <ExpertiseSection />
       <ProjectsSection />
       <Contact />
+      <Footer />
     </div>
   );
 };
