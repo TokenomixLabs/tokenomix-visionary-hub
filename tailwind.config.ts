@@ -45,6 +45,8 @@ export default {
         "fade-in": "fadeIn 0.5s ease-in-out",
         "slide-up": "slideUp 0.5s ease-out",
         "glow": "glow 2s ease-in-out infinite alternate",
+        "float": "float 6s ease-in-out infinite",
+        "subtle-zoom": "subtleZoom 20s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -58,6 +60,14 @@ export default {
         glow: {
           "0%": { textShadow: "0 0 10px rgba(14, 165, 233, 0.5)" },
           "100%": { textShadow: "0 0 20px rgba(14, 165, 233, 0.8)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        subtleZoom: {
+          "0%, 100%": { transform: "scale(1.05)" },
+          "50%": { transform: "scale(1)" },
         },
       },
     },
