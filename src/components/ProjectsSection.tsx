@@ -67,7 +67,7 @@ export const ProjectsSection = () => {
                   ) : (
                     <Button
                       variant="outline"
-                      className="w-full border-neon-purple/50 text-neon-purple hover:bg-neon-purple/10 hover:text-white hover:border-neon-blue group"
+                      className="w-full bg-gradient-to-r from-neon-blue to-neon-purple text-white border-0 hover:from-neon-purple hover:to-neon-blue shadow-[0_0_15px_rgba(14,165,233,0.3)] hover:shadow-[0_0_25px_rgba(139,92,246,0.4)] transition-all duration-300 group"
                       asChild
                     >
                       <a href={project.url} target="_blank" rel="noopener noreferrer">
