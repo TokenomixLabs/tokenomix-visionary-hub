@@ -49,8 +49,8 @@ export const Footer = () => {
           </Dialog>
         </div>
 
-        {/* Bottom Section */}
-        <div className="mt-16 flex flex-col md:flex-row items-center justify-between text-white/60 text-sm">
+        {/* Bottom Section - Now with more spacing */}
+        <div className="mt-24 flex flex-col md:flex-row items-center justify-between text-white/60 text-sm">
           <p>2024 © Tokenomix, All rights reserved.</p>
           <div className="flex gap-8 mt-4 md:mt-0">
             <a href="#" className="hover:text-neon-blue transition-colors">Terms of use</a>
