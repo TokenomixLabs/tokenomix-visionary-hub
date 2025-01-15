@@ -41,7 +41,7 @@ export const ExpertiseSection = () => {
       <section className="py-20 bg-gradient-to-br from-primary via-primary/90 to-secondary">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-white text-center mb-12 font-orbitron animate-glow drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]">
-            Our <span className="text-neon-blue animate-glow drop-shadow-[0_0_25px_rgba(14,165,233,0.5)]">Expertise</span>
+            Where <span className="text-neon-blue animate-glow drop-shadow-[0_0_25px_rgba(14,165,233,0.5)]">Expertise</span> Meets Innovation
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {expertiseAreas.map((area, index) => (
