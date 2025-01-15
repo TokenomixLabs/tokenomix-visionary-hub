@@ -36,7 +36,7 @@ const expertiseAreas = [
 
 export const ExpertiseSection = () => {
   return (
-    <section className="py-20 bg-primary">
+    <section className="py-20 bg-gradient-to-br from-primary via-primary/90 to-secondary">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-white text-center mb-12 font-orbitron">
           Our <span className="text-neon-blue">Expertise</span>
