@@ -17,8 +17,8 @@ export const VideoHero = () => {
           {/* Add your video source here */}
           <source src="/path-to-your-video.mp4" type="video/mp4" />
         </video>
-        {/* Overlay gradient - reduced opacity */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/30 to-primary"></div>
+        {/* Enhanced gradient overlay with stronger bottom fade */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/60 to-primary"></div>
       </div>
 
       {/* Content */}
