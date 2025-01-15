@@ -8,14 +8,14 @@ const projects = [
     title: "Societi",
     logo: "/lovable-uploads/370cdaf8-407f-4434-ba46-9dd119016abd.png",
     description: "Redefining how communities create and share value through decentralized ownership and tokenized engagement",
-    url: "#", // Replace with actual Societi URL
+    url: "#",
     isComingSoon: false,
   },
   {
     title: "InsiderDAO",
     logo: "/lovable-uploads/d8031f73-2ada-4016-be4b-c789b6674981.png",
     description: "Unlocking exclusive tools, strategies, and opportunities to lead and grow in the new digital age.",
-    url: "#", // Replace with actual InsiderDAO URL
+    url: "#",
     isComingSoon: false,
   },
   {
@@ -32,9 +32,9 @@ export const ProjectsSection = () => {
     <div className="relative">
       <section className="py-20 bg-gradient-to-b from-[#2D1F54] via-[#1E1A2E] to-[#0EA5E9]/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-white text-center mb-12 font-orbitron">
+          <h2 className="text-4xl font-bold text-white text-center mb-12 font-orbitron animate-glow drop-shadow-[0_0_20px_rgba(14,165,233,0.4)]">
             Current{" "}
-            <span className="text-neon-blue animate-glow drop-shadow-[0_0_15px_rgba(14,165,233,0.5)]">
+            <span className="text-neon-blue animate-glow drop-shadow-[0_0_30px_rgba(14,165,233,0.6)]">
               Projects
             </span>
           </h2>
