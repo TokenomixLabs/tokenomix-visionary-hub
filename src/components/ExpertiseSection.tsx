@@ -1,5 +1,6 @@
 import { Brain, Users, Repeat, Rocket, BarChart3, Coins } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 
 const expertiseAreas = [
   {
@@ -36,29 +37,32 @@ const expertiseAreas = [
 
 export const ExpertiseSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-primary via-primary/90 to-secondary">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-white text-center mb-12 font-orbitron">
-          Our <span className="text-neon-blue">Expertise</span>
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {expertiseAreas.map((area, index) => (
-            <Card 
-              key={index} 
-              className="animate-slide-up bg-primary/50 border-neon-purple/20 backdrop-blur-sm hover:border-neon-blue/50 transition-all duration-300" 
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <CardHeader>
-                <area.icon className="h-12 w-12 text-neon-blue mb-4" />
-                <CardTitle className="text-xl font-orbitron text-white">{area.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300">{area.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+    <div className="relative">
+      <section className="py-20 bg-gradient-to-br from-primary via-primary/90 to-secondary">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-white text-center mb-12 font-orbitron">
+            Our <span className="text-neon-blue">Expertise</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {expertiseAreas.map((area, index) => (
+              <Card 
+                key={index} 
+                className="animate-slide-up bg-primary/50 border-neon-purple/20 backdrop-blur-sm hover:border-neon-blue/50 transition-all duration-300" 
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <CardHeader>
+                  <area.icon className="h-12 w-12 text-neon-blue mb-4" />
+                  <CardTitle className="text-xl font-orbitron text-white">{area.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300">{area.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <Separator className="absolute bottom-0 w-full h-px bg-gradient-to-r from-transparent via-neon-purple/30 to-transparent" />
+    </div>
   );
 };
