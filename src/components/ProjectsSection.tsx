@@ -28,7 +28,7 @@ const projects = [
 
 export const ProjectsSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-primary via-primary/90 to-secondary/70">
+    <section className="py-20 bg-gradient-to-b from-[#2D1F54] via-[#1E1A2E] to-[#1A1F2C]">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-white text-center mb-12 font-orbitron">
           Current <span className="text-neon-blue animate-glow">Projects</span>
