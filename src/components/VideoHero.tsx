@@ -12,7 +12,8 @@ export const VideoHero = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 w-full h-full overflow-hidden">
+    <div className="fixed inset-0 w-full h-full -z-10">
+      <div className="absolute inset-0 bg-black/50" /> {/* Overlay to ensure content visibility */}
       <iframe
         src="https://player.vimeo.com/video/1047375038?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
         style={{
@@ -21,7 +22,7 @@ export const VideoHero = () => {
           left: '50%',
           width: '100vw',
           height: '100vh',
-          transform: 'translate(-50%, -50%) scale(1.2)', // Increased scale for better coverage
+          transform: 'translate(-50%, -50%) scale(1.2)',
           border: 'none',
           pointerEvents: 'none'
         }}

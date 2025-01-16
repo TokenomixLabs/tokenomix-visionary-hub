@@ -8,9 +8,9 @@ const Index = () => {
   return (
     <div className="relative min-h-screen">
       <VideoHero />
-      <div className="relative z-10">
+      <div className="relative">
         <Navigation />
-        <div className="pt-20"> {/* Added padding to account for navigation height */}
+        <div className="pt-20">
           <ExpertiseSection />
           <ProjectsSection />
           <Footer />
