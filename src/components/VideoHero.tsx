@@ -57,7 +57,7 @@ export const VideoHero = () => {
       </div>
 
       {/* Navigation with slightly darker background */}
-      <nav className="fixed top-0 left-0 right-0 z-50 w-full">
+      <nav className="absolute top-0 left-0 right-0 z-50 w-full">
         <div className={`w-full px-4 py-6 flex ${isMobile ? 'flex-col space-y-4' : 'justify-between'} items-center bg-black/20 backdrop-blur-sm`}>
           <img 
             src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png" 
