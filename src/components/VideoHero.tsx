@@ -12,11 +12,12 @@ export const VideoHero = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0">
+    <div className="w-full h-full">
       <iframe
         src="https://player.vimeo.com/video/1047375038?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+        className="w-full h-full object-cover"
         style={{
-          position: 'absolute',
+          position: 'fixed',
           top: 0,
           left: 0,
           width: '100%',

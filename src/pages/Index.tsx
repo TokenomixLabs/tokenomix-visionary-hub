@@ -6,22 +6,19 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="relative">
-      {/* Hero Section with Video Background */}
-      <div className="relative h-screen w-full overflow-hidden">
+    <main className="w-full min-h-screen">
+      <div className="fixed inset-0">
         <VideoHero />
-        <div className="absolute top-0 left-0 right-0 z-10">
-          <Navigation />
-        </div>
       </div>
-
-      {/* Content Sections */}
-      <div className="relative bg-black">
+      <div className="relative z-10">
+        <Navigation />
+      </div>
+      <div className="relative z-10 mt-screen bg-black">
         <ExpertiseSection />
         <ProjectsSection />
         <Footer />
       </div>
-    </div>
+    </main>
   );
 };
 
