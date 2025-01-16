@@ -32,8 +32,8 @@ export const VideoHero = () => {
 
   return (
     <section className="relative min-h-screen">
-      {/* Navigation */}
-      <div className="absolute top-0 left-0 w-full z-50 bg-gradient-to-b from-primary/80 to-transparent">
+      {/* Navigation with gradient background */}
+      <div className="absolute top-0 left-0 w-full z-50 bg-gradient-to-b from-black/40 via-black/20 to-transparent backdrop-blur-[2px]">
         <div className="container mx-auto px-4 py-6 flex justify-between items-center">
           <img 
             src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png" 
@@ -44,7 +44,7 @@ export const VideoHero = () => {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink
-                  className="text-white hover:text-neon-blue transition-colors px-4 py-2"
+                  className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium"
                   href="#expertise"
                 >
                   Expertise
@@ -52,7 +52,7 @@ export const VideoHero = () => {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink
-                  className="text-white hover:text-neon-blue transition-colors px-4 py-2"
+                  className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium"
                   href="#projects"
                 >
                   Projects
@@ -60,7 +60,7 @@ export const VideoHero = () => {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink
-                  className="text-white hover:text-neon-blue transition-colors px-4 py-2"
+                  className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium"
                   href="#contact"
                 >
                   Contact
