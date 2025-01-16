@@ -19,9 +19,6 @@ export const VideoHero = () => {
     if (player) {
       const newMutedState = !isMuted;
       try {
-        // First ensure the video is playing
-        await player.play();
-        // Then set volume
         await player.setVolume(newMutedState ? 0 : 1);
         setIsMuted(newMutedState);
         console.log('Volume toggled:', newMutedState ? 'Muted' : 'Unmuted');
