@@ -6,26 +6,15 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="flex flex-col">
-      <div className="relative h-screen overflow-hidden">
+    <main className="w-full min-h-screen bg-black">
+      <section className="relative w-full h-screen">
         <VideoHero />
-        <div className="absolute inset-0">
-          <Navigation />
-          <div className="h-[calc(100vh-88px)] flex items-center justify-center px-4">
-            <h1 className="text-4xl md:text-6xl font-orbitron text-white text-center animate-glow">
-              <span>Where </span>
-              <span className="text-neon-blue">Expertise </span>
-              <span>Meets Innovation</span>
-            </h1>
-          </div>
-        </div>
-      </div>
-      <div className="bg-black">
-        <ExpertiseSection />
-        <ProjectsSection />
-        <Footer />
-      </div>
-    </div>
+        <Navigation />
+      </section>
+      <ExpertiseSection />
+      <ProjectsSection />
+      <Footer />
+    </main>
   );
 };
 
