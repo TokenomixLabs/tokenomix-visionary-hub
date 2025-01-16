@@ -31,7 +31,7 @@ export const VideoBackground = ({ onPlayerReady, isVideoLoaded }: VideoBackgroun
     <div className={`absolute inset-0 transition-opacity duration-1000 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'}`}>
       <div className="absolute inset-0 w-full h-full">
         <iframe
-          src="https://player.vimeo.com/video/1047375038?badge=0&autopause=0&player_id=0&app_id=58479&background=1&controls=0&muted=1"
+          src="https://player.vimeo.com/video/1047375038?badge=0&autopause=0&player_id=0&app_id=58479&background=1&controls=0"
           style={{
             position: 'absolute',
             top: '50%',
