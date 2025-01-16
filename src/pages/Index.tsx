@@ -6,9 +6,9 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <main className="relative min-h-screen bg-black">
+    <main className="min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="relative h-screen">
+      <section className="relative h-screen overflow-hidden">
         <VideoHero />
         <Navigation />
       </section>
