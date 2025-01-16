@@ -8,6 +8,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 export const VideoHero = () => {
   const [isMuted, setIsMuted] = useState(true);
   const [player, setPlayer] = useState<Player | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
   const isMobile = useIsMobile();
 
   useEffect(() => {
@@ -19,6 +20,16 @@ export const VideoHero = () => {
       vimeoPlayer.setLoop(true);
       vimeoPlayer.play();
     }
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const toggleMute = async () => {
@@ -56,9 +67,9 @@ export const VideoHero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-primary/70"></div>
       </div>
 
-      {/* Navigation with slightly darker background */}
-      <div className="absolute top-0 left-0 w-full z-50">
-        <div className={`container mx-auto px-4 py-6 flex ${isMobile ? 'flex-col space-y-4' : 'justify-between'} items-center bg-black/20 backdrop-blur-sm rounded-b-lg`}>
+      {/* Navigation with scroll behavior */}
+      <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-primary/90 backdrop-blur-md shadow-lg' : ''}`}>
+        <div className={`container mx-auto px-4 py-6 flex ${isMobile ? 'flex-col space-y-4' : 'justify-between'} items-center ${!isScrolled ? 'bg-black/20 backdrop-blur-sm rounded-b-lg' : ''}`}>
           <img 
             src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png" 
             alt="Tokenomix" 
