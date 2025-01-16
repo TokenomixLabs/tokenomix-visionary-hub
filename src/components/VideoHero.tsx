@@ -19,20 +19,12 @@ export const VideoHero = () => {
     if (player) {
       const newMutedState = !isMuted;
       try {
-        // Set volume before updating state
+        // First ensure the video is playing
+        await player.play();
+        // Then set volume
         await player.setVolume(newMutedState ? 0 : 1);
         setIsMuted(newMutedState);
         console.log('Volume toggled:', newMutedState ? 'Muted' : 'Unmuted');
-        
-        // Verify and ensure volume persists
-        const currentVolume = await player.getVolume();
-        console.log('Current volume:', currentVolume);
-        
-        // If unmuted but volume is 0, try setting it again
-        if (!newMutedState && currentVolume === 0) {
-          await player.setVolume(1);
-          console.log('Volume reinforced to:', 1);
-        }
       } catch (error) {
         console.error('Error toggling mute:', error);
       }

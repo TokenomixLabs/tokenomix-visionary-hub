@@ -25,15 +25,10 @@ export const VideoBackground = ({ onPlayerReady, isVideoLoaded }: VideoBackgroun
         console.log('Vimeo player ready');
         onPlayerReady(vimeoPlayer);
         
-        // Ensure video is playing
+        // Start playing immediately
         vimeoPlayer.play().catch(error => {
           console.error('Error playing video:', error);
         });
-      });
-
-      // Debug volume changes
-      vimeoPlayer.on('volumechange', (event) => {
-        console.log('Volume changed to:', event.volume);
       });
 
       return () => {
