@@ -11,13 +11,14 @@ export const VideoHero = () => {
 
   const handlePlayerReady = (vimeoPlayer: Player) => {
     setPlayer(vimeoPlayer);
+    vimeoPlayer.setVolume(0);
     setIsVideoLoaded(true);
   };
 
-  const toggleMute = () => {
+  const toggleMute = async () => {
     if (player) {
       const newMutedState = !isMuted;
-      player.setVolume(newMutedState ? 0 : 1);
+      await player.setVolume(newMutedState ? 0 : 1);
       setIsMuted(newMutedState);
     }
   };

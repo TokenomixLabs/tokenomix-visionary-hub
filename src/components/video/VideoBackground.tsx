@@ -18,7 +18,7 @@ export const VideoBackground = ({ onPlayerReady, isVideoLoaded }: VideoBackgroun
       vimeoPlayer.ready().then(() => {
         vimeoPlayer.setLoop(true);
         vimeoPlayer.setQuality(isMobile ? 'auto' : '1080p');
-        vimeoPlayer.play();
+        vimeoPlayer.play().catch(console.error);
         onPlayerReady(vimeoPlayer);
       });
 
@@ -32,7 +32,7 @@ export const VideoBackground = ({ onPlayerReady, isVideoLoaded }: VideoBackgroun
     <div className={`absolute inset-0 transition-opacity duration-1000 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'}`}>
       <div className="absolute inset-0 w-full h-full">
         <iframe
-          src="https://player.vimeo.com/video/1047375038?background=1&autoplay=1&loop=1&transparent=0&controls=0&muted=1"
+          src="https://player.vimeo.com/video/1047375038?background=1&autoplay=1&loop=1&transparent=0&controls=0&muted=1&autopause=0"
           style={{
             position: 'absolute',
             top: '50%',
