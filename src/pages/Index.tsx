@@ -14,7 +14,7 @@ const Index = () => {
       </section>
 
       {/* Content Sections */}
-      <div className="relative z-10">
+      <div className="relative bg-black">
         <ExpertiseSection />
         <ProjectsSection />
         <Footer />
