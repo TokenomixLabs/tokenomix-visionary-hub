@@ -1,8 +1,13 @@
-import { Brain, Users, Repeat, Rocket, BarChart3, Coins } from "lucide-react";
+import { Brain, Users, Repeat, Rocket, BarChart3, Lightbulb } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 const expertiseAreas = [
+  {
+    title: "Visionary Strategy",
+    description: "Crafting foresight-driven frameworks that shape innovation, empower growth, and create transformative solutions.",
+    icon: Lightbulb,
+  },
   {
     title: "Decentralized Systems",
     description: "Pioneering ownership-driven platforms that empower communities through tokenized engagement.",
@@ -27,11 +32,6 @@ const expertiseAreas = [
     title: "Growth Hacking",
     description: "Data-driven strategies to ignite momentum and maximize reach across digital ecosystems.",
     icon: BarChart3,
-  },
-  {
-    title: "Tokenomics Design",
-    description: "Creating sustainable token models that balance economic growth, user incentives, and long-term value.",
-    icon: Coins,
   },
 ];
 
