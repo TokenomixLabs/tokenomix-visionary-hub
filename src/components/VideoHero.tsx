@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Volume2, VolumeX } from "lucide-react";
 import { useState, useEffect } from "react";
 import Player from "@vimeo/player";
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
 
 export const VideoHero = () => {
   const [isMuted, setIsMuted] = useState(true);
@@ -31,6 +32,41 @@ export const VideoHero = () => {
 
   return (
     <section className="relative min-h-screen">
+      {/* Navigation */}
+      <div className="absolute top-0 left-0 w-full z-50 bg-gradient-to-b from-primary/80 to-transparent">
+        <div className="container mx-auto px-4 py-6 flex justify-between items-center">
+          <h1 className="text-3xl font-bold text-white font-orbitron">TOKENOMIX</h1>
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  className="text-white hover:text-neon-blue transition-colors px-4 py-2"
+                  href="#expertise"
+                >
+                  Expertise
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  className="text-white hover:text-neon-blue transition-colors px-4 py-2"
+                  href="#projects"
+                >
+                  Projects
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  className="text-white hover:text-neon-blue transition-colors px-4 py-2"
+                  href="#contact"
+                >
+                  Contact
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
+      </div>
+
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <div className="relative w-full h-full" style={{ padding: "56.25% 0 0 0" }}>
