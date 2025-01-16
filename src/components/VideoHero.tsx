@@ -41,19 +41,16 @@ export const VideoHero = () => {
   };
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden">
+    <section className="relative h-screen w-full overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 w-full h-full">
+        <div className="relative w-full h-full">
           <iframe
             src="https://player.vimeo.com/video/1047375038?badge=0&autopause=0&player_id=0&app_id=58479&background=1&controls=0"
+            className="absolute w-full h-full"
             style={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              width: '100vw',
-              height: '100vh',
-              transform: 'translate(-50%, -50%)',
+              width: '100%',
+              height: '100%',
               objectFit: 'cover',
               pointerEvents: 'none'
             }}
