@@ -4,9 +4,9 @@ const NAVIGATION_ITEMS = ["Expertise", "Projects", "Contact"];
 
 export const Navigation = () => {
   return (
-    <nav className="absolute top-1/2 left-0 right-0 z-50 w-full -translate-y-1/2">
-      <div className="w-full px-6 flex flex-col">
-        <div className="w-full flex justify-center mb-16">
+    <nav className="absolute top-0 left-0 right-0 z-50 w-full md:top-0 md:transform-none">
+      <div className="w-full px-6 py-8 flex flex-col">
+        <div className="w-full flex justify-center mb-12">
           <img 
             src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png" 
             alt="Tokenomix" 
