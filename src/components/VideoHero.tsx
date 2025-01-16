@@ -68,8 +68,10 @@ export const VideoHero = () => {
       </div>
 
       {/* Navigation with scroll behavior */}
-      <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-primary/90 backdrop-blur-md shadow-lg' : ''}`}>
-        <div className={`container mx-auto px-4 py-6 flex ${isMobile ? 'flex-col space-y-4' : 'justify-between'} items-center ${!isScrolled ? 'bg-black/20 backdrop-blur-sm rounded-b-lg' : ''}`}>
+      <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-gradient-to-r from-primary/90 to-secondary/90 backdrop-blur-md shadow-lg' : ''
+      }`}>
+        <div className={`container mx-auto px-4 py-6 flex ${isMobile ? 'flex-col space-y-4' : 'justify-between'} items-center`}>
           <img 
             src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png" 
             alt="Tokenomix" 
