@@ -31,18 +31,18 @@ export const VideoHero = () => {
     <section className="relative min-h-screen">
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <div className="relative w-full h-full" style={{ padding: "56.25% 0 0 0" }}>
+        <div className="relative w-full h-full" style={{ padding: "56.25% 0 0 0", minHeight: "100vh" }}>
           <iframe
             src="https://player.vimeo.com/video/1047366093?badge=0&autopause=0&player_id=0&app_id=58479&background=1&controls=0"
-            className="absolute top-0 left-0 w-full h-full"
+            className="absolute top-0 left-0 w-full h-full object-cover"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             title="tokenomix-hero"
           />
         </div>
 
-        {/* Lighter gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-primary/20"></div>
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-primary/20"></div>
       </div>
 
       {/* Navigation with transparent background */}
