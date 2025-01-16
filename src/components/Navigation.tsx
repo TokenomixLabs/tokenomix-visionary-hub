@@ -6,7 +6,7 @@ export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-black/50 to-transparent">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-primary/90 to-primary/0">
       <div className="container mx-auto px-4 py-6">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
@@ -37,7 +37,7 @@ export const Navigation = () => {
           </button>
 
           {isMenuOpen && (
-            <div className="fixed inset-0 bg-black/95 flex items-center justify-center md:hidden z-50">
+            <div className="fixed inset-0 bg-primary/95 flex items-center justify-center md:hidden z-50">
               <div className="flex flex-col space-y-8">
                 {["Expertise", "Projects", "Contact"].map((item) => (
                   <Link
