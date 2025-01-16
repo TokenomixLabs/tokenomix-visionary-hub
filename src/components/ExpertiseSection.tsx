@@ -1,4 +1,4 @@
-import { Crown, Boxes, Users, Repeat, Rocket, BarChart3 } from "lucide-react";
+import { Crown, Boxes, Brain, Repeat, Rocket, BarChart3 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
@@ -16,7 +16,7 @@ const expertiseAreas = [
   {
     title: "AI Collaboration",
     description: "Leveraging advanced AI tools to enhance scalability, streamline operations, and innovate systems of growth.",
-    icon: Users,
+    icon: Brain,
   },
   {
     title: "Systems of Duplication",
