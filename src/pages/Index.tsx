@@ -6,14 +6,12 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="relative w-full">
+    <div className="min-h-screen bg-primary bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neon-purple/20 via-primary to-primary">
       <Navigation />
-      <div className="flex flex-col">
-        <VideoHero />
-        <ExpertiseSection />
-        <ProjectsSection />
-        <Footer />
-      </div>
+      <VideoHero />
+      <ExpertiseSection />
+      <ProjectsSection />
+      <Footer />
     </div>
   );
 };
