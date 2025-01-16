@@ -12,26 +12,21 @@ export const VideoHero = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden">
-      <div className="absolute inset-0 w-full h-full">
-        <iframe
-          src="https://player.vimeo.com/video/1047375038?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
-          className="w-full h-full"
-          style={{ 
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: '100vw',
-            height: '100vh',
-            objectFit: 'cover',
-            pointerEvents: 'none'
-          }}
-          allow="autoplay; fullscreen"
-          frameBorder="0"
-        />
-      </div>
-      <div className="absolute inset-0 bg-black/50" /> {/* Overlay to ensure content visibility */}
+    <div className="fixed top-0 left-0 w-full h-screen -z-10">
+      <iframe
+        src="https://player.vimeo.com/video/1047375038?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+        style={{
+          width: '100%',
+          height: '100%',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          objectFit: 'cover',
+        }}
+        frameBorder="0"
+        allow="autoplay; fullscreen"
+      />
+      <div className="absolute inset-0 bg-black/30" />
     </div>
   );
 };
