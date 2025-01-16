@@ -9,16 +9,13 @@ export const VideoHero = () => {
   const [player, setPlayer] = useState<Player | null>(null);
 
   useEffect(() => {
-    // Initialize Vimeo player
     const iframe = document.querySelector('iframe');
     if (iframe) {
       const vimeoPlayer = new Player(iframe);
       setPlayer(vimeoPlayer);
-      
-      // Set initial state
-      vimeoPlayer.setVolume(0); // Start muted
-      vimeoPlayer.setLoop(true); // Loop the video
-      vimeoPlayer.play(); // Autoplay
+      vimeoPlayer.setVolume(0);
+      vimeoPlayer.setLoop(true);
+      vimeoPlayer.play();
     }
   }, []);
 
@@ -32,45 +29,6 @@ export const VideoHero = () => {
 
   return (
     <section className="relative min-h-screen">
-      {/* Navigation with transparent background */}
-      <div className="absolute top-0 left-0 w-full z-50">
-        <div className="container mx-auto px-4 py-6 flex justify-between items-center bg-transparent">
-          <img 
-            src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png" 
-            alt="Tokenomix" 
-            className="h-8 w-auto"
-          />
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium text-shadow"
-                  href="#expertise"
-                >
-                  Expertise
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium text-shadow"
-                  href="#projects"
-                >
-                  Projects
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium text-shadow"
-                  href="#contact"
-                >
-                  Contact
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-        </div>
-      </div>
-
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <div className="relative w-full h-full" style={{ padding: "56.25% 0 0 0" }}>
@@ -85,22 +43,61 @@ export const VideoHero = () => {
 
         {/* Lighter gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-transparent to-primary/20"></div>
-
-        {/* Mute/Unmute Button */}
-        <Button
-          variant="ghost"
-          size="icon"
-          className="absolute bottom-4 right-4 z-20 bg-black/20 hover:bg-black/40 text-white rounded-full w-12 h-12 flex items-center justify-center backdrop-blur-sm transition-all duration-300 hover:scale-110"
-          onClick={toggleMute}
-          title={isMuted ? "Unmute" : "Mute"}
-        >
-          {isMuted ? (
-            <VolumeX className="h-6 w-6" />
-          ) : (
-            <Volume2 className="h-6 w-6" />
-          )}
-        </Button>
       </div>
+
+      {/* Navigation with truly transparent background */}
+      <div className="absolute top-0 left-0 w-full z-50">
+        <div className="container mx-auto px-4 py-6 flex justify-between items-center">
+          <img 
+            src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png" 
+            alt="Tokenomix" 
+            className="h-8 w-auto"
+          />
+          <NavigationMenu>
+            <NavigationMenuList className="space-x-2">
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium text-shadow backdrop-blur-sm bg-black/10 rounded-lg"
+                  href="#expertise"
+                >
+                  Expertise
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium text-shadow backdrop-blur-sm bg-black/10 rounded-lg"
+                  href="#projects"
+                >
+                  Projects
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium text-shadow backdrop-blur-sm bg-black/10 rounded-lg"
+                  href="#contact"
+                >
+                  Contact
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
+      </div>
+
+      {/* Mute/Unmute Button */}
+      <Button
+        variant="ghost"
+        size="icon"
+        className="absolute bottom-4 right-4 z-20 bg-black/20 hover:bg-black/40 text-white rounded-full w-12 h-12 flex items-center justify-center backdrop-blur-sm transition-all duration-300 hover:scale-110"
+        onClick={toggleMute}
+        title={isMuted ? "Unmute" : "Mute"}
+      >
+        {isMuted ? (
+          <VolumeX className="h-6 w-6" />
+        ) : (
+          <Volume2 className="h-6 w-6" />
+        )}
+      </Button>
     </section>
   );
 };
