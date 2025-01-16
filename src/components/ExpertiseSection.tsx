@@ -37,8 +37,9 @@ const expertiseAreas = [
 
 export const ExpertiseSection = () => {
   return (
-    <section className="relative w-full py-20 bg-gradient-to-b from-primary via-primary to-primary/90">
-      <div className="container mx-auto px-4">
+    <section className="relative w-full py-20 bg-gradient-to-b from-primary/90 via-primary to-primary">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neon-purple/20 via-transparent to-transparent pointer-events-none" />
+      <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-4xl font-bold text-white text-center mb-12 font-orbitron animate-glow drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]">
           Where <span className="text-neon-blue animate-glow drop-shadow-[0_0_25px_rgba(14,165,233,0.5)]">Expertise</span> Meets Innovation
         </h2>
