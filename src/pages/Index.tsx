@@ -6,16 +6,14 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <main className="relative min-h-screen bg-transparent">
+    <main className="relative min-h-screen">
       <VideoHero />
       <Navigation />
-      <div className="relative z-10">
-        <div className="min-h-[80vh] flex items-center justify-center">
-          <div className="container mx-auto px-4">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-orbitron animate-fade-in">
-              Where <span className="text-neon-blue animate-glow">Expertise</span> Meets Innovation
-            </h1>
-          </div>
+      <div className="relative pt-[30vh]">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-orbitron animate-fade-in">
+            EMPOWERING ECONOMIES
+          </h1>
         </div>
         <ExpertiseSection />
         <ProjectsSection />
