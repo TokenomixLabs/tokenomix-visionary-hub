@@ -15,7 +15,6 @@ export const VideoBackground = ({ onPlayerReady, isVideoLoaded }: VideoBackgroun
     if (iframe) {
       const vimeoPlayer = new Player(iframe);
       
-      // Initial setup
       vimeoPlayer.setLoop(true);
       
       const quality = isMobile ? 'auto' : '1080p';
@@ -25,16 +24,8 @@ export const VideoBackground = ({ onPlayerReady, isVideoLoaded }: VideoBackgroun
         console.log('Vimeo player ready');
         onPlayerReady(vimeoPlayer);
         
-        // Start playing immediately and keep playing
         vimeoPlayer.play().catch(error => {
           console.error('Error playing video:', error);
-        });
-
-        // Ensure video keeps playing
-        vimeoPlayer.on('pause', () => {
-          vimeoPlayer.play().catch(error => {
-            console.error('Error resuming video:', error);
-          });
         });
       });
 
