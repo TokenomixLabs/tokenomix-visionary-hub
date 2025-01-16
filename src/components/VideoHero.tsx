@@ -1,14 +1,30 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Volume2, VolumeX } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Player from "@vimeo/player";
 
 export const VideoHero = () => {
   const [isMuted, setIsMuted] = useState(true);
+  const [player, setPlayer] = useState<Player | null>(null);
 
-  const toggleMute = () => {
-    const video = document.querySelector('video');
-    if (video) {
-      video.muted = !video.muted;
+  useEffect(() => {
+    // Initialize Vimeo player
+    const iframe = document.querySelector('iframe');
+    if (iframe) {
+      const vimeoPlayer = new Player(iframe);
+      setPlayer(vimeoPlayer);
+      
+      // Set initial state
+      vimeoPlayer.setVolume(0); // Start muted
+      vimeoPlayer.setLoop(true); // Loop the video
+      vimeoPlayer.play(); // Autoplay
+    }
+  }, []);
+
+  const toggleMute = async () => {
+    if (player) {
+      const newMutedState = !isMuted;
+      await player.setVolume(newMutedState ? 0 : 1);
       setIsMuted(!isMuted);
     }
   };
@@ -17,12 +33,16 @@ export const VideoHero = () => {
     <section className="relative min-h-screen">
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <div
-          className="absolute w-full h-full bg-cover bg-center bg-no-repeat scale-105 transition-transform duration-10000 animate-subtle-zoom"
-          style={{
-            backgroundImage: "url('/lovable-uploads/a0458f04-0eb0-495a-9095-a6e47fcd937d.png')"
-          }}
-        />
+        <div className="relative w-full h-full" style={{ padding: "56.25% 0 0 0" }}>
+          <iframe
+            src="https://player.vimeo.com/video/1047366093?badge=0&autopause=0&player_id=0&app_id=58479&background=1&controls=0"
+            className="absolute top-0 left-0 w-full h-full"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            title="tokenomix-hero"
+          />
+        </div>
+
         {/* Enhanced gradient overlay with stronger contrast */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/80 to-primary"></div>
 
