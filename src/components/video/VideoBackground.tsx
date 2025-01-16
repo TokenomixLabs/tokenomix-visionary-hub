@@ -14,6 +14,8 @@ export const VideoBackground = ({ onPlayerReady, isVideoLoaded }: VideoBackgroun
     const iframe = document.querySelector('iframe');
     if (iframe) {
       const vimeoPlayer = new Player(iframe);
+      
+      // Initial setup
       vimeoPlayer.setVolume(0);
       vimeoPlayer.setLoop(true);
 
@@ -21,8 +23,16 @@ export const VideoBackground = ({ onPlayerReady, isVideoLoaded }: VideoBackgroun
       vimeoPlayer.setQuality(quality);
 
       vimeoPlayer.ready().then(() => {
+        console.log('Vimeo player ready');
         onPlayerReady(vimeoPlayer);
-        vimeoPlayer.play();
+        vimeoPlayer.play().catch(error => {
+          console.error('Error playing video:', error);
+        });
+      });
+
+      // Debug volume changes
+      vimeoPlayer.on('volumechange', (event) => {
+        console.log('Volume changed to:', event.volume);
       });
     }
   }, [isMobile, onPlayerReady]);
@@ -31,7 +41,7 @@ export const VideoBackground = ({ onPlayerReady, isVideoLoaded }: VideoBackgroun
     <div className={`absolute inset-0 transition-opacity duration-1000 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'}`}>
       <div className="absolute inset-0 w-full h-full">
         <iframe
-          src="https://player.vimeo.com/video/1047375038?badge=0&autopause=0&player_id=0&app_id=58479&background=1&controls=0"
+          src="https://player.vimeo.com/video/1047375038?background=1&autoplay=1&loop=1&transparent=0&controls=0"
           style={{
             position: 'absolute',
             top: '50%',

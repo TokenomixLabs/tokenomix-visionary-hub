@@ -21,7 +21,11 @@ export const VideoHero = () => {
       try {
         await player.setVolume(newMutedState ? 0 : 1);
         setIsMuted(newMutedState);
-        console.log('Volume set to:', newMutedState ? 0 : 1);
+        console.log('Volume toggled:', newMutedState ? 'Muted' : 'Unmuted');
+        
+        // Verify the volume was set correctly
+        const currentVolume = await player.getVolume();
+        console.log('Current volume:', currentVolume);
       } catch (error) {
         console.error('Error toggling mute:', error);
       }
