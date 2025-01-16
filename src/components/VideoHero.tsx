@@ -64,27 +64,27 @@ export const VideoHero = () => {
 
       {/* Mobile-optimized navigation */}
       <nav className="absolute top-0 left-0 right-0 z-50 w-full">
-        <div className="w-full px-4 py-6 flex flex-col bg-black/20 backdrop-blur-sm">
+        <div className="w-full px-6 py-8 flex flex-col bg-black/30 backdrop-blur-md">
           {/* Logo container */}
-          <div className="w-full flex justify-center mb-8">
+          <div className="w-full flex justify-center mb-10">
             <img 
               src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png" 
               alt="Tokenomix" 
-              className="h-10 w-auto hover:scale-105 transition-transform duration-300 animate-fade-in"
+              className="h-12 w-auto hover:scale-105 transition-transform duration-300 animate-fade-in"
             />
           </div>
           
           {/* Navigation items */}
           <NavigationMenu className="w-full">
-            <NavigationMenuList className="flex flex-col items-center space-y-6 w-full">
+            <NavigationMenuList className="flex flex-col items-center space-y-4 w-full">
               {["Expertise", "Projects", "Contact"].map((item) => (
-                <NavigationMenuItem key={item} className="w-full max-w-[280px]">
+                <NavigationMenuItem key={item} className="w-full">
                   <NavigationMenuLink
                     className="w-full text-white hover:text-neon-blue transition-all duration-300 
-                      px-8 py-4 text-lg font-medium backdrop-blur-sm bg-black/10 rounded-lg
-                      hover:shadow-neon-blue/20 hover:scale-105 hover:bg-black/20
+                      px-6 py-4 text-xl font-orbitron font-medium bg-black/20 rounded-xl
+                      hover:bg-black/40 hover:shadow-[0_0_15px_rgba(14,165,233,0.3)]
                       active:scale-95 touch-manipulation flex items-center justify-center
-                      animate-fade-in"
+                      animate-fade-in border border-white/10"
                     href={`#${item.toLowerCase()}`}
                     style={{
                       animationDelay: `${["Expertise", "Projects", "Contact"].indexOf(item) * 100}ms`
@@ -104,10 +104,10 @@ export const VideoHero = () => {
         variant="ghost"
         size="icon"
         className="absolute bottom-6 right-6 z-20 
-          w-14 h-14 bg-black/20 hover:bg-black/40 text-white rounded-full 
-          flex items-center justify-center backdrop-blur-sm 
+          w-14 h-14 bg-black/40 hover:bg-black/60 text-white rounded-full 
+          flex items-center justify-center backdrop-blur-md 
           transition-all duration-300 hover:scale-110 hover:shadow-lg
-          active:scale-95 touch-manipulation
+          active:scale-95 touch-manipulation border border-white/10
           animate-fade-in"
         onClick={toggleMute}
         title={isMuted ? "Unmute" : "Mute"}
