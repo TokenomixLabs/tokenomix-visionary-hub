@@ -8,13 +8,13 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="relative h-screen overflow-hidden">
+      <section className="h-screen w-full relative">
         <VideoHero />
         <Navigation />
       </section>
 
       {/* Content Sections */}
-      <div className="relative bg-black">
+      <div className="relative z-10 bg-black">
         <ExpertiseSection />
         <ProjectsSection />
         <Footer />
