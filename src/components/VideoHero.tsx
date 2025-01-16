@@ -12,10 +12,10 @@ export const VideoHero = () => {
   }, []);
 
   return (
-    <div className="w-full h-screen">
+    <div className="relative w-full h-screen">
       <iframe
         src="https://player.vimeo.com/video/1047375038?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
-        className="w-full h-full"
+        className="absolute inset-0 w-full h-full"
         allow="autoplay; fullscreen"
         title="Background Video"
       />

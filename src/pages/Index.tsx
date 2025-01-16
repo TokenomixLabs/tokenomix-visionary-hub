@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <main>
+    <div className="relative">
       <Navigation />
       <VideoHero />
       <div className="bg-primary">
@@ -14,7 +14,7 @@ const Index = () => {
         <ProjectsSection />
         <Footer />
       </div>
-    </main>
+    </div>
   );
 };
 
