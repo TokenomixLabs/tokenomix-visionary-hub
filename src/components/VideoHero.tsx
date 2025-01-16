@@ -28,13 +28,21 @@ export const VideoHero = () => {
   };
 
   return (
-    <section className="relative min-h-screen">
+    <section className="relative h-screen w-full overflow-hidden">
       {/* Video Background */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <div className="relative w-full h-full" style={{ padding: "56.25% 0 0 0", minHeight: "100vh" }}>
+      <div className="absolute inset-0">
+        <div className="absolute inset-0">
           <iframe
             src="https://player.vimeo.com/video/1047366093?badge=0&autopause=0&player_id=0&app_id=58479&background=1&controls=0"
-            className="absolute top-0 left-0 w-full h-full object-cover"
+            className="w-full h-full object-cover"
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              minWidth: '100%',
+              minHeight: '100%',
+            }}
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             title="tokenomix-hero"
