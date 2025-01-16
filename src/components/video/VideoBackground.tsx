@@ -16,15 +16,16 @@ export const VideoBackground = ({ onPlayerReady, isVideoLoaded }: VideoBackgroun
       const vimeoPlayer = new Player(iframe);
       
       // Initial setup
-      vimeoPlayer.setVolume(0);
       vimeoPlayer.setLoop(true);
-
+      
       const quality = isMobile ? 'auto' : '1080p';
       vimeoPlayer.setQuality(quality);
 
       vimeoPlayer.ready().then(() => {
         console.log('Vimeo player ready');
         onPlayerReady(vimeoPlayer);
+        
+        // Ensure video is playing
         vimeoPlayer.play().catch(error => {
           console.error('Error playing video:', error);
         });
@@ -34,6 +35,10 @@ export const VideoBackground = ({ onPlayerReady, isVideoLoaded }: VideoBackgroun
       vimeoPlayer.on('volumechange', (event) => {
         console.log('Volume changed to:', event.volume);
       });
+
+      return () => {
+        vimeoPlayer.unload();
+      };
     }
   }, [isMobile, onPlayerReady]);
 
