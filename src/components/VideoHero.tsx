@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Volume2, VolumeX } from "lucide-react";
+import { Volume2, VolumeX } from "lucide-react";
 import { useState, useEffect } from "react";
 import Player from "@vimeo/player";
+import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
 
 export const VideoHero = () => {
@@ -83,8 +83,8 @@ export const VideoHero = () => {
           />
         </div>
 
-        {/* Enhanced gradient overlay with stronger contrast */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/80 to-primary"></div>
+        {/* Lighter gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-transparent to-primary/20"></div>
 
         {/* Mute/Unmute Button */}
         <Button
@@ -100,25 +100,6 @@ export const VideoHero = () => {
             <Volume2 className="h-6 w-6" />
           )}
         </Button>
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 h-screen flex items-center">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 font-orbitron animate-glow drop-shadow-[0_0_35px_rgba(14,165,233,0.4)] animate-float">
-            TOKENOMIX
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-100 mb-8 font-orbitron font-light drop-shadow-lg animate-fade-in opacity-0" style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}>
-            Shaping the Future of Decentralized Economies
-          </p>
-          <Button 
-            className="bg-neon-blue hover:bg-neon-purple text-white px-8 py-6 text-lg rounded-lg transition-all duration-300 font-orbitron shadow-lg shadow-neon-blue/20 hover:shadow-neon-purple/30 hover:scale-105 animate-fade-in opacity-0" 
-            style={{ animationDelay: "1s", animationFillMode: "forwards" }}
-          >
-            Get Started
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-        </div>
       </div>
     </section>
   );
