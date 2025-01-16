@@ -51,9 +51,9 @@ export const VideoHero = () => {
               position: 'absolute',
               top: '50%',
               left: '50%',
-              transform: 'translate(-50%, -50%) scale(1.2)',
-              width: '100%',
-              height: '100%',
+              width: '100vw',
+              height: '100vh',
+              transform: 'translate(-50%, -50%)',
               objectFit: 'cover',
               pointerEvents: 'none'
             }}
@@ -69,7 +69,7 @@ export const VideoHero = () => {
 
       {/* Navigation with scroll behavior */}
       <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-gradient-to-r from-primary/90 to-secondary/90 backdrop-blur-md shadow-lg' : ''
+        isScrolled ? 'bg-gradient-to-r from-primary/90 to-secondary/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}>
         <div className={`container mx-auto px-4 py-6 flex ${isMobile ? 'flex-col space-y-4' : 'justify-between'} items-center`}>
           <img 
