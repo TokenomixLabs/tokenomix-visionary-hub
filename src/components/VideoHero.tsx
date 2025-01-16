@@ -12,7 +12,7 @@ export const VideoHero = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 w-full h-screen">
+    <div className="fixed inset-0 w-full h-full -z-10">
       <div className="absolute inset-0 w-full h-full">
         <iframe
           src="https://player.vimeo.com/video/1047375038?background=1&autoplay=1&loop=1&byline=0&title=0"
