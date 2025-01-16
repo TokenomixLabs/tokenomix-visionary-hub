@@ -16,7 +16,7 @@ export const VideoHero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/60 to-primary z-10" />
       <div className="absolute inset-0">
         <iframe
-          src="https://player.vimeo.com/video/1047375038?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+          src="https://player.vimeo.com/video/824804225?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
           className="w-full h-full"
           style={{
             position: 'absolute',
