@@ -8,10 +8,12 @@ const Index = () => {
   return (
     <div className="relative min-h-screen">
       <VideoHero />
-      <div className="relative">
+      <div className="relative z-10">
         <Navigation />
-        <div className="pt-20">
-          <ExpertiseSection />
+        <div className="min-h-screen flex flex-col">
+          <div className="flex-1 flex flex-col justify-center">
+            <ExpertiseSection />
+          </div>
           <ProjectsSection />
           <Footer />
         </div>

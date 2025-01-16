@@ -37,8 +37,8 @@ const expertiseAreas = [
 
 export const ExpertiseSection = () => {
   return (
-    <div className="relative">
-      <section className="py-20 bg-gradient-to-br from-primary via-primary/90 to-secondary">
+    <div className="relative min-h-screen flex items-center">
+      <section className="w-full py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-white text-center mb-12 font-orbitron animate-glow drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]">
             Where <span className="text-neon-blue animate-glow drop-shadow-[0_0_25px_rgba(14,165,233,0.5)]">Expertise</span> Meets Innovation
