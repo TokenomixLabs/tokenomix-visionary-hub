@@ -6,10 +6,10 @@ export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-[100]">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center relative z-[101]">
+          <Link to="/" className="flex items-center">
             <img 
               src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png" 
               alt="Tokenomix" 
@@ -18,7 +18,7 @@ export const Navigation = () => {
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8 relative z-[101]">
+          <div className="hidden md:flex space-x-8">
             {["Expertise", "Projects", "Contact"].map((item) => (
               <Link
                 key={item}
@@ -32,7 +32,7 @@ export const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-white relative z-[101]"
+            className="md:hidden text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <Menu size={24} />
@@ -40,7 +40,7 @@ export const Navigation = () => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="fixed inset-0 bg-black/95 flex items-center justify-center md:hidden z-[100]">
+            <div className="fixed inset-0 bg-black/95 flex items-center justify-center md:hidden z-50">
               <div className="flex flex-col space-y-8">
                 {["Expertise", "Projects", "Contact"].map((item) => (
                   <Link
