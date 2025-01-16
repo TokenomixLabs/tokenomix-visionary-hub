@@ -1,4 +1,4 @@
-import { Brain, Users, Repeat, Rocket, BarChart3, Sword } from "lucide-react";
+import { Brain, Users, Repeat, Rocket, BarChart3, ChessKing } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
@@ -6,7 +6,7 @@ const expertiseAreas = [
   {
     title: "Visionary Strategy",
     description: "Crafting foresight-driven frameworks that shape innovation, empower growth, and create transformative solutions.",
-    icon: Sword,
+    icon: ChessKing,
   },
   {
     title: "Decentralized Systems",
