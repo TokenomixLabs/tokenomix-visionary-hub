@@ -3,22 +3,24 @@ import { VideoHero } from "@/components/VideoHero";
 import { ExpertiseSection } from "@/components/ExpertiseSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import { Footer } from "@/components/Footer";
+import { Hero } from "@/components/Hero";
 
 const Index = () => {
   return (
-    <div className="relative">
+    <div className="relative min-h-screen">
       <VideoHero />
-      <div className="relative z-10">
+      <div className="relative">
         <Navigation />
-        <div className="flex flex-col">
-          <div className="min-h-screen flex items-center">
-            <div className="w-full">
-              <ExpertiseSection />
-            </div>
-          </div>
+        <main className="flex flex-col">
+          <section className="min-h-screen flex items-center justify-center relative">
+            <Hero />
+          </section>
+          <section className="relative bg-primary min-h-screen">
+            <ExpertiseSection />
+          </section>
           <ProjectsSection />
           <Footer />
-        </div>
+        </main>
       </div>
     </div>
   );
