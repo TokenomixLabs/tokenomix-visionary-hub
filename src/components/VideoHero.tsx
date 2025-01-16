@@ -12,14 +12,13 @@ export const VideoHero = () => {
   }, []);
 
   return (
-    <div className="relative h-screen">
+    <div className="h-screen w-full">
       <iframe
         src="https://player.vimeo.com/video/1047375038?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="w-full h-full object-cover"
         frameBorder="0"
         allow="autoplay; fullscreen"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-transparent" />
     </div>
   );
 };
