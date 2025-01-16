@@ -18,12 +18,9 @@ export const VideoBackground = ({ onPlayerReady, isVideoLoaded }: VideoBackgroun
       player.ready().then(() => {
         player.setLoop(true);
         player.setQuality(isMobile ? 'auto' : '1080p');
+        player.play().catch(console.error);
         onPlayerReady(player);
       });
-
-      return () => {
-        player.unload();
-      };
     }
   }, [isMobile, onPlayerReady]);
 
