@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-primary bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neon-purple/20 via-primary to-primary">
+    <div className="relative w-full bg-primary">
       <Navigation />
       <VideoHero />
       <ExpertiseSection />
