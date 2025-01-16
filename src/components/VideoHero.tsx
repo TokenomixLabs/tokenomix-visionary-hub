@@ -3,10 +3,12 @@ import { useState, useEffect } from "react";
 import Player from "@vimeo/player";
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export const VideoHero = () => {
   const [isMuted, setIsMuted] = useState(true);
   const [player, setPlayer] = useState<Player | null>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const iframe = document.querySelector('iframe');
@@ -28,20 +30,28 @@ export const VideoHero = () => {
   };
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative w-full h-screen overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0">
+        <div 
+          className="absolute inset-0"
+          style={{
+            width: '100vw',
+            height: '100vh',
+            overflow: 'hidden'
+          }}
+        >
           <iframe
             src="https://player.vimeo.com/video/1047366093?badge=0&autopause=0&player_id=0&app_id=58479&background=1&controls=0"
-            className="w-full h-full object-cover"
             style={{
               position: 'absolute',
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
-              minWidth: '100%',
-              minHeight: '100%',
+              width: '100vw',
+              height: '100vh',
+              objectFit: 'cover',
+              pointerEvents: 'none'
             }}
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
@@ -50,7 +60,7 @@ export const VideoHero = () => {
         </div>
 
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-primary/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-primary/90"></div>
       </div>
 
       {/* Navigation with transparent background */}
@@ -62,7 +72,7 @@ export const VideoHero = () => {
             className="h-8 w-auto"
           />
           <NavigationMenu>
-            <NavigationMenuList className="space-x-2">
+            <NavigationMenuList className={`space-x-2 ${isMobile ? 'flex-wrap justify-end' : ''}`}>
               {["Expertise", "Projects", "Contact"].map((item) => (
                 <NavigationMenuItem key={item}>
                   <NavigationMenuLink
