@@ -42,12 +42,12 @@ export const VideoHero = () => {
         </div>
 
         {/* Lighter gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-transparent to-primary/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-primary/20"></div>
       </div>
 
-      {/* Navigation with truly transparent background */}
+      {/* Navigation with transparent background */}
       <div className="absolute top-0 left-0 w-full z-50">
-        <div className="container mx-auto px-4 py-6 flex justify-between items-center">
+        <div className="container mx-auto px-4 py-6 flex justify-between items-center bg-transparent">
           <img 
             src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png" 
             alt="Tokenomix" 
@@ -55,30 +55,16 @@ export const VideoHero = () => {
           />
           <NavigationMenu>
             <NavigationMenuList className="space-x-2">
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium text-shadow backdrop-blur-sm bg-black/10 rounded-lg"
-                  href="#expertise"
-                >
-                  Expertise
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium text-shadow backdrop-blur-sm bg-black/10 rounded-lg"
-                  href="#projects"
-                >
-                  Projects
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium text-shadow backdrop-blur-sm bg-black/10 rounded-lg"
-                  href="#contact"
-                >
-                  Contact
-                </NavigationMenuLink>
-              </NavigationMenuItem>
+              {["Expertise", "Projects", "Contact"].map((item) => (
+                <NavigationMenuItem key={item}>
+                  <NavigationMenuLink
+                    className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium backdrop-blur-sm bg-black/5 rounded-lg shadow-sm"
+                    href={`#${item.toLowerCase()}`}
+                  >
+                    {item}
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              ))}
             </NavigationMenuList>
           </NavigationMenu>
         </div>
