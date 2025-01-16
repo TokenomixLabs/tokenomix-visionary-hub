@@ -56,20 +56,20 @@ export const VideoHero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-primary/70"></div>
       </div>
 
-      {/* Navigation with slightly darker background */}
+      {/* Navigation with enhanced hover states */}
       <nav className="absolute top-0 left-0 right-0 z-50 w-full">
         <div className={`w-full px-4 py-6 flex ${isMobile ? 'flex-col space-y-4' : 'justify-between'} items-center bg-black/20 backdrop-blur-sm`}>
           <img 
             src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png" 
             alt="Tokenomix" 
-            className={`h-8 w-auto ${isMobile ? 'mb-4' : ''}`}
+            className={`h-8 w-auto ${isMobile ? 'mb-4' : ''} hover:scale-105 transition-transform duration-300`}
           />
           <NavigationMenu>
             <NavigationMenuList className={`${isMobile ? 'flex-wrap justify-center gap-2' : 'space-x-2'}`}>
               {["Expertise", "Projects", "Contact"].map((item) => (
                 <NavigationMenuItem key={item}>
                   <NavigationMenuLink
-                    className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium backdrop-blur-sm bg-black/10 rounded-lg shadow-sm"
+                    className="text-white hover:text-neon-blue transition-all duration-300 px-4 py-2 font-medium backdrop-blur-sm bg-black/10 rounded-lg shadow-sm hover:shadow-neon-blue/20 hover:scale-105 hover:bg-black/20"
                     href={`#${item.toLowerCase()}`}
                   >
                     {item}
@@ -85,7 +85,7 @@ export const VideoHero = () => {
       <Button
         variant="ghost"
         size="icon"
-        className="absolute bottom-4 right-4 z-20 bg-black/20 hover:bg-black/40 text-white rounded-full w-12 h-12 flex items-center justify-center backdrop-blur-sm transition-all duration-300 hover:scale-110"
+        className="absolute bottom-4 right-4 z-20 bg-black/20 hover:bg-black/40 text-white rounded-full w-12 h-12 flex items-center justify-center backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-lg"
         onClick={toggleMute}
         title={isMuted ? "Unmute" : "Mute"}
       >
