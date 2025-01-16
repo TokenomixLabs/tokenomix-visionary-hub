@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Player from "@vimeo/player";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -13,17 +13,16 @@ export const VideoBackground = ({ onPlayerReady, isVideoLoaded }: VideoBackgroun
   useEffect(() => {
     const iframe = document.querySelector('iframe');
     if (iframe) {
-      const vimeoPlayer = new Player(iframe);
+      const player = new Player(iframe);
       
-      vimeoPlayer.ready().then(() => {
-        vimeoPlayer.setLoop(true);
-        vimeoPlayer.setQuality(isMobile ? 'auto' : '1080p');
-        vimeoPlayer.play().catch(console.error);
-        onPlayerReady(vimeoPlayer);
+      player.ready().then(() => {
+        player.setLoop(true);
+        player.setQuality(isMobile ? 'auto' : '1080p');
+        onPlayerReady(player);
       });
 
       return () => {
-        vimeoPlayer.unload();
+        player.unload();
       };
     }
   }, [isMobile, onPlayerReady]);
