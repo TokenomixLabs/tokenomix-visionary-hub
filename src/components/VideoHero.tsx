@@ -16,7 +16,7 @@ export const VideoHero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/60 to-primary z-10" />
       <iframe
         src="https://player.vimeo.com/video/1047375038?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
-        className="absolute top-0 left-0 w-full h-full scale-150 object-cover"
+        className="absolute top-0 left-0 w-full h-full object-cover"
         frameBorder="0"
         allow="autoplay; fullscreen"
         title="Background Video"
