@@ -43,17 +43,11 @@ export const VideoHero = () => {
   return (
     <div className="relative w-full h-screen">
       {/* Video Container */}
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <iframe
           src="https://player.vimeo.com/video/1047375038?badge=0&autopause=0&player_id=0&app_id=58479&background=1&controls=0"
+          className="absolute top-1/2 left-1/2 w-[100vw] h-[100vh] -translate-x-1/2 -translate-y-1/2 scale-[1.01]"
           style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            width: '100vw',
-            height: '100vh',
-            transform: 'translate(-50%, -50%) scale(1.1)',
-            objectFit: 'cover',
             pointerEvents: 'none'
           }}
           frameBorder="0"
@@ -62,7 +56,7 @@ export const VideoHero = () => {
         />
 
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-primary/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-primary/90"></div>
       </div>
 
       {/* Navigation */}
