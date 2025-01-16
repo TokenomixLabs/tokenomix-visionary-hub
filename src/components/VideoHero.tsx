@@ -30,26 +30,19 @@ export const VideoHero = () => {
   };
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative min-h-screen w-full overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0">
-        <div 
-          className="absolute inset-0"
-          style={{
-            width: '100vw',
-            height: '100vh',
-            overflow: 'hidden'
-          }}
-        >
+        <div className="absolute inset-0 w-full h-full">
           <iframe
             src="https://player.vimeo.com/video/1047366093?badge=0&autopause=0&player_id=0&app_id=58479&background=1&controls=0"
             style={{
               position: 'absolute',
               top: '50%',
               left: '50%',
-              transform: 'translate(-50%, -50%)',
-              width: '100vw',
-              height: '100vh',
+              transform: 'translate(-50%, -50%) scale(1.2)',
+              width: '100%',
+              height: '100%',
               objectFit: 'cover',
               pointerEvents: 'none'
             }}
@@ -60,19 +53,19 @@ export const VideoHero = () => {
         </div>
 
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-primary/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-primary/90"></div>
       </div>
 
       {/* Navigation with transparent background */}
       <div className="absolute top-0 left-0 w-full z-50">
-        <div className="container mx-auto px-4 py-6 flex justify-between items-center bg-transparent">
+        <div className={`container mx-auto px-4 py-6 flex ${isMobile ? 'flex-col space-y-4' : 'justify-between'} items-center bg-transparent`}>
           <img 
             src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png" 
             alt="Tokenomix" 
-            className="h-8 w-auto"
+            className={`h-8 w-auto ${isMobile ? 'mb-4' : ''}`}
           />
           <NavigationMenu>
-            <NavigationMenuList className={`space-x-2 ${isMobile ? 'flex-wrap justify-end' : ''}`}>
+            <NavigationMenuList className={`${isMobile ? 'flex-wrap justify-center gap-2' : 'space-x-2'}`}>
               {["Expertise", "Projects", "Contact"].map((item) => (
                 <NavigationMenuItem key={item}>
                   <NavigationMenuLink
