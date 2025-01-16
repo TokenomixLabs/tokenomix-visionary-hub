@@ -12,21 +12,13 @@ export const VideoHero = () => {
   const handlePlayerReady = (vimeoPlayer: Player) => {
     setPlayer(vimeoPlayer);
     setIsVideoLoaded(true);
-    // Set initial volume silently without affecting playback
-    vimeoPlayer.setVolume(0);
   };
 
-  const toggleMute = async () => {
+  const toggleMute = () => {
     if (player) {
       const newMutedState = !isMuted;
-      try {
-        // Set volume directly without checking current state
-        await player.setVolume(newMutedState ? 0 : 1);
-        setIsMuted(newMutedState);
-        console.log('Volume set to:', newMutedState ? 0 : 1);
-      } catch (error) {
-        console.error('Error setting volume:', error);
-      }
+      player.setVolume(newMutedState ? 0 : 1);
+      setIsMuted(newMutedState);
     }
   };
 
