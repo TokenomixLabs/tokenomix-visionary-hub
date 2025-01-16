@@ -12,12 +12,12 @@ export const VideoHero = () => {
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen">
+    <div className="fixed top-0 left-0 w-full h-screen">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/60 to-primary z-10" />
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0">
         <iframe
           src="https://player.vimeo.com/video/1047375038?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
-          className="absolute top-1/2 left-1/2 w-[100vw] h-[100vh] -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"
+          className="w-full h-full object-cover"
           frameBorder="0"
           allow="autoplay; fullscreen"
           title="Background Video"
