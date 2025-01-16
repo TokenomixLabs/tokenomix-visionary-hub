@@ -30,7 +30,7 @@ export const VideoHero = () => {
   };
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-screen w-full overflow-hidden bg-primary">
       {/* Video Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 w-full h-full">
@@ -57,8 +57,8 @@ export const VideoHero = () => {
       </div>
 
       {/* Navigation with slightly darker background */}
-      <div className="absolute top-0 left-0 right-0 z-50">
-        <div className={`px-4 py-6 flex ${isMobile ? 'flex-col space-y-4' : 'justify-between'} items-center bg-black/20 backdrop-blur-sm`}>
+      <nav className="fixed top-0 left-0 right-0 z-50 w-full">
+        <div className={`w-full px-4 py-6 flex ${isMobile ? 'flex-col space-y-4' : 'justify-between'} items-center bg-black/20 backdrop-blur-sm`}>
           <img 
             src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png" 
             alt="Tokenomix" 
@@ -79,7 +79,7 @@ export const VideoHero = () => {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-      </div>
+      </nav>
 
       {/* Mute/Unmute Button */}
       <Button
