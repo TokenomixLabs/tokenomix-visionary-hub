@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <main className="relative">
+    <main className="relative min-h-screen w-full">
       <div className="relative">
         <VideoHero />
         <div className="absolute top-0 left-0 w-full z-20">
