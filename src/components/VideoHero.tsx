@@ -52,13 +52,13 @@ export const VideoHero = () => {
           />
         </div>
 
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-primary/90"></div>
+        {/* Lighter gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-primary/70"></div>
       </div>
 
-      {/* Navigation with transparent background */}
+      {/* Navigation with slightly darker background */}
       <div className="absolute top-0 left-0 w-full z-50">
-        <div className={`container mx-auto px-4 py-6 flex ${isMobile ? 'flex-col space-y-4' : 'justify-between'} items-center bg-transparent`}>
+        <div className={`container mx-auto px-4 py-6 flex ${isMobile ? 'flex-col space-y-4' : 'justify-between'} items-center bg-black/20 backdrop-blur-sm rounded-b-lg`}>
           <img 
             src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png" 
             alt="Tokenomix" 
@@ -69,7 +69,7 @@ export const VideoHero = () => {
               {["Expertise", "Projects", "Contact"].map((item) => (
                 <NavigationMenuItem key={item}>
                   <NavigationMenuLink
-                    className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium backdrop-blur-sm bg-black/5 rounded-lg shadow-sm"
+                    className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium backdrop-blur-sm bg-black/10 rounded-lg shadow-sm"
                     href={`#${item.toLowerCase()}`}
                   >
                     {item}
