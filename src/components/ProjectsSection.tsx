@@ -28,11 +28,12 @@ const projects = [
 
 export const ProjectsSection = () => {
   return (
-    <section className="w-full bg-gradient-to-b from-[#2D1F54] via-[#1E1A2E] to-[#0EA5E9]/20">
+    <section className="w-full bg-[#1A1F2C] relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#2D1F54] via-[#1E1A2E] to-[#0EA5E9]/20 pointer-events-none" />
       <div className="container mx-auto px-4 py-20">
         <h2 className="text-center mb-16">
-          <span className="font-orbitron text-5xl font-bold">
-            <span className="text-white">Current </span>
+          <span className="font-orbitron text-5xl font-bold flex justify-center items-center gap-4">
+            <span className="text-white">Current</span>
             <span className="text-neon-blue animate-glow">Projects</span>
           </span>
         </h2>
@@ -40,7 +41,7 @@ export const ProjectsSection = () => {
           {projects.map((project, index) => (
             <Card 
               key={index}
-              className="group relative overflow-hidden bg-primary/30 border-neon-purple/30 backdrop-blur-sm hover:border-neon-blue/50 transition-all duration-500"
+              className="group relative overflow-hidden bg-[#1A1F2C]/80 border border-neon-purple/30 backdrop-blur-sm hover:border-neon-blue/50 transition-all duration-500"
             >
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-neon-purple/20 to-neon-blue/20 transition-opacity duration-500" />
               <CardHeader className="relative z-10">
@@ -53,11 +54,11 @@ export const ProjectsSection = () => {
                 </div>
               </CardHeader>
               <CardContent className="relative z-10">
-                <p className="text-gray-300 mb-6">{project.description}</p>
+                <p className="text-gray-300 text-lg mb-8 min-h-[80px]">{project.description}</p>
                 {project.isComingSoon ? (
                   <Button
                     variant="outline"
-                    className="w-full bg-primary/20 backdrop-blur-sm border-2 border-transparent bg-gradient-to-r from-neon-purple/50 to-neon-blue/50 text-white/90 cursor-not-allowed"
+                    className="w-full bg-[#1A1F2C]/50 backdrop-blur-sm border-2 border-transparent bg-gradient-to-r from-neon-purple/50 to-neon-blue/50 text-white/90 cursor-not-allowed font-orbitron text-lg py-6"
                     disabled
                   >
                     Coming Soon
@@ -65,7 +66,7 @@ export const ProjectsSection = () => {
                 ) : (
                   <Button
                     variant="outline"
-                    className="w-full bg-gradient-to-r from-neon-blue to-neon-purple text-white border-0 hover:from-neon-purple hover:to-neon-blue transition-all duration-300"
+                    className="w-full bg-gradient-to-r from-neon-blue to-neon-purple hover:from-neon-purple hover:to-neon-blue text-white border-0 transition-all duration-300 font-orbitron text-lg py-6"
                     asChild
                   >
                     <a href={project.url} target="_blank" rel="noopener noreferrer">
