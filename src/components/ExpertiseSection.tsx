@@ -37,32 +37,30 @@ const expertiseAreas = [
 
 export const ExpertiseSection = () => {
   return (
-    <div className="relative min-h-screen flex items-center">
-      <section className="w-full py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-white text-center mb-12 font-orbitron animate-glow drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]">
-            Where <span className="text-neon-blue animate-glow drop-shadow-[0_0_25px_rgba(14,165,233,0.5)]">Expertise</span> Meets Innovation
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {expertiseAreas.map((area, index) => (
-              <Card 
-                key={index} 
-                className="animate-slide-up bg-primary/50 border-neon-purple/20 backdrop-blur-sm hover:border-neon-blue/50 transition-all duration-300" 
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardHeader>
-                  <area.icon className="h-12 w-12 text-neon-blue mb-4" />
-                  <CardTitle className="text-xl font-orbitron text-white">{area.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300">{area.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+    <section className="w-full py-20">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-bold text-white text-center mb-12 font-orbitron animate-glow drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]">
+          Where <span className="text-neon-blue animate-glow drop-shadow-[0_0_25px_rgba(14,165,233,0.5)]">Expertise</span> Meets Innovation
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {expertiseAreas.map((area, index) => (
+            <Card 
+              key={index} 
+              className="animate-slide-up bg-primary/50 border-neon-purple/20 backdrop-blur-sm hover:border-neon-blue/50 transition-all duration-300" 
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <CardHeader>
+                <area.icon className="h-12 w-12 text-neon-blue mb-4" />
+                <CardTitle className="text-xl font-orbitron text-white">{area.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300">{area.description}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
-      </section>
+      </div>
       <Separator className="absolute bottom-0 w-full h-px bg-gradient-to-r from-transparent via-neon-purple/30 to-transparent" />
-    </div>
+    </section>
   );
 };
