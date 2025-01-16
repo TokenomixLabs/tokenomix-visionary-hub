@@ -1,7 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Volume2, VolumeX } from "lucide-react";
+import { useState } from "react";
 
 export const VideoHero = () => {
+  const [isMuted, setIsMuted] = useState(true);
+
+  const toggleMute = () => {
+    const video = document.querySelector('video');
+    if (video) {
+      video.muted = !video.muted;
+      setIsMuted(!isMuted);
+    }
+  };
+
   return (
     <section className="relative min-h-screen">
       {/* Video Background */}
@@ -14,6 +25,21 @@ export const VideoHero = () => {
         />
         {/* Enhanced gradient overlay with stronger contrast */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/80 to-primary"></div>
+
+        {/* Mute/Unmute Button */}
+        <Button
+          variant="ghost"
+          size="icon"
+          className="absolute bottom-4 right-4 z-20 bg-black/20 hover:bg-black/40 text-white rounded-full w-12 h-12 flex items-center justify-center backdrop-blur-sm transition-all duration-300 hover:scale-110"
+          onClick={toggleMute}
+          title={isMuted ? "Unmute" : "Mute"}
+        >
+          {isMuted ? (
+            <VolumeX className="h-6 w-6" />
+          ) : (
+            <Volume2 className="h-6 w-6" />
+          )}
+        </Button>
       </div>
 
       {/* Content */}
