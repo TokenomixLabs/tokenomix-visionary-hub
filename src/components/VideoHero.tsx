@@ -19,11 +19,9 @@ export const VideoHero = () => {
       vimeoPlayer.setVolume(0);
       vimeoPlayer.setLoop(true);
 
-      // Optimize video loading
       const quality = isMobile ? 'auto' : '1080p';
       vimeoPlayer.setQuality(quality);
 
-      // Show video only after it's loaded
       vimeoPlayer.ready().then(() => {
         setIsVideoLoaded(true);
         vimeoPlayer.play();
@@ -66,23 +64,27 @@ export const VideoHero = () => {
 
       {/* Mobile-optimized navigation */}
       <nav className="absolute top-0 left-0 right-0 z-50 w-full">
-        <div className={`w-full px-4 ${isMobile ? 'py-4' : 'py-6'} flex ${isMobile ? 'flex-col space-y-4' : 'justify-between'} items-center bg-black/20 backdrop-blur-sm`}>
-          <img 
-            src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png" 
-            alt="Tokenomix" 
-            className={`h-8 w-auto ${isMobile ? 'mb-4' : ''} hover:scale-105 transition-transform duration-300 animate-fade-in`}
-          />
-          <NavigationMenu>
-            <NavigationMenuList className={`${isMobile ? 'flex-wrap justify-center gap-4' : 'space-x-2'}`}>
+        <div className="w-full px-4 py-6 flex flex-col bg-black/20 backdrop-blur-sm">
+          {/* Logo container */}
+          <div className="w-full flex justify-center mb-8">
+            <img 
+              src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png" 
+              alt="Tokenomix" 
+              className="h-10 w-auto hover:scale-105 transition-transform duration-300 animate-fade-in"
+            />
+          </div>
+          
+          {/* Navigation items */}
+          <NavigationMenu className="w-full">
+            <NavigationMenuList className="flex flex-col items-center space-y-6 w-full">
               {["Expertise", "Projects", "Contact"].map((item) => (
-                <NavigationMenuItem key={item}>
+                <NavigationMenuItem key={item} className="w-full max-w-[280px]">
                   <NavigationMenuLink
-                    className={`text-white hover:text-neon-blue transition-all duration-300 
-                      ${isMobile ? 'px-6 py-3 text-lg' : 'px-4 py-2'} 
-                      font-medium backdrop-blur-sm bg-black/10 rounded-lg shadow-sm 
+                    className="w-full text-white hover:text-neon-blue transition-all duration-300 
+                      px-8 py-4 text-lg font-medium backdrop-blur-sm bg-black/10 rounded-lg
                       hover:shadow-neon-blue/20 hover:scale-105 hover:bg-black/20
-                      active:scale-95 touch-manipulation
-                      animate-fade-in`}
+                      active:scale-95 touch-manipulation flex items-center justify-center
+                      animate-fade-in"
                     href={`#${item.toLowerCase()}`}
                     style={{
                       animationDelay: `${["Expertise", "Projects", "Contact"].indexOf(item) * 100}ms`
@@ -101,20 +103,19 @@ export const VideoHero = () => {
       <Button
         variant="ghost"
         size="icon"
-        className={`absolute bottom-4 right-4 z-20 
-          ${isMobile ? 'w-14 h-14' : 'w-12 h-12'}
-          bg-black/20 hover:bg-black/40 text-white rounded-full 
+        className="absolute bottom-6 right-6 z-20 
+          w-14 h-14 bg-black/20 hover:bg-black/40 text-white rounded-full 
           flex items-center justify-center backdrop-blur-sm 
           transition-all duration-300 hover:scale-110 hover:shadow-lg
           active:scale-95 touch-manipulation
-          animate-fade-in`}
+          animate-fade-in"
         onClick={toggleMute}
         title={isMuted ? "Unmute" : "Mute"}
       >
         {isMuted ? (
-          <VolumeX className={`${isMobile ? 'h-7 w-7' : 'h-6 w-6'}`} />
+          <VolumeX className="h-7 w-7" />
         ) : (
-          <Volume2 className={`${isMobile ? 'h-7 w-7' : 'h-6 w-6'}`} />
+          <Volume2 className="h-7 w-7" />
         )}
       </Button>
 
