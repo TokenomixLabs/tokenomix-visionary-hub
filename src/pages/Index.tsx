@@ -1,6 +1,7 @@
 import { VideoHero } from "@/components/VideoHero";
 import { ExpertiseSection } from "@/components/ExpertiseSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
+import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { BackToTop } from "@/components/BackToTop";
 import { useEffect } from "react";
@@ -30,6 +31,7 @@ const Index = () => {
       <div id="projects">
         <ProjectsSection />
       </div>
+      <Contact />
       <Footer />
       <BackToTop />
     </main>
