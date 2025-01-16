@@ -41,32 +41,33 @@ export const VideoHero = () => {
   };
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
-      {/* Video Background */}
-      <div className="absolute inset-0">
-        <div className="relative w-full h-full">
-          <iframe
-            src="https://player.vimeo.com/video/1047375038?badge=0&autopause=0&player_id=0&app_id=58479&background=1&controls=0"
-            className="absolute w-full h-full"
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              pointerEvents: 'none'
-            }}
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            title="tokenomix-hero"
-          />
-        </div>
+    <div className="relative w-full h-screen">
+      {/* Video Container */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <iframe
+          src="https://player.vimeo.com/video/1047375038?badge=0&autopause=0&player_id=0&app_id=58479&background=1&controls=0"
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            width: '100vw',
+            height: '100vh',
+            transform: 'translate(-50%, -50%) scale(1.01)', // Slight scale to prevent white edges
+            objectFit: 'cover',
+            pointerEvents: 'none'
+          }}
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          title="tokenomix-hero"
+        />
 
-        {/* Lighter gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-primary/70"></div>
+        {/* Darker gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-primary/80"></div>
       </div>
 
-      {/* Navigation with scroll behavior */}
+      {/* Navigation */}
       <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-gradient-to-r from-primary/90 to-secondary/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        isScrolled ? 'bg-black/80 backdrop-blur-md shadow-lg' : ''
       }`}>
         <div className={`container mx-auto px-4 py-6 flex ${isMobile ? 'flex-col space-y-4' : 'justify-between'} items-center`}>
           <img 
@@ -79,7 +80,7 @@ export const VideoHero = () => {
               {["Expertise", "Projects", "Contact"].map((item) => (
                 <NavigationMenuItem key={item}>
                   <NavigationMenuLink
-                    className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium backdrop-blur-sm bg-black/10 rounded-lg shadow-sm"
+                    className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium rounded-lg"
                     href={`#${item.toLowerCase()}`}
                   >
                     {item}
@@ -105,6 +106,6 @@ export const VideoHero = () => {
           <Volume2 className="h-6 w-6" />
         )}
       </Button>
-    </section>
+    </div>
   );
 };
