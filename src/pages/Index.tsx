@@ -6,11 +6,11 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <main className="relative min-h-screen">
-      <VideoHero />
-      <div className="relative z-20">
-        <Navigation />
-        <div className="min-h-screen flex flex-col justify-center items-center text-white px-4">
+    <main>
+      <Navigation />
+      <div className="relative">
+        <VideoHero />
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-white px-4">
           <h1 className="text-5xl md:text-7xl font-orbitron font-bold animate-glow mb-6">
             Tokenomix
           </h1>
@@ -18,11 +18,11 @@ const Index = () => {
             Revolutionizing blockchain economics through innovative tokenomics solutions
           </p>
         </div>
-        <div className="bg-primary">
-          <ExpertiseSection />
-          <ProjectsSection />
-          <Footer />
-        </div>
+      </div>
+      <div className="bg-primary">
+        <ExpertiseSection />
+        <ProjectsSection />
+        <Footer />
       </div>
     </main>
   );
