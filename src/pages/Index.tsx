@@ -6,15 +6,20 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen w-full relative">
-      <VideoHero />
-      <div className="relative z-10">
-        <Navigation />
-        <div className="relative">
-          <ExpertiseSection />
-          <ProjectsSection />
-          <Footer />
+    <div className="min-h-screen w-full">
+      <div className="relative">
+        <VideoHero />
+        <div className="absolute inset-0">
+          <Navigation />
+          <div className="h-screen flex items-center justify-center">
+            <h1 className="text-6xl font-orbitron text-white animate-glow">
+              DECENTRALIZED SYSTEMS
+            </h1>
+          </div>
         </div>
+        <ExpertiseSection />
+        <ProjectsSection />
+        <Footer />
       </div>
     </div>
   );
