@@ -1,4 +1,4 @@
-import { Crown, Cubes, Users, Repeat, Rocket, BarChart3 } from "lucide-react";
+import { Crown, Boxes, Users, Repeat, Rocket, BarChart3 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
@@ -11,7 +11,7 @@ const expertiseAreas = [
   {
     title: "Decentralized Systems",
     description: "Pioneering ownership-driven platforms that empower communities through tokenized engagement.",
-    icon: Cubes,
+    icon: Boxes,
   },
   {
     title: "AI Collaboration",
