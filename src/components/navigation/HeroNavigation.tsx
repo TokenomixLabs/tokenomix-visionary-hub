@@ -14,8 +14,12 @@ export const HeroNavigation = () => {
         />
         <NavigationMenu>
           <NavigationMenuList className={`${isMobile ? 'flex-wrap justify-center gap-2' : 'space-x-2'}`}>
-            {["Expertise", "Projects", "Contact"].map((item) => (
-              <NavigationMenuItem key={item}>
+            {[
+              { label: "Expertise", id: "expertise" },
+              { label: "Projects", id: "projects" },
+              { label: "Contact", id: "connect-with-us" }
+            ].map((item) => (
+              <NavigationMenuItem key={item.label}>
                 <NavigationMenuLink
                   className={`text-white hover:text-neon-blue transition-all duration-300 
                     ${isMobile ? 'text-sm px-3 py-1.5' : 'px-4 py-2'} 
@@ -23,12 +27,12 @@ export const HeroNavigation = () => {
                     hover:shadow-neon-blue/20 hover:scale-105 hover:bg-black/20
                     active:scale-95 touch-manipulation
                     animate-fade-in`}
-                  href={`#${item.toLowerCase()}`}
+                  href={`#${item.id}`}
                   style={{
-                    animationDelay: `${["Expertise", "Projects", "Contact"].indexOf(item) * 100}ms`
+                    animationDelay: `${["Expertise", "Projects", "Contact"].indexOf(item.label) * 100}ms`
                   }}
                 >
-                  {item}
+                  {item.label}
                 </NavigationMenuLink>
               </NavigationMenuItem>
             ))}

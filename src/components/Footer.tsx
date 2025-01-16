@@ -13,7 +13,7 @@ const socialLinks = [
 export const Footer = () => {
   return (
     <footer className="bg-gradient-to-b from-primary via-primary/90 to-black py-16">
-      <div className="container mx-auto px-4">
+      <div id="connect-with-us" className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex gap-6">
             {socialLinks.map(({ icon: Icon, href, label }) => (
