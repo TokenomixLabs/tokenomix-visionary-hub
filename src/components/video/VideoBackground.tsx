@@ -22,14 +22,10 @@ export const VideoBackground = ({ onPlayerReady, isVideoLoaded }: VideoBackgroun
 
       vimeoPlayer.ready().then(() => {
         console.log('Vimeo player ready');
+        // Start playback immediately
+        vimeoPlayer.play().catch(console.error);
+        // Only call onPlayerReady after play has started
         onPlayerReady(vimeoPlayer);
-        
-        // Ensure video is playing
-        vimeoPlayer.play().then(() => {
-          console.log('Video playback started');
-        }).catch(error => {
-          console.error('Error starting playback:', error);
-        });
       });
 
       return () => {
