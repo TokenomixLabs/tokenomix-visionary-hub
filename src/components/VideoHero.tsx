@@ -12,15 +12,13 @@ export const VideoHero = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 w-full h-full">
-      <div className="relative w-full h-full">
-        <iframe
-          src="https://player.vimeo.com/video/1047375038?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
-          className="absolute inset-0 w-full h-full object-cover"
-          allow="autoplay; fullscreen"
-          style={{ border: 'none' }}
-        />
-      </div>
+    <div className="absolute inset-0 w-full h-full overflow-hidden">
+      <iframe
+        src="https://player.vimeo.com/video/1047375038?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+        className="absolute inset-0 w-full h-full object-cover"
+        allow="autoplay; fullscreen"
+        style={{ border: 'none' }}
+      />
     </div>
   );
 };

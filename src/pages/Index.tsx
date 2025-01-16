@@ -6,15 +6,17 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-black">
+    <main className="relative min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="h-screen w-full relative">
+      <section className="relative h-screen w-full">
         <VideoHero />
-        <Navigation />
+        <div className="absolute inset-0 z-10">
+          <Navigation />
+        </div>
       </section>
 
       {/* Content Sections */}
-      <div className="relative z-10 bg-black">
+      <div className="relative z-20 bg-black">
         <ExpertiseSection />
         <ProjectsSection />
         <Footer />
