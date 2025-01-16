@@ -27,13 +27,13 @@ export const VideoHero = () => {
 
   return (
     <section className="relative h-screen w-full overflow-hidden bg-primary">
-      <VideoBackground onPlayerReady={handlePlayerReady} isVideoLoaded={isVideoLoaded} />
+      <VideoBackground onPlayerReady={handlePlayerReady} />
       <HeroNavigation />
       <MuteButton isMuted={isMuted} onToggle={toggleMute} />
 
       {!isVideoLoaded && (
         <div className="absolute inset-0 flex items-center justify-center bg-primary">
-          <div className="w-16 h-16 border-4 border-neon-blue border-t-transparent rounded-full animate-spin"></div>
+          <div className="w-16 h-16 border-4 border-neon-blue border-t-transparent rounded-full animate-spin" />
         </div>
       )}
     </section>

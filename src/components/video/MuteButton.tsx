@@ -19,8 +19,7 @@ export const MuteButton = ({ isMuted, onToggle }: MuteButtonProps) => {
         bg-black/20 hover:bg-black/40 text-white rounded-full 
         flex items-center justify-center backdrop-blur-sm 
         transition-all duration-300 hover:scale-110 hover:shadow-lg
-        active:scale-95 touch-manipulation
-        animate-fade-in`}
+        active:scale-95 touch-manipulation`}
       onClick={onToggle}
       title={isMuted ? "Unmute" : "Mute"}
     >
