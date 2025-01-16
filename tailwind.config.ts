@@ -70,6 +70,9 @@ export default {
           "50%": { transform: "scale(1)" },
         },
       },
+      textShadow: {
+        DEFAULT: '0 2px 4px rgba(0, 0, 0, 0.5)',
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

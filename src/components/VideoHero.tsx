@@ -32,9 +32,9 @@ export const VideoHero = () => {
 
   return (
     <section className="relative min-h-screen">
-      {/* Navigation with gradient background */}
-      <div className="absolute top-0 left-0 w-full z-50 bg-gradient-to-b from-black/40 via-black/20 to-transparent backdrop-blur-[2px]">
-        <div className="container mx-auto px-4 py-6 flex justify-between items-center">
+      {/* Navigation with transparent background */}
+      <div className="absolute top-0 left-0 w-full z-50">
+        <div className="container mx-auto px-4 py-6 flex justify-between items-center bg-transparent">
           <img 
             src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png" 
             alt="Tokenomix" 
@@ -44,7 +44,7 @@ export const VideoHero = () => {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink
-                  className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium"
+                  className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium text-shadow"
                   href="#expertise"
                 >
                   Expertise
@@ -52,7 +52,7 @@ export const VideoHero = () => {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink
-                  className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium"
+                  className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium text-shadow"
                   href="#projects"
                 >
                   Projects
@@ -60,7 +60,7 @@ export const VideoHero = () => {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink
-                  className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium"
+                  className="text-white hover:text-neon-blue transition-colors px-4 py-2 font-medium text-shadow"
                   href="#contact"
                 >
                   Contact
