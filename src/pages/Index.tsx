@@ -6,15 +6,17 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <main className="relative w-full min-h-screen bg-black">
+    <div className="relative min-h-screen">
       <VideoHero />
       <div className="relative z-10">
         <Navigation />
-        <ExpertiseSection />
-        <ProjectsSection />
-        <Footer />
+        <div className="pt-20"> {/* Added padding to account for navigation height */}
+          <ExpertiseSection />
+          <ProjectsSection />
+          <Footer />
+        </div>
       </div>
-    </main>
+    </div>
   );
 };
 
