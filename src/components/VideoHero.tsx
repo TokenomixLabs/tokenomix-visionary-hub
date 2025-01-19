@@ -11,17 +11,26 @@ export const VideoHero = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const isMobile = useIsMobile();
 
-  const handlePlayerReady = (vimeoPlayer: Player) => {
-    vimeoPlayer.setVolume(0);
+  const handlePlayerReady = async (vimeoPlayer: Player) => {
+    // Ensure initial state matches the player's actual state
+    await vimeoPlayer.setVolume(0);
     setPlayer(vimeoPlayer);
     setIsVideoLoaded(true);
+    setIsMuted(true);
   };
 
   const toggleMute = async () => {
     if (player) {
       try {
-        const volume = await player.getVolume();
-        const newVolume = volume === 0 ? 1 : 0;
+        const currentVolume = await player.getVolume();
+        const newVolume = currentVolume === 0 ? 1 : 0;
+        
+        // First ensure the video is playing
+        if (currentVolume === 0) {
+          await player.play();
+        }
+        
+        // Then set the volume
         await player.setVolume(newVolume);
         setIsMuted(newVolume === 0);
         
