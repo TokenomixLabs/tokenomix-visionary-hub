@@ -16,18 +16,18 @@ export const VideoBackground = ({ onPlayerReady }: VideoBackgroundProps) => {
       
       player.ready().then(async () => {
         try {
-          // Set initial configuration
+          // Configure player
           await player.setLoop(true);
-          await player.setVolume(0);
           await player.setQuality(isMobile ? 'auto' : '1080p');
           
-          // Try to start playback
+          // Ensure video is playing
           await player.play();
+          console.log('Video playback started');
           
-          // Notify parent component that player is ready
+          // Initialize player in parent component
           onPlayerReady(player);
         } catch (error) {
-          console.error('Error setting up video player:', error);
+          console.error('Error initializing video player:', error);
         }
       });
     }
@@ -36,7 +36,7 @@ export const VideoBackground = ({ onPlayerReady }: VideoBackgroundProps) => {
   return (
     <div className="absolute inset-0 w-full h-full">
       <iframe
-        src="https://player.vimeo.com/video/1047625994?background=1&autoplay=1&loop=1&transparent=0&controls=0&muted=1&autopause=0&playsinline=1"
+        src="https://player.vimeo.com/video/1047625994?background=1&autoplay=1&loop=1&transparent=0&controls=0&autopause=0"
         style={{
           position: 'absolute',
           top: '50%',

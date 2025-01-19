@@ -14,26 +14,40 @@ export const VideoHero = () => {
   const handlePlayerReady = async (vimeoPlayer: Player) => {
     setPlayer(vimeoPlayer);
     setIsVideoLoaded(true);
-    // Ensure initial muted state
-    await vimeoPlayer.setVolume(0);
-    setIsMuted(true);
+    
+    try {
+      // Explicitly set initial volume to 0 and verify it was set
+      await vimeoPlayer.setVolume(0);
+      const volume = await vimeoPlayer.getVolume();
+      console.log('Initial volume set to:', volume);
+      setIsMuted(true);
+    } catch (error) {
+      console.error('Error setting initial volume:', error);
+    }
   };
 
   const toggleMute = async () => {
-    if (!player) return;
+    if (!player) {
+      console.error('Player not initialized');
+      return;
+    }
 
     try {
+      // Get current state
       const currentVolume = await player.getVolume();
+      console.log('Current volume:', currentVolume);
+      
+      // Set new volume state
       const newVolume = currentVolume === 0 ? 1 : 0;
-      
-      // First ensure video is playing
-      await player.play();
-      
-      // Then set volume
       await player.setVolume(newVolume);
-      setIsMuted(newVolume === 0);
       
-      console.log('Volume toggled:', newVolume);
+      // Verify the volume was actually set
+      const verifyVolume = await player.getVolume();
+      console.log('New volume set to:', verifyVolume);
+      
+      // Update UI state
+      setIsMuted(verifyVolume === 0);
+      
     } catch (error) {
       console.error('Error toggling mute:', error);
     }
