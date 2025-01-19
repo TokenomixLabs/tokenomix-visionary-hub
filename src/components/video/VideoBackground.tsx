@@ -51,7 +51,6 @@ export const VideoBackground = ({ onPlayerReady }: VideoBackgroundProps) => {
         frameBorder="0"
         allow="autoplay; fullscreen; picture-in-picture"
         title="tokenomix-hero"
-        playsInline
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-primary/70" />
     </div>
