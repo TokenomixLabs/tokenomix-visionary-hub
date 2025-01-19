@@ -12,35 +12,30 @@ export const VideoHero = () => {
   const isMobile = useIsMobile();
 
   const handlePlayerReady = async (vimeoPlayer: Player) => {
-    // Ensure initial state matches the player's actual state
-    await vimeoPlayer.setVolume(0);
     setPlayer(vimeoPlayer);
     setIsVideoLoaded(true);
+    // Ensure initial muted state
+    await vimeoPlayer.setVolume(0);
     setIsMuted(true);
   };
 
   const toggleMute = async () => {
-    if (player) {
-      try {
-        const currentVolume = await player.getVolume();
-        const newVolume = currentVolume === 0 ? 1 : 0;
-        
-        // First ensure the video is playing
-        if (currentVolume === 0) {
-          await player.play();
-        }
-        
-        // Then set the volume
-        await player.setVolume(newVolume);
-        setIsMuted(newVolume === 0);
-        
-        // If unmuting on mobile, ensure video is playing
-        if (isMobile && newVolume > 0) {
-          await player.play();
-        }
-      } catch (error) {
-        console.error('Error toggling mute:', error);
-      }
+    if (!player) return;
+
+    try {
+      const currentVolume = await player.getVolume();
+      const newVolume = currentVolume === 0 ? 1 : 0;
+      
+      // First ensure video is playing
+      await player.play();
+      
+      // Then set volume
+      await player.setVolume(newVolume);
+      setIsMuted(newVolume === 0);
+      
+      console.log('Volume toggled:', newVolume);
+    } catch (error) {
+      console.error('Error toggling mute:', error);
     }
   };
 

@@ -14,22 +14,21 @@ export const VideoBackground = ({ onPlayerReady }: VideoBackgroundProps) => {
     if (iframe) {
       const player = new Player(iframe);
       
-      player.ready().then(() => {
-        player.setLoop(true);
-        player.setQuality(isMobile ? 'auto' : '1080p');
-        
-        // Enable sound on mobile by setting volume to 0 initially
-        player.setVolume(0).then(() => {
-          // Play the video and handle any autoplay restrictions
-          player.play().catch((error) => {
-            console.warn('Playback was prevented:', error);
-            // On mobile, we'll still notify that the player is ready
-            // so the mute button can work when user interacts
-            onPlayerReady(player);
-          });
-        });
-        
-        onPlayerReady(player);
+      player.ready().then(async () => {
+        try {
+          // Set initial configuration
+          await player.setLoop(true);
+          await player.setVolume(0);
+          await player.setQuality(isMobile ? 'auto' : '1080p');
+          
+          // Try to start playback
+          await player.play();
+          
+          // Notify parent component that player is ready
+          onPlayerReady(player);
+        } catch (error) {
+          console.error('Error setting up video player:', error);
+        }
       });
     }
   }, [isMobile, onPlayerReady]);
