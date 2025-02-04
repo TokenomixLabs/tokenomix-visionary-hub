@@ -3,7 +3,7 @@ import { Volume2, VolumeX } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { AspectRatio } from "../components/ui/aspect-ratio";
 import { useIsMobile } from "../hooks/use-mobile";
-import ErrorBoundary from "./ErrorBoundary";
+import ErrorBoundary from "@/components/ErrorBoundary";
 
 const VideoPlayer = () => {
   const [isMuted, setIsMuted] = useState(true);
@@ -17,7 +17,7 @@ const VideoPlayer = () => {
     }).catch(error => {
       console.error('Error loading Vimeo player:', error);
     });
-  }, []);
+  }, []);42
 
   useEffect(() => {
     const iframe = iframeRef.current;
