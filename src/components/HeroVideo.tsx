@@ -11,6 +11,18 @@ const VideoPlayer = () => {
   const isMobile = useIsMobile();
 
   useEffect(() => {
+    // Load Vimeo player script
+    const script = document.createElement('script');
+    script.src = 'https://player.vimeo.com/api/player.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  useEffect(() => {
     const iframe = iframeRef.current;
     if (iframe) {
       // Post message to Vimeo player
@@ -22,35 +34,27 @@ const VideoPlayer = () => {
   }, [isMuted]);
 
   return (
-    <div className="relative w-full overflow-hidden bg-black pt-6 md:pt-12">
-      <AspectRatio ratio={16/9}>
+    <div className="relative w-full overflow-hidden bg-black mt-4">
+      <div style={{padding:'56.25% 0 0 0', position:'relative'}}>
         <iframe
           ref={iframeRef}
-          src="https://player.vimeo.com/video/1047625994?badge=0&autopause=0&player_id=0&app_id=58479&loop=1&controls=0"
-          className="w-full h-full"
-          title="OMNISX. Hero Video"
+          src="https://player.vimeo.com/video/1047625994?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;background=1&amp;muted=1&amp;loop=1"
           frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-          allowFullScreen
-          style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: '100%',
-            height: '100%'
-          }}
+          style={{position:'absolute', top:0, left:0, width:'100%', height:'100%'}}
+          title="Tokenomix Hero Video"
         />
-      </AspectRatio>
+      </div>
       <Button
         variant="ghost"
         size="icon"
         onClick={() => setIsMuted(!isMuted)}
-        className="absolute z-50 bg-black/20 hover:bg-black/40 backdrop-blur-sm rounded-full w-12 h-12 flex items-center justify-center bottom-8 right-8"
+        className="absolute z-[9999] bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full w-14 h-14 flex items-center justify-center bottom-8 right-8 border-2 border-white/30"
         aria-label={isMuted ? "Unmute video" : "Mute video"}
       >
-        {isMuted ? <VolumeX size={24} /> : <Volume2 size={24} />}
+        {isMuted ? <VolumeX size={28} className="text-white" /> : <Volume2 size={28} className="text-white" />}
       </Button>
+      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black to-transparent pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black to-transparent pointer-events-none" />
     </div>
   );
