@@ -11,15 +11,12 @@ const VideoPlayer = () => {
   const isMobile = useIsMobile();
 
   useEffect(() => {
-    // Load Vimeo player script
-    const script = document.createElement('script');
-    script.src = 'https://player.vimeo.com/api/player.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
+    // We don't need to manually load the script since we have @vimeo/player installed
+    import('@vimeo/player').then(() => {
+      // Vimeo player is ready
+    }).catch(error => {
+      console.error('Error loading Vimeo player:', error);
+    });
   }, []);
 
   useEffect(() => {
