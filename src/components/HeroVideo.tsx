@@ -1,8 +1,8 @@
-import { Button } from "../components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Volume2, VolumeX } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
-import { AspectRatio } from "../components/ui/aspect-ratio";
-import { useIsMobile } from "../hooks/use-mobile";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useIsMobile } from "@/hooks/use-mobile";
 import ErrorBoundary from "@/components/ErrorBoundary";
 
 const VideoPlayer = () => {
@@ -17,7 +17,7 @@ const VideoPlayer = () => {
     }).catch(error => {
       console.error('Error loading Vimeo player:', error);
     });
-  }, []);42
+  }, []);
 
   useEffect(() => {
     const iframe = iframeRef.current;
