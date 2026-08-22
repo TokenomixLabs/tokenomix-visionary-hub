@@ -1,11 +1,3 @@
-import { Github, Twitter, Linkedin } from "lucide-react";
-
-const socialLinks = [
-  { icon: Twitter, href: "#", label: "Tokenomix on X" },
-  { icon: Linkedin, href: "#", label: "Tokenomix on LinkedIn" },
-  { icon: Github, href: "#", label: "Tokenomix on GitHub" },
-];
-
 const sections = [
   { label: "Architecture", id: "architecture" },
   { label: "Incentives", id: "incentives" },
@@ -14,6 +6,7 @@ const sections = [
   { label: "Research", id: "research" },
   { label: "Contact", id: "contact" },
 ];
+
 
 export const Footer = () => (
   <footer id="connect-with-us" className="border-t border-border/60 bg-surface/30 py-16">
