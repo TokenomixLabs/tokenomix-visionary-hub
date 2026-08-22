@@ -15,6 +15,7 @@ export const CategoryStatement = () => (
     index="01"
     eyebrow="Category"
     titleWide
+    leadClassName="max-w-5xl"
     title={
       <>
         Tokenomics is not a pie chart. It is{" "}
@@ -29,14 +30,14 @@ export const CategoryStatement = () => (
           who owns, who decides, which behavior is rewarded, which rights exist, how value moves, and
           what happens when the network changes shape.
         </p>
-        <p className="text-foreground">
+        <p className="text-foreground font-medium">
           Tokenomix designs that architecture — the paths value takes, the boundaries it respects, and
           the rules that can legitimately change.
         </p>
       </>
     }
   >
-    <div className="mt-16 grid items-center gap-12 lg:mt-20 lg:grid-cols-[1.05fr_1fr] lg:gap-20">
+    <div className="mt-20 grid items-center gap-12 lg:mt-28 lg:grid-cols-[1.05fr_1fr] lg:gap-20">
       <Reveal>
         <ol className="divide-y divide-border/70 border-y border-border/70">
           {layers.map((layer, i) => (

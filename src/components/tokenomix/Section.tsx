@@ -11,6 +11,7 @@ interface SectionProps {
   className?: string;
   align?: "left" | "center";
   titleWide?: boolean;
+  leadClassName?: string;
 }
 
 const HeaderCluster = ({
@@ -43,8 +44,10 @@ export const Section = ({
   className = "",
   align = "left",
   titleWide = false,
+  leadClassName,
 }: SectionProps) => {
   const textContainer = align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl";
+  const leadContainer = leadClassName ?? textContainer;
 
   return (
     <section id={id} className={`relative scroll-mt-24 py-24 md:py-32 ${className}`}>
@@ -63,7 +66,7 @@ export const Section = ({
             </Reveal>
             {lead && (
               <Reveal delay={120}>
-                <div className={`mt-6 space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg ${textContainer}`}>
+                <div className={`mt-6 space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg ${leadContainer}`}>
                   {lead}
                 </div>
               </Reveal>
