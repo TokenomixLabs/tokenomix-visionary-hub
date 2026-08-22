@@ -37,7 +37,7 @@ export const CategoryStatement = () => (
       </>
     }
   >
-    <div className="mt-16 grid items-center gap-12 lg:mt-20 lg:grid-cols-[1.05fr_1fr] lg:gap-20">
+    <div className="mt-20 grid items-center gap-12 lg:mt-28 lg:grid-cols-[1.05fr_1fr] lg:gap-20">
       <Reveal>
         <ol className="divide-y divide-border/70 border-y border-border/70">
           {layers.map((layer, i) => (
