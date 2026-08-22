@@ -1,6 +1,7 @@
 import { Section } from "./Section";
 import { Reveal } from "./Reveal";
 import { ValueFlowLoop } from "./ValueFlowLoop";
+import { ValueFlowLoopMobile } from "./mobile/ValueFlowLoopMobile";
 
 const stages = [
   {
@@ -37,21 +38,18 @@ export const ValueArchitecture = () => (
   <Section
     index="02"
     eyebrow="The value architecture"
-    title={
-      <>
-        Value follows the paths you design. <br className="hidden sm:block" />
-        <span className="text-muted-foreground">Everything else is drift.</span>
-      </>
-    }
+    title="Value follows the paths you design. Everything else is drift."
     lead={
       <p>
-        An economy is not a funnel. It branches, loops and feeds back. The sequence below is the spine
-        of a working system — but the interesting design decisions live in the returns, where value
-        re-enters participation rather than terminating in extraction.
+        An economy is not a funnel — it branches, loops and feeds back. The interesting design
+        decisions live in the returns, where value re-enters participation rather than terminating in
+        extraction.
       </p>
     }
-    className="border-y border-border/60 bg-surface/40"
+    tier="pillar"
+    tone="tint"
     visual={<ValueFlowLoop className="mx-auto max-w-[26rem] lg:max-w-none" />}
+    mobileVisual={<ValueFlowLoopMobile />}
     visualSide="right"
   >
     <div className="mt-16 lg:mt-20">
@@ -64,14 +62,10 @@ export const ValueArchitecture = () => (
             className="relative flex min-h-[190px] flex-col justify-between bg-background/85 p-6 transition-colors duration-500 hover:bg-surface-raised/80"
           >
             <div className="flex items-center justify-between">
-              <span className="font-mono text-[0.65rem] tracking-[0.2em] text-accent/70">
+              <span className="font-mono text-[0.65rem] tracking-[0.2em] text-accent/80">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <span
-                className="h-1.5 w-1.5 rounded-full bg-signal animate-pulse-node"
-                style={{ animationDelay: `${i * 300}ms` }}
-                aria-hidden="true"
-              />
+              <span className="h-px w-6 bg-border" aria-hidden="true" />
             </div>
             <div className="mt-8">
               <h3 className="font-display text-lg font-medium leading-snug text-foreground">
