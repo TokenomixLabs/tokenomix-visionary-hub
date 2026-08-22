@@ -66,10 +66,7 @@ export const IntelligentEconomies = () => (
             <span className="font-mono text-[0.65rem] tracking-[0.2em] text-accent/70">
               {String(i + 1).padStart(2, "0")}
             </span>
-            <span
-              aria-hidden="true"
-              className="h-1.5 w-1.5 rounded-full bg-primary opacity-40 transition-opacity duration-500 group-hover:opacity-100"
-            />
+            <span aria-hidden="true" className="h-px w-6 bg-border" />
           </div>
           <h3 className="mt-6 font-display text-lg font-medium leading-snug text-foreground">
             {item.title}
