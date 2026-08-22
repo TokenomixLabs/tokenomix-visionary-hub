@@ -71,7 +71,7 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
       />
       <text
         x="190"
-        y="64"
+        y="58"
         textAnchor="middle"
         className="fill-muted-foreground font-mono"
         fontSize="7.5"
@@ -99,11 +99,11 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
       />
       <g>
         <circle cx="140" cy="134" r="5" fill="hsl(240 32% 5%)" stroke="hsl(250 92% 72%)" strokeWidth="1.4" />
-        <text x="140" y="118" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="7.5" letterSpacing="1.2">
+        <text x="146" y="116" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="7" letterSpacing="1">
           SCOPED PROPOSAL
         </text>
         <circle cx="262" cy="134" r="5" fill="hsl(240 32% 5%)" stroke="hsl(322 90% 62%)" strokeWidth="1.4" />
-        <text x="262" y="118" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="7.5" letterSpacing="1.2">
+        <text x="262" y="116" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="7" letterSpacing="1">
           VERSIONED RULE
         </text>
       </g>
@@ -131,14 +131,14 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
 
       {/* arbitrary override — bypasses the gate, marked illegitimate */}
       <path
-        d="M 94 120 C 150 40, 260 40, 326 118"
+        d="M 94 120 C 150 22, 260 22, 326 118"
         fill="none"
         stroke="hsl(356 76% 56%)"
         strokeWidth="1.2"
         strokeDasharray="3 7"
         opacity="0.55"
       />
-      <text x="210" y="34" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="7.5" letterSpacing="1.2">
+      <text x="210" y="16" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="7.5" letterSpacing="1.2">
         ADMIN OVERRIDE — BYPASSES LEGITIMACY
       </text>
 
