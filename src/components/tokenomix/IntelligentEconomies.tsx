@@ -46,12 +46,12 @@ export const IntelligentEconomies = () => (
     }
     lead={
       <p>
-        This territory is early and largely unbuilt. It is also unavoidable: once intelligent systems
-        can perform work, hold permissions and transact, the questions of contribution, attribution,
-        rights and authority all need answers that do not assume a human on every side. Tokenomix
-        treats this as an architecture problem rather than a narrative.
+        Once intelligent systems can perform work, hold permissions and transact, contribution,
+        attribution, rights and authority all need answers that do not assume a human on every side.
+        Tokenomix treats this as an architecture problem rather than a narrative.
       </p>
     }
+    tier="pillar"
     visual={<AgentEconomyNetwork className="mx-auto max-w-[27rem] lg:max-w-none" />}
     visualSide="left"
   >
