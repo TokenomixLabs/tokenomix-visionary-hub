@@ -13,6 +13,12 @@ interface SectionProps {
   titleWide?: boolean;
   leadClassName?: string;
   introClassName?: string;
+  /** Explanatory visual paired with the section intro. */
+  visual?: ReactNode;
+  /** Which side the visual sits on at desktop. Defaults to right. */
+  visualSide?: "left" | "right";
+  /** Narrower visual column for lighter accompaniments. */
+  visualWeight?: "full" | "light";
 }
 
 const HeaderCluster = ({
