@@ -12,9 +12,9 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1.5rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1320px",
       },
     },
     extend: {
@@ -24,54 +24,90 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        surface: {
+          DEFAULT: "hsl(var(--surface))",
+          raised: "hsl(var(--surface-raised))",
+        },
         primary: {
-          DEFAULT: "#1A1F2C",
-          light: "#0EA5E9", // Neon blue
-          dark: "#6E59A5",
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+          glow: "hsl(var(--primary-glow))",
         },
         secondary: {
-          DEFAULT: "#7E69AB",
-          light: "#D6BCFA",
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
-        neon: {
-          blue: "#0EA5E9",
-          purple: "#8B5CF6",
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
         },
+        signal: {
+          DEFAULT: "hsl(var(--signal))",
+          foreground: "hsl(var(--signal-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        orbitron: ['Orbitron', 'sans-serif'],
+        display: ['"Space Grotesk"', "system-ui", "sans-serif"],
+        sans: ['"IBM Plex Sans"', "system-ui", "sans-serif"],
+        mono: ['"IBM Plex Mono"', "ui-monospace", "monospace"],
+      },
+      backgroundImage: {
+        "gradient-value": "var(--gradient-value)",
+        "gradient-surface": "var(--gradient-surface)",
+      },
+      boxShadow: {
+        architectural: "var(--shadow-architectural)",
+        signal: "var(--shadow-signal)",
       },
       animation: {
-        "fade-in": "fadeIn 0.5s ease-in-out",
-        "slide-up": "slideUp 0.5s ease-out",
-        "glow": "glow 2s ease-in-out infinite alternate",
-        "float": "float 6s ease-in-out infinite",
-        "subtle-zoom": "subtleZoom 20s ease-in-out infinite",
+        "fade-in": "fadeIn 0.7s ease-out both",
+        "rise-in": "riseIn 0.7s cubic-bezier(0.16,1,0.3,1) both",
+        "flow-dash": "flowDash 3.2s linear infinite",
+        "pulse-node": "pulseNode 3.4s ease-in-out infinite",
+        "drift": "drift 18s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
-        slideUp: {
-          "0%": { transform: "translateY(20px)", opacity: "0" },
+        riseIn: {
+          "0%": { transform: "translateY(18px)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
-        glow: {
-          "0%": { textShadow: "0 0 10px rgba(14, 165, 233, 0.5)" },
-          "100%": { textShadow: "0 0 20px rgba(14, 165, 233, 0.8)" },
+        flowDash: {
+          "0%": { strokeDashoffset: "200" },
+          "100%": { strokeDashoffset: "0" },
         },
-        float: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-20px)" },
+        pulseNode: {
+          "0%, 100%": { opacity: "0.35", transform: "scale(1)" },
+          "50%": { opacity: "1", transform: "scale(1.12)" },
         },
-        subtleZoom: {
-          "0%, 100%": { transform: "scale(1.05)" },
-          "50%": { transform: "scale(1)" },
+        drift: {
+          "0%, 100%": { transform: "translate3d(0,0,0)" },
+          "50%": { transform: "translate3d(0,-14px,0)" },
         },
-      },
-      textShadow: {
-        DEFAULT: '0 2px 4px rgba(0, 0, 0, 0.5)',
       },
     },
   },
