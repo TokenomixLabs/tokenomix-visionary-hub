@@ -38,18 +38,19 @@ export const FinalStatement = () => (
                   size="lg"
                   className="group h-auto bg-gradient-value px-9 py-5 font-display text-base tracking-tight text-primary-foreground shadow-architectural transition-transform duration-300 hover:scale-[1.02] hover:brightness-110"
                 >
-                  Make an inquiry
+                  Inquiry channel
                   <ArrowUpRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Button>
               </DialogTrigger>
               <DialogContent className="max-w-2xl border-border bg-surface">
                 <h2 className="font-display text-2xl font-semibold text-foreground">
-                  Start the conversation
+                  Inquiry channel
                 </h2>
                 <p className="text-sm text-muted-foreground">
-                  Tell us about the system you are designing.
+                  The channel for new system-architecture conversations is being finalised.
                 </p>
                 <Contact isDialog />
+
               </DialogContent>
             </Dialog>
           </div>
