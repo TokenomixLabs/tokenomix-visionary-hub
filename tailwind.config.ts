@@ -86,6 +86,10 @@ export default {
         "flow-dash": "flowDash 3.2s linear infinite",
         "pulse-node": "pulseNode 3.4s ease-in-out infinite",
         "drift": "drift 18s ease-in-out infinite",
+        "flow-loop": "flowLoop 6s linear infinite",
+        "leak-out": "leakOut 6s ease-in-out infinite",
+        "glow-breathe": "glowBreathe 5s ease-in-out infinite",
+        "trace-sweep": "traceSweep 7s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -103,6 +107,24 @@ export default {
         pulseNode: {
           "0%, 100%": { opacity: "0.35", transform: "scale(1)" },
           "50%": { opacity: "1", transform: "scale(1.12)" },
+        },
+        flowLoop: {
+          "0%": { strokeDashoffset: "1000" },
+          "100%": { strokeDashoffset: "0" },
+        },
+        leakOut: {
+          "0%": { opacity: "0", strokeDashoffset: "120" },
+          "35%": { opacity: "0.85" },
+          "100%": { opacity: "0", strokeDashoffset: "0" },
+        },
+        glowBreathe: {
+          "0%, 100%": { opacity: "0.25" },
+          "50%": { opacity: "0.75" },
+        },
+        traceSweep: {
+          "0%": { strokeDashoffset: "480", opacity: "0.2" },
+          "50%": { opacity: "0.9" },
+          "100%": { strokeDashoffset: "0", opacity: "0.2" },
         },
         drift: {
           "0%, 100%": { transform: "translate3d(0,0,0)" },
