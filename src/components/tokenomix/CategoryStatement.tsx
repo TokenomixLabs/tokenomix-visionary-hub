@@ -14,6 +14,7 @@ export const CategoryStatement = () => (
     id="architecture"
     index="01"
     eyebrow="Category"
+    titleWide
     title={
       <>
         Tokenomics is not a pie chart. It is{" "}
