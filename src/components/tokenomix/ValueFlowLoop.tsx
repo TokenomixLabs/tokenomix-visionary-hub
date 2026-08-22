@@ -44,7 +44,7 @@ export const ValueFlowLoop = ({ className = "" }: { className?: string }) => {
   return (
     <div className={`relative ${className}`}>
       <svg
-        viewBox="0 0 400 400"
+        viewBox="-56 -14 512 440"
         className="h-auto w-full"
         role="img"
         aria-label="Diagram of a closed value loop from participation through governance back to reinvestment, with one branch leaking value outward"
