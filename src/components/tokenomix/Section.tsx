@@ -94,9 +94,11 @@ export const Section = ({
             }`}
           >
             <div className={visualSide === "left" ? "lg:order-2" : ""}>{textBlock}</div>
+            {/* Labelled system diagrams need width to stay legible — they are
+                supplemental to the detail modules below, so they drop on small screens. */}
             <Reveal
               delay={140}
-              className={visualSide === "left" ? "lg:order-1" : ""}
+              className={`hidden md:block ${visualSide === "left" ? "lg:order-1" : ""}`}
             >
               {visual}
             </Reveal>
