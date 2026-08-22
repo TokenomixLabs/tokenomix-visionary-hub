@@ -66,7 +66,7 @@ export const Section = ({
             </Reveal>
             {lead && (
               <Reveal delay={120}>
-                <div className={`mt-6 space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg ${textContainer}`}>
+                <div className={`mt-6 space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg ${leadContainer}`}>
                   {lead}
                 </div>
               </Reveal>
