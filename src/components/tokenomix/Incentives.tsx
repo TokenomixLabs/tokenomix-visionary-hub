@@ -35,16 +35,11 @@ export const Incentives = () => (
     id="incentives"
     index="03"
     eyebrow="Incentives"
-    title={
-      <>
-        Incentives are architecture. <span className="text-muted-foreground">Not marketing.</span>
-      </>
-    }
+    title="Incentives are architecture, not marketing."
     lead={
       <p>
-        Two systems can share the same product, the same technology and the same total supply, and
-        still produce opposite behavior — because reward, ownership and rule-change are designed
-        differently. Behavior is downstream of structure.
+        Two systems can share the same product, technology and total supply and still produce opposite
+        behavior. Behavior is downstream of structure.
       </p>
     }
     visual={<IncentiveBehaviorMap />}
