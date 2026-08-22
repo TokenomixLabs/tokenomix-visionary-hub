@@ -33,20 +33,13 @@ export const Research = () => (
     id="research"
     index="09"
     eyebrow="Research & frameworks"
-    title={
-      <>
-        Current research territory,{" "}
-        <span className="text-muted-foreground">not a client logo wall.</span>
-      </>
-    }
+    title="Current research territory, not a client logo wall."
     lead={
       <p>
-        Tokenomix explores these research domains through frameworks, architecture writing and
-        collaborative work. They describe the territory the practice thinks in — the questions that
-        shape how value, ownership and governance get designed.
+        Tokenomix explores these domains through frameworks, architecture writing and collaborative
+        work — the questions that shape how value, ownership and governance get designed.
       </p>
     }
-
   >
     <div className="mt-16 lg:mt-20">
       <div className="border-t border-border/70">

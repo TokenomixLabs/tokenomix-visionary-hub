@@ -34,16 +34,11 @@ export const EconomicLayers = () => (
   <Section
     index="05"
     eyebrow="Economic layers"
-    title={
-      <>
-        Layers can interoperate <span className="text-muted-foreground">without sharing authority.</span>
-      </>
-    }
+    title="Layers can interoperate without sharing authority."
     lead={
       <p>
-        Collapsing every layer into one economy is the most common structural failure in the space. It
-        feels simpler, then it becomes impossible to change anything without changing everything.
-        Coherent systems keep their boundaries distinct and their interfaces explicit.
+        Collapsing every layer into one economy feels simpler, then it becomes impossible to change
+        anything without changing everything. Coherent systems keep their interfaces explicit.
       </p>
     }
     visual={<LayerSeam className="mx-auto max-w-[18rem] lg:max-w-none" />}

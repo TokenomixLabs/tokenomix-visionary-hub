@@ -88,7 +88,7 @@ export const AuthorityTopology = ({ className = "" }: { className?: string }) =>
               strokeWidth="1.8"
               strokeLinecap="round"
               strokeDasharray="8 200"
-              className="animate-flow-loop"
+              className="animate-flow-loop motion-settle"
               style={{ animationDelay: `${i * 900}ms` }}
             />
             <circle

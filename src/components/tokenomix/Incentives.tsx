@@ -35,16 +35,11 @@ export const Incentives = () => (
     id="incentives"
     index="03"
     eyebrow="Incentives"
-    title={
-      <>
-        Incentives are architecture. <span className="text-muted-foreground">Not marketing.</span>
-      </>
-    }
+    title="Incentives are architecture, not marketing."
     lead={
       <p>
-        Two systems can share the same product, the same technology and the same total supply, and
-        still produce opposite behavior — because reward, ownership and rule-change are designed
-        differently. Behavior is downstream of structure.
+        Two systems can share the same product, technology and total supply and still produce opposite
+        behavior. Behavior is downstream of structure.
       </p>
     }
     visual={<IncentiveBehaviorMap />}
@@ -123,9 +118,9 @@ export const Incentives = () => (
       ))}
     </div>
     <Reveal delay={260}>
-      <p className="mt-10 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-        Neither diagram is a forecast. They are structural illustrations of the same principle: the
-        design decides which behavior is cheapest, and participants find that path quickly.
+      <p className="mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+        Structural illustrations, not forecasts: the design decides which behavior is cheapest, and
+        participants find that path quickly.
       </p>
     </Reveal>
   </Section>

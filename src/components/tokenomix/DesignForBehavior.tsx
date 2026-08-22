@@ -15,20 +15,14 @@ export const DesignForBehavior = () => (
   <Section
     index="06"
     eyebrow="Design for behavior"
-    title={
-      <>
-        Economies are behavior engines. <br className="hidden sm:block" />
-        <span className="text-muted-foreground">Design the behavior first.</span>
-      </>
-    }
+    title="Economies are behavior engines. Design the behavior first."
     lead={
       <p>
         A token design that cannot answer these seven questions is a distribution plan, not an economy.
-        None of them are about price. All of them are about what the system will actually do once real
-        participants arrive and start optimising.
+        None of them are about price; all of them are about what the system will actually do.
       </p>
     }
-    className="border-y border-border/60 bg-surface/40"
+    tone="tint"
   >
     <div className="mt-16 grid gap-12 lg:mt-20 lg:grid-cols-[1fr_0.85fr] lg:gap-20">
       <ol className="space-y-0">

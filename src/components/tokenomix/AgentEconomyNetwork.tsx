@@ -126,7 +126,7 @@ export const AgentEconomyNetwork = ({ className = "" }: { className?: string }) 
               strokeWidth="2"
               strokeLinecap="round"
               strokeDasharray="8 220"
-              className="animate-flow-loop"
+              className="animate-flow-loop motion-settle"
               style={{ animationDelay: `${i * 620}ms` }}
               opacity={provenance ? 0.4 : 0.85}
             />
@@ -145,7 +145,7 @@ export const AgentEconomyNetwork = ({ className = "" }: { className?: string }) 
         stroke="hsl(250 92% 72%)"
         strokeWidth="1"
         strokeDasharray="480"
-        className="animate-trace-sweep"
+        className="animate-trace-sweep motion-settle"
       />
       <text
         x="20"
