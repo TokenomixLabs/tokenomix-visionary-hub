@@ -11,6 +11,7 @@ interface SectionProps {
   className?: string;
   align?: "left" | "center";
   titleWide?: boolean;
+  leadClassName?: string;
 }
 
 const HeaderCluster = ({
