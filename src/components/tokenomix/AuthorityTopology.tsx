@@ -12,11 +12,11 @@ const layers = [
 ];
 
 const domains = [
-  { name: "Fee policy", layer: 0, x: 300 },
-  { name: "Settlement rules", layer: 0, x: 372 },
-  { name: "Pricing", layer: 1, x: 336 },
-  { name: "Governance", layer: 2, x: 300 },
-  { name: "Claims & rights", layer: 3, x: 336 },
+  { name: "Fee policy", layer: 0, x: 250 },
+  { name: "Settlement rules", layer: 0, x: 250 },
+  { name: "Pricing", layer: 1, x: 250 },
+  { name: "Governance", layer: 2, x: 250 },
+  { name: "Claims & rights", layer: 3, x: 250 },
 ];
 
 export const AuthorityTopology = ({ className = "" }: { className?: string }) => (
@@ -39,7 +39,7 @@ export const AuthorityTopology = ({ className = "" }: { className?: string }) =>
           <rect
             x="14"
             y={layer.y}
-            width="252"
+            width="196"
             height="44"
             rx="5"
             fill="url(#at-plane)"
@@ -59,7 +59,7 @@ export const AuthorityTopology = ({ className = "" }: { className?: string }) =>
             <line
               x1="14"
               y1={layer.y + 54}
-              x2="266"
+              x2="210"
               y2={layer.y + 54}
               stroke="hsl(240 22% 20%)"
               strokeDasharray="2 6"
@@ -75,14 +75,14 @@ export const AuthorityTopology = ({ className = "" }: { className?: string }) =>
         return (
           <g key={domain.name}>
             <path
-              d={`M 266 ${y} C ${domain.x - 30} ${y}, ${domain.x - 30} ${44 + i * 52}, ${domain.x} ${44 + i * 52}`}
+              d={`M 210 ${y} C ${domain.x - 30} ${y}, ${domain.x - 30} ${44 + i * 52}, ${domain.x} ${44 + i * 52}`}
               fill="none"
               stroke="hsl(250 92% 72%)"
               strokeWidth="1.1"
               opacity="0.35"
             />
             <path
-              d={`M 266 ${y} C ${domain.x - 30} ${y}, ${domain.x - 30} ${44 + i * 52}, ${domain.x} ${44 + i * 52}`}
+              d={`M 210 ${y} C ${domain.x - 30} ${y}, ${domain.x - 30} ${44 + i * 52}, ${domain.x} ${44 + i * 52}`}
               fill="none"
               stroke="hsl(322 90% 62%)"
               strokeWidth="1.8"
@@ -119,7 +119,7 @@ export const AuthorityTopology = ({ className = "" }: { className?: string }) =>
         fontSize="7.5"
         letterSpacing="1.4"
       >
-        AUTHORITY IS SCOPED PER LAYER — INTEROPERATION IS NOT SHARED CONTROL
+        AUTHORITY IS SCOPED PER LAYER
       </text>
     </svg>
   </div>
