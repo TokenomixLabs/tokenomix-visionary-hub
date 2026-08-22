@@ -1,5 +1,6 @@
 import { Section } from "./Section";
 import { Reveal } from "./Reveal";
+import { LayerSeam } from "./LayerSeam";
 
 const layers = [
   {
@@ -45,6 +46,9 @@ export const EconomicLayers = () => (
         Coherent systems keep their boundaries distinct and their interfaces explicit.
       </p>
     }
+    visual={<LayerSeam className="mx-auto max-w-[18rem] lg:max-w-none" />}
+    visualSide="right"
+    visualWeight="light"
   >
     <div className="mt-16 lg:mt-20">
       <div className="overflow-hidden rounded-md border border-border/70">

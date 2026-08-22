@@ -1,5 +1,6 @@
 import { Section } from "./Section";
 import { Reveal } from "./Reveal";
+import { GovernanceStateTransition } from "./GovernanceStateTransition";
 
 const steps = [
   { label: "Current rule state", detail: "The economy as it operates today, legible to participants." },
@@ -33,6 +34,8 @@ export const Governance = () => (
       </p>
     }
     className="border-y border-border/60 bg-surface/40"
+    visual={<GovernanceStateTransition className="mx-auto max-w-[28rem] lg:max-w-none" />}
+    visualSide="right"
   >
     <div className="mt-16 lg:mt-20">
       <ol className="grid gap-px overflow-hidden rounded-md border border-border/70 bg-border/50 md:grid-cols-5">

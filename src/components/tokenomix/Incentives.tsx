@@ -1,5 +1,6 @@
 import { Section } from "./Section";
 import { Reveal } from "./Reveal";
+import { IncentiveBehaviorMap } from "./IncentiveBehaviorMap";
 
 const systems = [
   {
@@ -46,6 +47,8 @@ export const Incentives = () => (
         differently. Behavior is downstream of structure.
       </p>
     }
+    visual={<IncentiveBehaviorMap />}
+    visualSide="left"
   >
     <div className="mt-16 grid gap-6 lg:mt-20 lg:grid-cols-2">
       {systems.map((system, i) => (
