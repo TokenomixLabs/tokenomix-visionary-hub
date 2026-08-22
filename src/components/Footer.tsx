@@ -1,60 +1,71 @@
-import { Github, Twitter, Facebook, Instagram } from "lucide-react";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { Contact } from "@/components/Contact";
-import { Button } from "@/components/ui/button";
+import { Github, Twitter, Linkedin } from "lucide-react";
 
 const socialLinks = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Github, href: "#", label: "Github" },
+  { icon: Twitter, href: "#", label: "Tokenomix on X" },
+  { icon: Linkedin, href: "#", label: "Tokenomix on LinkedIn" },
+  { icon: Github, href: "#", label: "Tokenomix on GitHub" },
 ];
 
-export const Footer = () => {
-  return (
-    <footer className="bg-gradient-to-b from-primary via-primary/90 to-black py-16">
-      <div id="connect-with-us" className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="flex gap-6">
+const sections = [
+  { label: "Architecture", id: "architecture" },
+  { label: "Incentives", id: "incentives" },
+  { label: "Ownership", id: "ownership" },
+  { label: "Intelligent Economies", id: "intelligent-economies" },
+  { label: "Research", id: "research" },
+  { label: "Contact", id: "contact" },
+];
+
+export const Footer = () => (
+  <footer id="connect-with-us" className="border-t border-border/60 bg-surface/30 py-16">
+    <div className="container mx-auto">
+      <div className="grid gap-12 md:grid-cols-[1.2fr_1fr]">
+        <div>
+          <img
+            src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png"
+            alt="Tokenomix"
+            className="h-7 w-auto"
+          />
+          <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
+            Designing how value, ownership, incentives and governance actually work inside intelligent
+            and decentralized systems.
+          </p>
+          <div className="mt-7 flex gap-4">
             {socialLinks.map(({ icon: Icon, href, label }) => (
               <a
                 key={label}
                 href={href}
-                className="text-white/60 hover:text-neon-blue transition-colors"
                 aria-label={label}
+                className="flex h-11 w-11 items-center justify-center rounded-sm border border-border/70 text-muted-foreground transition-colors duration-300 hover:border-accent/50 hover:text-foreground"
               >
-                <Icon className="w-6 h-6" />
+                <Icon className="h-4 w-4" />
               </a>
             ))}
           </div>
-
-          <h2 className="text-3xl font-orbitron text-white">
-            Connect With Us
-          </h2>
-
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button
-                className="bg-gradient-to-r from-neon-blue to-neon-purple hover:from-neon-purple hover:to-neon-blue text-white border-0 font-orbitron px-8 py-6 shadow-[0_0_15px_rgba(14,165,233,0.3)] hover:shadow-[0_0_25px_rgba(139,92,246,0.4)] transition-all duration-300"
-              >
-                Make An Inquiry
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="max-w-2xl bg-primary border-neon-purple/20">
-              <Contact isDialog />
-            </DialogContent>
-          </Dialog>
         </div>
 
-        <div className="mt-24 flex flex-col md:flex-row items-center justify-between text-white/60 text-sm">
-          <p>2024 © Tokenomix, All rights reserved.</p>
-          <div className="flex gap-8 mt-4 md:mt-0">
-            <a href="#" className="hover:text-neon-blue transition-colors">Terms of use</a>
-            <a href="#" className="hover:text-neon-blue transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-neon-blue transition-colors">Cookie Policy</a>
-          </div>
-        </div>
+        <nav aria-label="Footer">
+          <p className="eyebrow">Sections</p>
+          <ul className="mt-5 grid grid-cols-1 gap-x-8 gap-y-2 sm:grid-cols-2">
+            {sections.map((section) => (
+              <li key={section.id}>
+                <a
+                  href={`#${section.id}`}
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {section.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
-    </footer>
-  );
-};
+
+      <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-border/60 pt-7 text-xs text-muted-foreground md:flex-row md:items-center">
+        <p className="font-mono">© {new Date().getFullYear()} Tokenomix. All rights reserved.</p>
+        <p className="max-w-lg">
+          Nothing on this site is investment advice or a promise of returns.
+        </p>
+      </div>
+    </div>
+  </footer>
+);

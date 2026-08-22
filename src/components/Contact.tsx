@@ -19,7 +19,8 @@ interface ContactProps {
   isDialog?: boolean;
 }
 
-const inputStyles = "bg-primary/50 border-neon-purple/20 text-white placeholder:text-gray-400 focus:border-neon-blue/50";
+const inputStyles =
+  "bg-background/60 border-border text-foreground placeholder:text-muted-foreground focus-visible:border-accent/60";
 
 export const Contact = ({ isDialog = false }: ContactProps) => {
   const { toast } = useToast();
@@ -34,14 +35,13 @@ export const Contact = ({ isDialog = false }: ContactProps) => {
 
   const onSubmit = async (data: FormData) => {
     try {
-      // Here you would typically send the data to your backend
       console.log("Form submitted:", data);
-      
+
       toast({
-        title: "Message sent!",
+        title: "Message sent",
         description: "Thank you for your message. We'll get back to you soon.",
       });
-      
+
       reset();
     } catch (error) {
       toast({
@@ -52,68 +52,76 @@ export const Contact = ({ isDialog = false }: ContactProps) => {
     }
   };
 
-  const containerClass = isDialog ? "" : "py-20 bg-primary bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-neon-purple/20 via-primary to-primary";
-  const innerContainerClass = isDialog ? "" : "container mx-auto px-4";
+  const containerClass = isDialog ? "" : "py-24 bg-surface/40 border-y border-border/60";
+  const innerContainerClass = isDialog ? "" : "container mx-auto";
   const formContainerClass = isDialog ? "" : "max-w-2xl mx-auto";
 
   return (
-    <div id="contact" className={containerClass}>
+    <div className={containerClass}>
       <div className={innerContainerClass}>
         <div className={formContainerClass}>
           {!isDialog && (
-            <h2 className="text-4xl font-bold text-white text-center mb-12 font-orbitron">
-              Get in <span className="text-neon-blue">Touch</span>
+            <h2 className="mb-10 text-center font-display text-3xl font-semibold text-foreground">
+              Get in <span className="text-gradient-value">touch</span>
             </h2>
           )}
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
               <div className="space-y-2">
-                <Input 
-                  placeholder="Name" 
-                  className={`${inputStyles} ${errors.name ? 'border-red-500' : ''}`}
+                <label htmlFor="contact-name" className="eyebrow block">
+                  Name
+                </label>
+                <Input
+                  id="contact-name"
+                  placeholder="Your name"
+                  className={`${inputStyles} ${errors.name ? "border-destructive" : ""}`}
                   {...register("name")}
                 />
-                {errors.name && (
-                  <p className="text-red-500 text-sm">{errors.name.message}</p>
-                )}
+                {errors.name && <p className="text-sm text-destructive">{errors.name.message}</p>}
               </div>
               <div className="space-y-2">
-                <Input 
-                  placeholder="Email" 
-                  type="email" 
-                  className={`${inputStyles} ${errors.email ? 'border-red-500' : ''}`}
+                <label htmlFor="contact-email" className="eyebrow block">
+                  Email
+                </label>
+                <Input
+                  id="contact-email"
+                  placeholder="you@domain.com"
+                  type="email"
+                  className={`${inputStyles} ${errors.email ? "border-destructive" : ""}`}
                   {...register("email")}
                 />
-                {errors.email && (
-                  <p className="text-red-500 text-sm">{errors.email.message}</p>
-                )}
+                {errors.email && <p className="text-sm text-destructive">{errors.email.message}</p>}
               </div>
             </div>
             <div className="space-y-2">
-              <Input 
-                placeholder="Subject" 
-                className={`${inputStyles} ${errors.subject ? 'border-red-500' : ''}`}
+              <label htmlFor="contact-subject" className="eyebrow block">
+                Subject
+              </label>
+              <Input
+                id="contact-subject"
+                placeholder="What is this about?"
+                className={`${inputStyles} ${errors.subject ? "border-destructive" : ""}`}
                 {...register("subject")}
               />
-              {errors.subject && (
-                <p className="text-red-500 text-sm">{errors.subject.message}</p>
-              )}
+              {errors.subject && <p className="text-sm text-destructive">{errors.subject.message}</p>}
             </div>
             <div className="space-y-2">
-              <Textarea 
-                placeholder="Message" 
-                className={`${inputStyles} h-32 ${errors.message ? 'border-red-500' : ''}`}
+              <label htmlFor="contact-message" className="eyebrow block">
+                Message
+              </label>
+              <Textarea
+                id="contact-message"
+                placeholder="Describe the system you are designing"
+                className={`${inputStyles} h-32 ${errors.message ? "border-destructive" : ""}`}
                 {...register("message")}
               />
-              {errors.message && (
-                <p className="text-red-500 text-sm">{errors.message.message}</p>
-              )}
+              {errors.message && <p className="text-sm text-destructive">{errors.message.message}</p>}
             </div>
-            <Button 
+            <Button
               type="submit"
-              className="w-full bg-neon-blue hover:bg-neon-purple text-white py-6 font-orbitron transition-all duration-300"
+              className="h-auto w-full bg-gradient-value py-4 font-display text-base text-primary-foreground transition-all duration-300 hover:brightness-110"
             >
-              Send Message
+              Send message
             </Button>
           </form>
         </div>
