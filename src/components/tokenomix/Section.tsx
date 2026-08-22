@@ -53,14 +53,55 @@ export const Section = ({
   titleWide = false,
   leadClassName,
   introClassName,
+  visual,
+  visualSide = "right",
+  visualWeight = "full",
 }: SectionProps) => {
   const textContainer = align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl";
   const leadContainer = leadClassName ?? textContainer;
 
+  const textBlock = (
+    <div>
+      {(eyebrow || index) && (
+        <Reveal>
+          <HeaderCluster index={index} eyebrow={eyebrow} align={align} />
+        </Reveal>
+      )}
+      <Reveal delay={60}>
+        <h2 className="font-display text-3xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-4xl md:text-[2.7rem]">
+          {title}
+        </h2>
+      </Reveal>
+      {lead && (
+        <Reveal delay={120}>
+          <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+            {lead}
+          </div>
+        </Reveal>
+      )}
+    </div>
+  );
+
   return (
     <section id={id} className={`relative scroll-mt-24 py-24 md:py-32 ${className}`}>
       <div className="container mx-auto">
-        {titleWide ? (
+        {visual ? (
+          <div
+            className={`grid items-center gap-12 lg:gap-16 ${
+              visualWeight === "light"
+                ? "lg:grid-cols-[1.25fr_0.75fr]"
+                : "lg:grid-cols-[1fr_1fr]"
+            }`}
+          >
+            <div className={visualSide === "left" ? "lg:order-2" : ""}>{textBlock}</div>
+            <Reveal
+              delay={140}
+              className={visualSide === "left" ? "lg:order-1" : ""}
+            >
+              {visual}
+            </Reveal>
+          </div>
+        ) : titleWide ? (
           <div className={introClassName}>
             <Reveal>
               <div className={textContainer}>
