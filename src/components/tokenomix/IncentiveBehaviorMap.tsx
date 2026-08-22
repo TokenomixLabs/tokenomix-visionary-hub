@@ -101,7 +101,7 @@ const Panel = ({
           strokeWidth="2.2"
           strokeLinecap="round"
           strokeDasharray="12 380"
-          className="animate-flow-loop"
+          className="animate-flow-loop motion-settle"
           opacity={signal ? 0.95 : 0.5}
         />
 
@@ -154,7 +154,7 @@ const Panel = ({
               strokeWidth="2"
               strokeLinecap="round"
               strokeDasharray="10 300"
-              className="animate-flow-loop"
+              className="animate-flow-loop motion-settle"
             />
             <text
               x="140"

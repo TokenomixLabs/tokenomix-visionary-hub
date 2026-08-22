@@ -90,7 +90,7 @@ export const ValueFlowLoop = ({ className = "" }: { className?: string }) => {
           strokeWidth="2.6"
           strokeLinecap="round"
           strokeDasharray="16 984"
-          className="animate-flow-loop"
+          className="animate-flow-loop motion-settle"
         />
 
         {/* leaking / extractive branch */}

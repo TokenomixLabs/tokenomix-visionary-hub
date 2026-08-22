@@ -67,7 +67,7 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
         rx="2"
         fill="hsl(268 86% 70%)"
         opacity="0.5"
-        className="animate-glow-breathe"
+        
       />
       <text
         x="190"
@@ -95,7 +95,7 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
         strokeWidth="2.6"
         strokeLinecap="round"
         strokeDasharray="14 240"
-        className="animate-flow-loop"
+        className="animate-flow-loop motion-settle"
       />
       <g>
         <circle cx="140" cy="134" r="5" fill="hsl(240 32% 5%)" stroke="hsl(250 92% 72%)" strokeWidth="1.4" />
