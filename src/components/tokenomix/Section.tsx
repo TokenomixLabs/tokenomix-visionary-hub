@@ -44,8 +44,10 @@ export const Section = ({
   className = "",
   align = "left",
   titleWide = false,
+  leadClassName,
 }: SectionProps) => {
   const textContainer = align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl";
+  const leadContainer = leadClassName ?? textContainer;
 
   return (
     <section id={id} className={`relative scroll-mt-24 py-24 md:py-32 ${className}`}>
