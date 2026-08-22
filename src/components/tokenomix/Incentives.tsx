@@ -91,7 +91,7 @@ export const Incentives = () => (
               {Array.from({ length: 11 }).map((_, n) => {
                 const x = 12 + n * 29.6;
                 const r =
-                  system.tone === "signal" ? 4.2 + ((n * 5) % 11) / 4 : n < 2 ? 9.5 : 2;
+                  system.tone === "signal" ? 3.4 + ((n * 4) % 9) / 1.6 : n < 2 ? 9.5 : 2;
                 return (
                   <circle
                     key={n}
