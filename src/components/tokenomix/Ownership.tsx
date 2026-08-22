@@ -1,5 +1,6 @@
 import { Section } from "./Section";
 import { Reveal } from "./Reveal";
+import { AuthorityTopology } from "./AuthorityTopology";
 
 const questions = [
   { q: "Who owns the protocol layer?", n: "Ownership of the base rules is rarely the same as ownership of the experience built on top." },
@@ -28,6 +29,8 @@ export const Ownership = () => (
       </p>
     }
     className="border-y border-border/60 bg-surface/40"
+    visual={<AuthorityTopology className="mx-auto max-w-[28rem] lg:max-w-none" />}
+    visualSide="right"
   >
     <div className="mt-16 grid gap-px overflow-hidden rounded-md border border-border/70 bg-border/50 md:grid-cols-2 lg:mt-20 lg:grid-cols-3">
       {questions.map((item, i) => (

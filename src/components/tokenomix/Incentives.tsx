@@ -1,5 +1,6 @@
 import { Section } from "./Section";
 import { Reveal } from "./Reveal";
+import { IncentiveBehaviorMap } from "./IncentiveBehaviorMap";
 
 const systems = [
   {
@@ -46,6 +47,8 @@ export const Incentives = () => (
         differently. Behavior is downstream of structure.
       </p>
     }
+    visual={<IncentiveBehaviorMap />}
+    visualSide="left"
   >
     <div className="mt-16 grid gap-6 lg:mt-20 lg:grid-cols-2">
       {systems.map((system, i) => (
@@ -82,25 +85,31 @@ export const Incentives = () => (
               ))}
             </ul>
 
-            {/* structural illustration: where value settles */}
-            <svg viewBox="0 0 320 70" className="mt-9 h-auto w-full" aria-hidden="true">
-              {Array.from({ length: 9 }).map((_, n) => {
-                const x = 12 + n * 36;
-                const height = system.tone === "signal" ? 12 + ((n * 7) % 34) : n < 2 ? 46 : 6;
+            {/* structural illustration: how standing is distributed across participants */}
+            <svg viewBox="0 0 320 44" className="mt-9 h-auto w-full" aria-hidden="true">
+              <line x1="4" y1="22" x2="316" y2="22" stroke="hsl(240 22% 20%)" />
+              {Array.from({ length: 11 }).map((_, n) => {
+                const x = 12 + n * 29.6;
+                const r =
+                  system.tone === "signal" ? 3.4 + ((n * 4) % 9) / 1.6 : n < 2 ? 9.5 : 2;
                 return (
-                  <rect
+                  <circle
                     key={n}
-                    x={x}
-                    y={60 - height}
-                    width="10"
-                    height={height}
-                    rx="2"
-                    fill={system.tone === "signal" ? "hsl(322 90% 62%)" : "hsl(240 22% 26%)"}
-                    opacity={system.tone === "signal" ? 0.75 : 0.9}
+                    cx={x}
+                    cy="22"
+                    r={r}
+                    fill="hsl(240 32% 5%)"
+                    stroke={
+                      system.tone === "signal"
+                        ? "hsl(322 90% 62%)"
+                        : n < 2
+                          ? "hsl(250 92% 72%)"
+                          : "hsl(240 22% 30%)"
+                    }
+                    strokeWidth="1.3"
                   />
                 );
               })}
-              <line x1="0" y1="62" x2="320" y2="62" stroke="hsl(240 22% 20%)" />
             </svg>
             <p className="mt-3 font-mono text-[0.65rem] uppercase tracking-[0.18em] text-muted-foreground/70">
               Where standing accumulates

@@ -1,5 +1,6 @@
 import { Section } from "./Section";
 import { Reveal } from "./Reveal";
+import { ValueFlowLoop } from "./ValueFlowLoop";
 
 const stages = [
   {
@@ -50,6 +51,8 @@ export const ValueArchitecture = () => (
       </p>
     }
     className="border-y border-border/60 bg-surface/40"
+    visual={<ValueFlowLoop className="mx-auto max-w-[26rem] lg:max-w-none" />}
+    visualSide="right"
   >
     <div className="mt-16 lg:mt-20">
       <ol className="relative grid gap-px overflow-hidden rounded-md border border-border/70 bg-border/50 md:grid-cols-2 lg:grid-cols-4">

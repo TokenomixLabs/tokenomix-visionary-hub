@@ -1,5 +1,6 @@
 import { Section } from "./Section";
 import { Reveal } from "./Reveal";
+import { AgentEconomyNetwork } from "./AgentEconomyNetwork";
 
 const territory = [
   {
@@ -51,6 +52,8 @@ export const IntelligentEconomies = () => (
         treats this as an architecture problem rather than a narrative.
       </p>
     }
+    visual={<AgentEconomyNetwork className="mx-auto max-w-[27rem] lg:max-w-none" />}
+    visualSide="left"
   >
     <div className="mt-16 grid gap-px overflow-hidden rounded-md border border-border/70 bg-border/50 sm:grid-cols-2 lg:mt-20 lg:grid-cols-3">
       {territory.map((item, i) => (
