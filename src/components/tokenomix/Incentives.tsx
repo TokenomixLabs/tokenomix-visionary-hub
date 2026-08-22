@@ -118,9 +118,9 @@ export const Incentives = () => (
       ))}
     </div>
     <Reveal delay={260}>
-      <p className="mt-10 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-        Neither diagram is a forecast. They are structural illustrations of the same principle: the
-        design decides which behavior is cheapest, and participants find that path quickly.
+      <p className="mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+        Structural illustrations, not forecasts: the design decides which behavior is cheapest, and
+        participants find that path quickly.
       </p>
     </Reveal>
   </Section>
