@@ -35,15 +35,18 @@ export const Research = () => (
     eyebrow="Research & frameworks"
     title={
       <>
-        Open research domains, <span className="text-muted-foreground">not a client logo wall.</span>
+        Current research territory,{" "}
+        <span className="text-muted-foreground">not a client logo wall.</span>
       </>
     }
     lead={
       <p>
-        Tokenomix works in public through frameworks, field notes and architecture writing. These are
-        the active domains — the questions currently being worked on, published and argued about.
+        Tokenomix explores these research domains through frameworks, architecture writing and
+        collaborative work. They describe the territory the practice thinks in — the questions that
+        shape how value, ownership and governance get designed.
       </p>
     }
+
   >
     <div className="mt-16 lg:mt-20">
       <div className="border-t border-border/70">
