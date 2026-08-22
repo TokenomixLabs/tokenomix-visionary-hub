@@ -88,8 +88,16 @@ export const Governance = () => (
             <h4 className="font-display text-base font-medium text-foreground md:text-lg">
               {choice.name}
             </h4>
-            <p className="text-sm leading-relaxed text-muted-foreground">{choice.gives}</p>
-            <p className="text-sm leading-relaxed text-signal/80">{choice.forfeits}</p>
+            <div className="md:contents">
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:mt-0">
+                <span className="eyebrow mr-2 md:hidden">Gives</span>
+                {choice.gives}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-signal/80 md:mt-0">
+                <span className="eyebrow mr-2 md:hidden">Forfeits</span>
+                {choice.forfeits}
+              </p>
+            </div>
           </Reveal>
         ))}
       </div>
