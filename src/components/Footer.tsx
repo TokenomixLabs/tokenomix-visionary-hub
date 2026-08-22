@@ -1,11 +1,3 @@
-import { Github, Twitter, Linkedin } from "lucide-react";
-
-const socialLinks = [
-  { icon: Twitter, href: "#", label: "Tokenomix on X" },
-  { icon: Linkedin, href: "#", label: "Tokenomix on LinkedIn" },
-  { icon: Github, href: "#", label: "Tokenomix on GitHub" },
-];
-
 const sections = [
   { label: "Architecture", id: "architecture" },
   { label: "Incentives", id: "incentives" },
@@ -14,6 +6,7 @@ const sections = [
   { label: "Research", id: "research" },
   { label: "Contact", id: "contact" },
 ];
+
 
 export const Footer = () => (
   <footer id="connect-with-us" className="border-t border-border/60 bg-surface/30 py-16">
@@ -29,18 +22,10 @@ export const Footer = () => (
             Designing how value, ownership, incentives and governance actually work inside intelligent
             and decentralized systems.
           </p>
-          <div className="mt-7 flex gap-4">
-            {socialLinks.map(({ icon: Icon, href, label }) => (
-              <a
-                key={label}
-                href={href}
-                aria-label={label}
-                className="flex h-11 w-11 items-center justify-center rounded-sm border border-border/70 text-muted-foreground transition-colors duration-300 hover:border-accent/50 hover:text-foreground"
-              >
-                <Icon className="h-4 w-4" />
-              </a>
-            ))}
-          </div>
+          <p className="mt-7 font-mono text-xs tracking-[0.18em] text-muted-foreground/80">
+            VALUE · OWNERSHIP · INCENTIVES · GOVERNANCE
+          </p>
+
         </div>
 
         <nav aria-label="Footer">
