@@ -101,6 +101,12 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  /* Explanatory motion runs a few cycles, then settles into a readable static state. */
+  .motion-settle {
+    animation-iteration-count: 3;
+    animation-fill-mode: forwards;
+  }
 }
 
 /* Mobile touch optimization */
