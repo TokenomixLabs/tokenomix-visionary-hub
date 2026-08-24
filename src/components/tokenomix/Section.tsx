@@ -59,6 +59,7 @@ export const Section = ({
   className = "",
   align = "left",
   titleWide = false,
+  headingLevel = "h2",
   leadClassName,
   introClassName,
   visual,
