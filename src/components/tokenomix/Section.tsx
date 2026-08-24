@@ -141,7 +141,7 @@ export const Section = ({
             </Reveal>
             <Reveal delay={60}>
               <Heading className="font-display text-4xl font-semibold leading-[1.06] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-[4.2rem]">
-
+                {title}
               </Heading>
             </Reveal>
             {lead && (
