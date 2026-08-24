@@ -91,9 +91,9 @@ export const Section = ({
         </Reveal>
       )}
       <Reveal delay={60}>
-        <h2 className="font-display text-3xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-4xl md:text-[2.6rem]">
-          {title}
-        </h2>
+        <Heading className="font-display text-3xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-4xl md:text-[2.6rem]">
+
+        </Heading>
       </Reveal>
       {lead && (
         <Reveal delay={120}>
@@ -140,9 +140,9 @@ export const Section = ({
               </div>
             </Reveal>
             <Reveal delay={60}>
-              <h2 className="font-display text-4xl font-semibold leading-[1.06] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-[4.2rem]">
-                {title}
-              </h2>
+              <Heading className="font-display text-4xl font-semibold leading-[1.06] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-[4.2rem]">
+
+              </Heading>
             </Reveal>
             {lead && (
               <Reveal delay={120}>
@@ -161,9 +161,9 @@ export const Section = ({
               </Reveal>
             )}
             <Reveal delay={60}>
-              <h2 className="font-display text-3xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-4xl md:text-[2.6rem]">
-                {title}
-              </h2>
+              <Heading className="font-display text-3xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-4xl md:text-[2.6rem]">
+
+              </Heading>
             </Reveal>
             {lead && (
               <Reveal delay={120}>
