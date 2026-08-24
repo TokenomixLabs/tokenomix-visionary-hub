@@ -1,6 +1,7 @@
 import { Section } from "./Section";
 import { Reveal } from "./Reveal";
 import { AgentEconomyNetwork } from "./AgentEconomyNetwork";
+import { AgentEconomyNetworkMobile } from "./mobile/AgentEconomyNetworkMobile";
 
 const territory = [
   {
