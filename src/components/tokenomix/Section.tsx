@@ -11,6 +11,8 @@ interface SectionProps {
   className?: string;
   align?: "left" | "center";
   titleWide?: boolean;
+  /** Semantic level for the section title. Exactly one section should use h1. */
+  headingLevel?: "h1" | "h2";
   leadClassName?: string;
   introClassName?: string;
   /** Explanatory visual paired with the section intro (desktop). */
@@ -57,6 +59,7 @@ export const Section = ({
   className = "",
   align = "left",
   titleWide = false,
+  headingLevel = "h2",
   leadClassName,
   introClassName,
   visual,
@@ -68,6 +71,8 @@ export const Section = ({
 }: SectionProps) => {
   const textContainer = align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl";
   const leadContainer = leadClassName ?? textContainer;
+  /* Semantic level only — visual scale stays identical. */
+  const Heading = headingLevel;
 
   const rhythm = tier === "pillar" ? "py-28 md:py-40" : "py-20 md:py-28";
   const chapterTone = tone === "tint" ? "border-t border-border/60 bg-surface/30" : "";
@@ -86,9 +91,9 @@ export const Section = ({
         </Reveal>
       )}
       <Reveal delay={60}>
-        <h2 className="font-display text-3xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-4xl md:text-[2.6rem]">
+        <Heading className="font-display text-3xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-4xl md:text-[2.6rem]">
           {title}
-        </h2>
+        </Heading>
       </Reveal>
       {lead && (
         <Reveal delay={120}>
@@ -135,9 +140,9 @@ export const Section = ({
               </div>
             </Reveal>
             <Reveal delay={60}>
-              <h2 className="font-display text-4xl font-semibold leading-[1.06] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-[4.2rem]">
+              <Heading className="font-display text-4xl font-semibold leading-[1.06] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-[4.2rem]">
                 {title}
-              </h2>
+              </Heading>
             </Reveal>
             {lead && (
               <Reveal delay={120}>
@@ -156,9 +161,9 @@ export const Section = ({
               </Reveal>
             )}
             <Reveal delay={60}>
-              <h2 className="font-display text-3xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-4xl md:text-[2.6rem]">
+              <Heading className="font-display text-3xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-4xl md:text-[2.6rem]">
                 {title}
-              </h2>
+              </Heading>
             </Reveal>
             {lead && (
               <Reveal delay={120}>

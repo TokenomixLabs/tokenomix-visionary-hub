@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tokenomix-visionary-hub.lovable.app/sitemap.xml
