@@ -54,6 +54,7 @@ export const IntelligentEconomies = () => (
     }
     tier="pillar"
     visual={<AgentEconomyNetwork className="mx-auto max-w-[27rem] lg:max-w-none" />}
+    mobileVisual={<AgentEconomyNetworkMobile />}
     visualSide="left"
   >
     <div className="mt-16 grid gap-px overflow-hidden rounded-md border border-border/70 bg-border/50 sm:grid-cols-2 lg:mt-20 lg:grid-cols-3">

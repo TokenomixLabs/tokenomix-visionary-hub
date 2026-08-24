@@ -11,6 +11,8 @@ interface SectionProps {
   className?: string;
   align?: "left" | "center";
   titleWide?: boolean;
+  /** Semantic level for the section title. Exactly one section should use h1. */
+  headingLevel?: "h1" | "h2";
   leadClassName?: string;
   introClassName?: string;
   /** Explanatory visual paired with the section intro (desktop). */
