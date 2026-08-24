@@ -71,6 +71,8 @@ export const Section = ({
 }: SectionProps) => {
   const textContainer = align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl";
   const leadContainer = leadClassName ?? textContainer;
+  /* Semantic level only — visual scale stays identical. */
+  const Heading = headingLevel;
 
   const rhythm = tier === "pillar" ? "py-28 md:py-40" : "py-20 md:py-28";
   const chapterTone = tone === "tint" ? "border-t border-border/60 bg-surface/30" : "";
