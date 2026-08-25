@@ -1,51 +1,52 @@
-# Tokenomix — Final Visual Audit (read-only)
+# Tokenomix — Full-Page Visual Release Audit (read-only, re-run from scratch)
 
-Method: live browser captures of the full vertical sequence at 1700 / 1440 / 1280 / 1024 / 768 / 390, plus measured hero geometry and reveal-state probing. No code changed.
+Fresh captures of the rendered homepage at 1700 / 1440 / 1280 / 1024 / 768 / 390, full top-to-bottom sequence, reveals pre-triggered then re-captured settled, plus measured hero geometry. Previous verdicts disregarded. No code changed.
 
-## VERDICT: GREEN WITH FIXES
+## OVERALL VERDICT: GREEN WITH FIXES
 
-The editorial spine, typography, chapter tone alternation and diagram language all hold. Four composition defects and a set of transition voids keep it from unqualified GREEN. One narrow visual pass is warranted — nothing structural.
+Blockers: 0. Material: 4. Minor: 5. The page reads as a finished editorial system — chapter numbering, tone alternation, diagram vocabulary and truthfulness copy all hold, and there is zero horizontal overflow at every width. Four material defects are localized geometry, not design direction.
 
-## P0
+## BLOCKER
 
-1. **Mobile hero has no presence — 390px hero band measures 235px tall.**
-   Section `#top` renders as a thin 16:9 strip: wordmark, tagline wrapping to two lines, and the mute control crowding the right edge inside a shallow letterbox. Desktop is 826px and reads as a full stage. On phones the site effectively opens on the Category headline, so the brand entrance is lost and the mute affordance reads like a stray floating button.
+None. No section fails to render, no chapter is unreadable, no width breaks layout.
 
-## P1
+## MATERIAL (4)
 
-2. **Trailing summary tiles read as empty artwork panels during normal scrolling.**
-   Value Architecture ("Feedback loop", 8th cell of the 4-up grid) and Intelligent Economies ("Position", 8th cell of the 3-up grid) both resolve to opacity 1 eventually, but at the sequence delays they inherit (~490ms behind their grid) a captured scroll-through shows a large tinted rectangle with no content — in Intelligent Economies it reads as a two-column dead field because the adjacent cell is genuinely empty. Visually this is the exact "missing artwork" signature.
+**M1 — Economic Layers (05): diagram fails at tablet and is absent on phone.**
+At 768 the desktop `LayerSeam` runs at roughly half its intended measure and its footing label truncates mid-word ("SEPARATE AUTHORI"). At 390 the section has no visual at all — headline, lead, then straight into the layer table. Why it matters: this is the only chapter in the page whose argument loses its diagram entirely on phones, so the "explicit interfaces / separate authority" idea exists only as words while every neighbouring chapter shows it. Clipped type also reads as a build defect.
+Smallest safe fix concept: add a portrait mobile variant for the layer seam and let the tablet range use it instead of the shrunken desktop SVG.
 
-3. **Economic Layers diagram is undersized and its caption is clipped at 768.**
-   At tablet the desktop `LayerSeam` SVG is used at roughly half its intended measure; the footing label truncates mid-word ("SEPARATE AUTHORI"). Clipped typography at a real device width.
+**M2 — Intelligent Economies (07): empty trailing grid cell reads as missing artwork.**
+Eight items in a 3-up grid leave the final cell blank; at 1440/1700 it renders as a tinted rectangle the size of a full card sitting beside the "Position" panel. Why it matters: an empty tinted panel inside a bordered grid is the classic "image failed to load" signature — the one place on the page that looks unfinished rather than restrained.
+Smallest safe fix concept: let the Position panel span the remaining columns so the grid closes.
 
-4. **Stranded closing lines with stacked voids at chapter ends.**
-   "Most projects design layer one and hope the rest emerges." (Category), "Strong economies draw their boundaries in public." (Ownership), "Economic boundaries are not bureaucracy…" (Economic Layers) and "No model is correct everywhere…" (Governance) each sit alone at full width with a large empty right field and then a tall padding void before the next chapter. Read together they are the page's main source of oversized transition gaps.
+**M3 — Mobile hero (390): 235px band, no brand entrance.**
+Measured: 826px at 1440 versus 235px at 390. The wordmark lockup, the four-word tagline wrapping to two lines and the round mute control are all compressed into a shallow letterbox, and the mute button crowds the right edge. Why it matters: on phones the site effectively opens on the Category headline; the hero stops functioning as a stage and the audio affordance reads as a stray floating button.
+Smallest safe fix concept: give the hero a minimum viewport-relative height on small screens and let the video cover it, with the lockup and control spaced to that taller frame.
 
-5. **Research and Method open with a half-empty desktop composition.**
-   At 1440/1700 both chapters place headline plus lead in the left measure with the entire right half black, while every neighbouring chapter pairs its headline with a diagram. The composition implies a visual that never arrives, so the imbalance reads as absence rather than restraint.
+**M4 — Chapter-end stranded lines with stacked voids.**
+"Most projects design layer one and hope the rest emerges." (01), "Strong economies draw their boundaries in public." (04), "Economic boundaries are not bureaucracy…" (05) and "No model is correct everywhere…" (08) each sit alone at the left with an empty right field, then a further large gap before the chapter's own bottom padding and the next chapter's top padding. Why it matters: four repetitions of the same pattern are the page's main source of oversized negative space and make transitions feel like something was removed.
+Smallest safe fix concept: treat these closers as a resolved footing — tighten the space above/below them and give them a rule or full-measure treatment instead of leaving them floating.
 
-## P2
+## MINOR (5)
 
-6. **Grid-of-tiles silhouette repeats.** Value Architecture and Intelligent Economies share nearly the same bordered tile-grid rhythm, and the numbered rail device (Ownership, Research, Method, Governance steps) repeats four times. Neither is wrong; together they slightly flatten the middle of the page.
-7. **Governance chapter is the densest stack on the page** — state rail, five-step row, then a four-row tradeoff table, then a stranded closing line. At 1280 it is the one place the eye has no rest.
-8. **Reveal resolution feels unfinished on fast scroll.** Late cards in long grids and rails are still mid-fade when the next chapter is already on screen. The animation's resolved state is correct; its arrival is late.
+**m1 — Research (09) and Method (10):** at 1440/1700 headline and lead occupy the left measure with the entire right half black, while every adjacent chapter pairs a headline with a diagram, so the composition implies a visual that never arrives.
+**m2 — Design for Behavior (06), after the Behavior Engine fix:** the upper-right dead field is genuinely resolved and the circuit reads distinctly from the loop and rail motifs. Two residual items: at 1024–1280 the caption floats far below the diagram while the left column under the lead is empty, and the animated pink dash settles parked as an asymmetric stub on one edge rather than at a corner.
+**m3 — Late reveal arrival:** the trailing summary tiles ("Feedback loop" in 02, "Position" in 07) resolve about half a second behind their grids; on fast scroll they are briefly blank panels. Settled state is correct.
+**m4 — Repeated silhouettes:** two bordered tile grids (02, 07) plus four numbered rails (04, 08, 09, 10) flatten the middle of the page slightly. Not a defect on its own.
+**m5 — 390 Governance caption** runs beneath the back-to-top control at the right edge.
 
-## Truth / copy states (visual reading only, no rewrite)
+## CLEAR
 
-- Clean: "Out of scope", "Structural illustrations, not forecasts", "Position — open research territory", Research disclaimer, footer "Nothing on this site is investment advice", and the Contact/inquiry copy. Nothing on screen implies shipped infrastructure, clients, metrics or products.
-- Watch item only: the "Inquiry channel" CTA is styled as the single strongest button on the page, which visually promises a working intake path. Its behaviour must remain explicitly non-submitting or clearly a mail path; the styling alone raises the expectation.
+- Hero → body handoff at desktop and tablet: the gradient seam into Category reads intentional.
+- Category Statement composition at all widths, including the large topology visual at 768.
+- Incentives (03) A/B comparison, including the mini standing rails, which survive mobile intact.
+- Ownership (04) ledger, Governance (08) state rail plus tradeoff table, Method (10) sequenced rail.
+- Mobile completeness: purpose-built portrait variants for value flow, authority topology, governance state transition, behavior engine and human+agent economy all render fully, captioned and legible at 390 — they preserve the argument rather than shrinking the desktop art. Only Economic Layers (M1) is missing one.
+- Closing rhythm: Final Statement → single strong CTA → footer with sections, tagline, copyright and the investment-advice disclaimer. Ends deliberately.
+- No clipped typography anywhere except M1; no horizontal overflow at 1700/1440/1280/1024/768/390.
+- Truth states: "Out of scope", "Structural illustrations, not forecasts", "Position — open research territory", the Research independence note and the footer disclaimer are all visible and intact. Nothing on screen implies shipped infrastructure, clients or metrics. Only watch item: the "Inquiry channel" CTA is the strongest button on the page, so its behaviour must stay an honest mail/contact path.
 
-## Leave alone
+## Narrow pass warranted?
 
-- Hero video asset, Vimeo ID, mute control behaviour, wordmark and favicon.
-- Colour system, gradients, Space Grotesk / IBM Plex typography, tone alternation.
-- All copy, section numbering, chapter order, the seven-question ledger, Out of Scope card, Governance tradeoff table wording.
-- Incentives A/B comparison, Behavior Engine and its mobile variant, Value Flow Loop, Authority Topology, Governance state rail, Agent Economy visuals.
-- Footer structure, sitemap/robots/metadata, Netlify config.
-
-## Recommended narrow pass (if approved)
-
-Layout and geometry only, six targeted changes: give the mobile hero real vertical stature; make the trailing summary tiles resolve with the grid instead of behind it and close the empty adjacent cell; give Economic Layers a tablet-legible visual measure; tighten chapter-end voids and pull the stranded closing lines into a resolved footing; give Research and Method a right-column anchor so the composition is balanced; and shorten late reveal delays so long grids settle before the next chapter enters.
-
-No redesign, no copy edits, no hero/video/brand changes.
+Yes — one geometry-only pass covering M1–M4 plus m1, m2 and m3. No redesign, no copy changes, no hero video / logo / brand / colour / typography changes.
