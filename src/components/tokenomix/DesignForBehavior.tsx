@@ -1,5 +1,7 @@
 import { Section } from "./Section";
 import { Reveal } from "./Reveal";
+import { BehaviorEngine } from "./BehaviorEngine";
+import { BehaviorEngineMobile } from "./mobile/BehaviorEngineMobile";
 
 const questions = [
   "Which useful action should happen more often?",
@@ -23,8 +25,11 @@ export const DesignForBehavior = () => (
       </p>
     }
     tone="tint"
+    visual={<BehaviorEngine />}
+    mobileVisual={<BehaviorEngineMobile />}
   >
     <div className="mt-16 grid gap-12 lg:mt-20 lg:grid-cols-[1fr_0.85fr] lg:gap-20">
+
       <ol className="space-y-0">
         {questions.map((q, i) => (
           <Reveal
