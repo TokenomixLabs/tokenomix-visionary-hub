@@ -64,7 +64,7 @@ export const EconomicLayers = () => (
                 className="h-8 w-1 rounded-full bg-gradient-value"
                 style={{ opacity: 0.35 + i * 0.15 }}
               />
-              <h3 className="font-display text-base font-medium leading-snug text-foreground md:text-lg">
+              <h3 className="font-display text-base font-medium leading-snug text-balance text-foreground md:text-lg">
                 {layer.name}
               </h3>
             </div>

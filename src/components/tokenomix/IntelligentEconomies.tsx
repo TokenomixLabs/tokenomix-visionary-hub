@@ -61,8 +61,10 @@ export const IntelligentEconomies = () => (
       {territory.map((item, i) => (
         <Reveal
           key={item.title}
-          delay={i * 60}
-          className="group relative bg-background/85 p-7 transition-colors duration-500 hover:bg-surface-raised/70"
+          delay={i * 40}
+          className={`group relative bg-background/85 p-7 transition-colors duration-500 hover:bg-surface-raised/70 ${
+            i === territory.length - 1 ? "sm:col-span-2 lg:col-span-1" : ""
+          }`}
         >
           <div className="flex items-center justify-between">
             <span className="font-mono text-[0.65rem] tracking-[0.2em] text-accent/70">
@@ -70,15 +72,15 @@ export const IntelligentEconomies = () => (
             </span>
             <span aria-hidden="true" className="h-px w-6 bg-border" />
           </div>
-          <h3 className="mt-6 font-display text-lg font-medium leading-snug text-foreground">
+          <h3 className="mt-6 font-display text-lg font-medium leading-snug text-balance text-foreground">
             {item.title}
           </h3>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
         </Reveal>
       ))}
-      <Reveal delay={180} className="bg-gradient-surface p-7 lg:col-span-2">
+      <Reveal delay={160} className="bg-gradient-surface p-7 sm:col-span-2 lg:col-span-2">
         <p className="eyebrow">Position</p>
-        <p className="mt-5 font-display text-lg leading-snug text-foreground">
+        <p className="mt-5 max-w-3xl font-display text-lg leading-snug text-balance text-foreground md:text-xl">
           Open research territory. Described as design work in progress, not as shipped infrastructure.
         </p>
       </Reveal>

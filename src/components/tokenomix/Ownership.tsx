@@ -43,7 +43,7 @@ export const Ownership = () => (
           <span className="font-mono text-[0.65rem] tracking-[0.2em] text-accent/80">
             {String(i + 1).padStart(2, "0")}
           </span>
-          <h3 className="font-display text-lg font-medium leading-snug text-foreground md:text-xl">
+          <h3 className="font-display text-lg font-medium leading-snug text-balance text-foreground md:text-xl">
             {item.q}
           </h3>
           <p className="text-sm leading-relaxed text-muted-foreground">{item.n}</p>

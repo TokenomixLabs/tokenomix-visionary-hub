@@ -20,12 +20,12 @@ export const FinalStatement = () => (
           <p className="eyebrow">Final statement</p>
         </Reveal>
         <Reveal delay={80}>
-          <h2 className="mt-7 font-display text-4xl font-semibold leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-6xl">
+          <h2 className="mt-7 font-display text-4xl font-semibold leading-[1.05] tracking-tight text-balance text-foreground sm:text-5xl md:text-6xl 3xl:text-[4.6rem]">
             Build an economy <span className="text-gradient-value">worth participating in</span>.
           </h2>
         </Reveal>
         <Reveal delay={160}>
-          <p className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+          <p className="mx-auto mt-7 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg 3xl:text-xl">
             If you are designing how value, ownership, incentives and governance should work inside an
             intelligent or decentralized system, start the conversation with the architecture.
           </p>
