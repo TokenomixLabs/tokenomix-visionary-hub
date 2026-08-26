@@ -6,7 +6,7 @@ import { ChapterFooting } from "./ChapterFooting";
 
 const questions = [
   { q: "Who owns the protocol layer?", n: "Ownership of the base rules is rarely the same as ownership of the experience built on top." },
-  { q: "Who owns the community or application layer?", n: "Participation economics can be governed locally without touching network rules." },
+  { q: "Who owns the community or application layer?", n: "Participation economics can be governed locally without touching network rules." },
   { q: "Who can set prices?", n: "Pricing authority is an economic power, and it can sit at more than one layer." },
   { q: "Who can change protocol-level fees?", n: "Fee authority determines who captures value as the system scales." },
   { q: "Who benefits from value creation?", n: "Beneficiaries should be identifiable before launch, not discovered afterwards." },

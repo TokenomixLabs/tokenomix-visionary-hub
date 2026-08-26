@@ -17,7 +17,7 @@ export const DesignForBehavior = () => (
   <Section
     index="06"
     eyebrow="Design for behavior"
-    title="Economies are behavior engines. Design the behavior first."
+    title="Economies are behavior engines. Design the behavior first."
     lead={
       <p>
         A token design that cannot answer these seven questions is a distribution plan, not an economy.

@@ -107,7 +107,7 @@ export const Incentives = () => (
               })}
             </svg>
             <p className="mt-3 font-mono text-[0.65rem] uppercase tracking-[0.18em] text-muted-foreground/70">
-              Where standing accumulates
+              Where standing accumulates
             </p>
 
             <p className="mt-7 font-display text-base leading-relaxed text-foreground">

@@ -15,7 +15,7 @@ export const Method = () => (
   <Section
     index="10"
     eyebrow="Method"
-    title="A design method, not a service menu."
+    title="A design method, not a service menu."
     lead={
       <p>
         This is the sequence the work follows — reasoning, mapping and stress-testing structure rather

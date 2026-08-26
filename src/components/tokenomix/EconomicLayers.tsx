@@ -26,7 +26,7 @@ const layers = [
     authority: "Network-level authority",
   },
   {
-    name: "Treasury, allocation & governance logic",
+    name: "Treasury, allocation & governance logic",
     scope: "Where value is held, how it is deployed, who may decide",
     authority: "Governed, scoped mandate",
   },

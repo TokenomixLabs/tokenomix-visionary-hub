@@ -33,7 +33,7 @@ export const Research = () => (
     id="research"
     index="09"
     eyebrow="Research & frameworks"
-    title="Current research territory, not a client logo wall."
+    title="Current research territory, not a client logo wall."
     lead={
       <p>
         Tokenomix explores these domains through frameworks, architecture writing and collaborative

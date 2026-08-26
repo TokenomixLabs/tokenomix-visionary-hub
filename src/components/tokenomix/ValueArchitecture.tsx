@@ -38,7 +38,7 @@ export const ValueArchitecture = () => (
   <Section
     index="02"
     eyebrow="The value architecture"
-    title="Value follows the paths you design. Everything else is drift."
+    title="Value follows the paths you design. Everything else is drift."
     lead={
       <p>
         An economy is not a funnel — it branches, loops and feeds back. The interesting design
