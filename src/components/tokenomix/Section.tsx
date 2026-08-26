@@ -69,12 +69,18 @@ export const Section = ({
   tier = "standard",
   tone = "base",
 }: SectionProps) => {
-  const textContainer = align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl";
+  /* Reading measure stays disciplined; it grows one small step on ultra-wide
+     canvases so display lines stop stranding single words. */
+  const textContainer =
+    align === "center"
+      ? "mx-auto max-w-3xl 3xl:max-w-[48rem] text-center"
+      : "max-w-3xl 3xl:max-w-[48rem]";
   const leadContainer = leadClassName ?? textContainer;
   /* Semantic level only — visual scale stays identical. */
   const Heading = headingLevel;
 
-  const rhythm = tier === "pillar" ? "py-28 md:py-40" : "py-20 md:py-28";
+  const rhythm =
+    tier === "pillar" ? "py-28 md:py-40 3xl:py-48" : "py-20 md:py-28 3xl:py-36";
   const chapterTone = tone === "tint" ? "border-t border-border/60 bg-surface/30" : "";
 
   const mobileVisualBlock = mobileVisual ? (
