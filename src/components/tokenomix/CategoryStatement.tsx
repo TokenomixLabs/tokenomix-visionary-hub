@@ -55,13 +55,11 @@ export const CategoryStatement = () => (
             </li>
           ))}
         </ol>
-        <ChapterFooting>
-          Most projects design layer one and hope the rest emerges.
-        </ChapterFooting>
       </Reveal>
       <Reveal delay={120}>
         <ValueTopology className="animate-drift" />
       </Reveal>
     </div>
+    <ChapterFooting>Most projects design layer one and hope the rest emerges.</ChapterFooting>
   </Section>
 );
