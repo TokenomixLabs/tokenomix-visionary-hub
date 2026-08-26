@@ -71,7 +71,7 @@ export const ValueArchitecture = () => (
               <h3 className="font-display text-lg font-medium leading-snug text-foreground">
                 {stage.key}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{stage.body}</p>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground 3xl:text-[1.02rem]">{stage.body}</p>
             </div>
             {i < stages.length - 1 && (
               <span

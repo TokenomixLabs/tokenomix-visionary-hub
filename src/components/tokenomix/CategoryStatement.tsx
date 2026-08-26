@@ -50,7 +50,7 @@ export const CategoryStatement = () => (
               </span>
               <div>
                 <h3 className="font-display text-lg font-medium text-foreground">{layer.label}</h3>
-                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{layer.note}</p>
+                <p className="mt-1 text-sm leading-relaxed text-muted-foreground 3xl:text-[1.02rem]">{layer.note}</p>
               </div>
             </li>
           ))}

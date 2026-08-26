@@ -68,7 +68,7 @@ export const Incentives = () => (
 
             <ul className="space-y-4">
               {system.rules.map((rule) => (
-                <li key={rule} className="flex gap-3 text-sm leading-relaxed text-muted-foreground">
+                <li key={rule} className="flex gap-3 text-sm leading-relaxed text-muted-foreground 3xl:text-[1.02rem]">
                   <span
                     aria-hidden="true"
                     className={`mt-[0.45rem] h-1.5 w-1.5 shrink-0 rounded-full ${
@@ -118,7 +118,7 @@ export const Incentives = () => (
       ))}
     </div>
     <Reveal delay={260}>
-      <p className="mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+      <p className="mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground 3xl:text-[1.02rem]">
         Structural illustrations, not forecasts: the design decides which behavior is cheapest, and
         participants find that path quickly.
       </p>

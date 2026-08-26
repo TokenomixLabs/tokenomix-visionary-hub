@@ -56,12 +56,12 @@ export const Research = () => (
             <h3 className="font-display text-xl font-medium leading-snug text-foreground md:text-2xl">
               {theme.domain}
             </h3>
-            <p className="text-sm leading-relaxed text-muted-foreground">{theme.note}</p>
+            <p className="text-sm leading-relaxed text-muted-foreground 3xl:text-[1.02rem]">{theme.note}</p>
           </Reveal>
         ))}
       </div>
       <Reveal delay={480}>
-        <p className="mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground 3xl:text-[1.02rem]">
           Tokenomix has contributed to and published thinking around independent systems and
           communities. Those systems remain independent — nothing here is presented as owned or
           operated by Tokenomix.

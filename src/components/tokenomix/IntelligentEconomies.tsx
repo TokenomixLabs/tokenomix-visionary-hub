@@ -75,7 +75,7 @@ export const IntelligentEconomies = () => (
           <h3 className="mt-6 font-display text-lg font-medium leading-snug text-balance text-foreground">
             {item.title}
           </h3>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground 3xl:text-[1.02rem]">{item.body}</p>
         </Reveal>
       ))}
       <Reveal delay={160} className="bg-gradient-surface p-7 sm:col-span-2 lg:col-span-2">

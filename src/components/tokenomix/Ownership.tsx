@@ -46,7 +46,7 @@ export const Ownership = () => (
           <h3 className="font-display text-lg font-medium leading-snug text-balance text-foreground md:text-xl">
             {item.q}
           </h3>
-          <p className="text-sm leading-relaxed text-muted-foreground">{item.n}</p>
+          <p className="text-sm leading-relaxed text-muted-foreground 3xl:text-[1.02rem]">{item.n}</p>
         </Reveal>
       ))}
     </ol>
