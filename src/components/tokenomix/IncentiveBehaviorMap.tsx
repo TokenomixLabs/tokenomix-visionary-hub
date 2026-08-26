@@ -39,9 +39,9 @@ const Panel = ({
   return (
     <div className="panel bg-gradient-surface p-4">
       <div className="flex items-baseline justify-between">
-        <span className="eyebrow text-[0.6rem]">{label}</span>
+        <span className="eyebrow text-[0.72rem]">{label}</span>
         <span
-          className={`font-mono text-[0.58rem] uppercase tracking-[0.18em] ${
+          className={`font-mono text-[0.75rem] uppercase tracking-[0.18em] ${
             signal ? "text-signal" : "text-muted-foreground"
           }`}
         >

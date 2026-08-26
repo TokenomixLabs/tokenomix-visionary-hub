@@ -29,7 +29,7 @@ const HeroFallback = ({ active }: { active: boolean }) => (
         alt=""
         className="h-8 w-auto opacity-90 md:h-11"
       />
-      <p className="font-mono text-[0.62rem] uppercase tracking-[0.3em] text-muted-foreground md:text-[0.7rem]">
+      <p className="font-mono text-[0.72rem] uppercase tracking-[0.3em] text-muted-foreground md:text-[0.8rem]">
         Value · Ownership · Incentives · Governance
       </p>
     </div>
