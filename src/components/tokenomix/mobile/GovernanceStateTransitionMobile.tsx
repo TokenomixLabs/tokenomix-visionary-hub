@@ -80,8 +80,8 @@ export const GovernanceStateTransitionMobile = ({ className = "" }: { className?
         OVERRIDE
       </text>
 
-      <text x="16" y="382" className="fill-muted-foreground font-mono" fontSize="12.5" letterSpacing="1.6">
-        ONE LEGITIMATE PATH · TWO DEAD ENDS
+      <text x="16" y="368" className="fill-muted-foreground font-mono" fontSize="12" letterSpacing="1.4">
+        ONE LEGITIMATE PATH
       </text>
     </svg>
     <figcaption className="mt-4 diagram-caption">
