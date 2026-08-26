@@ -23,6 +23,7 @@ export const Method = () => (
       </p>
     }
     tone="tint"
+    introClassName="max-w-4xl xl:mx-auto xl:text-center"
   >
     {/* Seven-step rail: a single continuous path, no grid, no empty cell. */}
     <div className="relative mt-16 lg:mt-20">

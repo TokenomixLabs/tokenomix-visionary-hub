@@ -1,6 +1,7 @@
 import { Section } from "./Section";
 import { Reveal } from "./Reveal";
 import { ValueTopology } from "./ValueTopology";
+import { ChapterFooting } from "./ChapterFooting";
 
 const layers = [
   { label: "Supply & allocation", note: "One layer. The one everyone argues about." },
@@ -54,13 +55,11 @@ export const CategoryStatement = () => (
             </li>
           ))}
         </ol>
-        <p className="mt-8 font-display text-xl text-foreground/90">
-          Most projects design layer one and hope the rest emerges.
-        </p>
       </Reveal>
       <Reveal delay={120}>
         <ValueTopology className="animate-drift" />
       </Reveal>
     </div>
+    <ChapterFooting>Most projects design layer one and hope the rest emerges.</ChapterFooting>
   </Section>
 );

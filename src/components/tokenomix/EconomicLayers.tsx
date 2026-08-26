@@ -1,6 +1,8 @@
 import { Section } from "./Section";
 import { Reveal } from "./Reveal";
 import { LayerSeam } from "./LayerSeam";
+import { LayerSeamMobile } from "./mobile/LayerSeamMobile";
+import { ChapterFooting } from "./ChapterFooting";
 
 const layers = [
   {
@@ -41,7 +43,8 @@ export const EconomicLayers = () => (
         anything without changing everything. Coherent systems keep their interfaces explicit.
       </p>
     }
-    visual={<LayerSeam className="mx-auto max-w-[18rem] lg:max-w-none" />}
+    visual={<LayerSeam className="mx-auto max-w-[22rem] lg:max-w-none" />}
+    mobileVisual={<LayerSeamMobile />}
     visualSide="right"
     visualWeight="light"
   >
@@ -72,11 +75,9 @@ export const EconomicLayers = () => (
           </Reveal>
         ))}
       </div>
-      <Reveal delay={440}>
-        <p className="mt-8 max-w-2xl font-display text-xl leading-snug text-foreground">
-          Economic boundaries are not bureaucracy. They are what makes a system survivable.
-        </p>
-      </Reveal>
+      <ChapterFooting delay={440}>
+        Economic boundaries are not bureaucracy. They are what makes a system survivable.
+      </ChapterFooting>
     </div>
   </Section>
 );

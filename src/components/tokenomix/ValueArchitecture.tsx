@@ -83,7 +83,7 @@ export const ValueArchitecture = () => (
         ))}
         <Reveal
           as="li"
-          delay={stages.length * 70}
+          delay={180}
           className="flex min-h-[190px] flex-col justify-end bg-gradient-surface p-6"
         >
           <p className="eyebrow">Feedback loop</p>
