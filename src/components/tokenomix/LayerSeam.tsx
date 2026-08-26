@@ -59,7 +59,7 @@ export const LayerSeam = ({ className = "" }: { className?: string }) => (
         x="40"
         y="252"
         className="fill-muted-foreground font-mono"
-        fontSize="7.5"
+        fontSize="9.5"
         letterSpacing="1.4"
       >
         EXPLICIT INTERFACES · SEPARATE AUTHORITY

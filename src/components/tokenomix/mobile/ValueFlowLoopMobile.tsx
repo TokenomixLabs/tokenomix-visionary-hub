@@ -70,7 +70,7 @@ export const ValueFlowLoopMobile = ({ className = "" }: { className?: string }) 
           x="44"
           y={leakY + 114}
           className="fill-muted-foreground font-mono"
-          fontSize="12"
+          fontSize="13.0"
           letterSpacing="1.6"
         >
           LEAKAGE
@@ -99,7 +99,7 @@ export const ValueFlowLoopMobile = ({ className = "" }: { className?: string }) 
           x={SPINE + 26}
           y={TOP + 5}
           className="fill-foreground font-mono"
-          fontSize="12"
+          fontSize="13.0"
           letterSpacing="1.6"
         >
           PARTICIPATION
@@ -108,7 +108,7 @@ export const ValueFlowLoopMobile = ({ className = "" }: { className?: string }) 
           x={SPINE + 26}
           y={bottom + 5}
           className="fill-foreground font-mono"
-          fontSize="12"
+          fontSize="13.0"
           letterSpacing="1.6"
         >
           REINVESTMENT
@@ -118,7 +118,7 @@ export const ValueFlowLoopMobile = ({ className = "" }: { className?: string }) 
           y={TOP + GAP * 3}
           textAnchor="middle"
           className="fill-muted-foreground font-mono"
-          fontSize="11"
+          fontSize="12.5"
           letterSpacing="1.6"
         >
           RETURN
@@ -128,13 +128,13 @@ export const ValueFlowLoopMobile = ({ className = "" }: { className?: string }) 
           x="18"
           y="376"
           className="fill-muted-foreground font-mono"
-          fontSize="11"
+          fontSize="12.5"
           letterSpacing="1.6"
         >
           SEVEN STAGES · ONE CLOSED CIRCUIT
         </text>
       </svg>
-      <figcaption className="mt-4 font-mono text-[0.68rem] uppercase leading-relaxed tracking-[0.16em] text-muted-foreground">
+      <figcaption className="mt-4 diagram-caption">
         Participation → contribution → attribution → rights → incentive → governance →
         reinvestment. The return arc is the design decision; the branch leaving the boundary is
         value the system never recovers.

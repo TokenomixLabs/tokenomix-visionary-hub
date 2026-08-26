@@ -71,7 +71,7 @@ const Panel = ({
           x="16"
           y="48"
           className="fill-muted-foreground font-mono"
-          fontSize="7.5"
+          fontSize="9.5"
           letterSpacing="1.2"
         >
           CONTRIBUTION
@@ -84,7 +84,7 @@ const Panel = ({
           y="198"
           textAnchor="end"
           className="fill-muted-foreground font-mono"
-          fontSize="7"
+          fontSize="9.0"
           letterSpacing="1.2"
         >
           SUSTAINED PARTICIPATION →
@@ -161,7 +161,7 @@ const Panel = ({
               y="86"
               textAnchor="middle"
               className="fill-muted-foreground font-mono"
-              fontSize="7"
+              fontSize="9.0"
               letterSpacing="1.2"
             >
               RETURNS TO PARTICIPATION
@@ -189,7 +189,7 @@ const Panel = ({
               x="180"
               y="30"
               className="fill-muted-foreground font-mono"
-              fontSize="7"
+              fontSize="9.0"
               letterSpacing="1.2"
             >
               EXIT

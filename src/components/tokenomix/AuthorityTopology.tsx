@@ -49,7 +49,7 @@ export const AuthorityTopology = ({ className = "" }: { className?: string }) =>
             x="28"
             y={layer.y + 26}
             className="fill-foreground font-mono"
-            fontSize="9"
+            fontSize="11.0"
             letterSpacing="1.6"
           >
             {layer.name.toUpperCase()}
@@ -103,7 +103,7 @@ export const AuthorityTopology = ({ className = "" }: { className?: string }) =>
               x={domain.x + 10}
               y={47 + i * 52}
               className="fill-muted-foreground font-mono"
-              fontSize="8"
+              fontSize="10.0"
               letterSpacing="1.2"
             >
               {domain.name.toUpperCase()}
@@ -116,7 +116,7 @@ export const AuthorityTopology = ({ className = "" }: { className?: string }) =>
         x="14"
         y="292"
         className="fill-muted-foreground font-mono"
-        fontSize="7.5"
+        fontSize="9.5"
         letterSpacing="1.4"
       >
         AUTHORITY IS SCOPED PER LAYER
