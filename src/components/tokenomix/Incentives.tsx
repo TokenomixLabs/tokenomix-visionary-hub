@@ -56,7 +56,7 @@ export const Incentives = () => (
             <div className="flex items-baseline justify-between gap-4">
               <span className="eyebrow">{system.name}</span>
               <span
-                className={`font-mono text-[0.65rem] uppercase tracking-[0.2em] ${
+                className={`font-mono text-[0.75rem] uppercase tracking-[0.2em] ${
                   system.tone === "signal" ? "text-signal" : "text-muted-foreground"
                 }`}
               >
@@ -68,7 +68,7 @@ export const Incentives = () => (
 
             <ul className="space-y-4">
               {system.rules.map((rule) => (
-                <li key={rule} className="flex gap-3 text-sm leading-relaxed text-muted-foreground">
+                <li key={rule} className="flex gap-3 text-sm leading-relaxed text-muted-foreground 3xl:text-[1.02rem]">
                   <span
                     aria-hidden="true"
                     className={`mt-[0.45rem] h-1.5 w-1.5 shrink-0 rounded-full ${
@@ -106,8 +106,8 @@ export const Incentives = () => (
                 );
               })}
             </svg>
-            <p className="mt-3 font-mono text-[0.65rem] uppercase tracking-[0.18em] text-muted-foreground/70">
-              Where standing accumulates
+            <p className="mt-3 font-mono text-[0.75rem] uppercase tracking-[0.18em] text-muted-foreground">
+              Where standing accumulates
             </p>
 
             <p className="mt-7 font-display text-base leading-relaxed text-foreground">
@@ -118,7 +118,7 @@ export const Incentives = () => (
       ))}
     </div>
     <Reveal delay={260}>
-      <p className="mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+      <p className="mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground 3xl:text-[1.02rem]">
         Structural illustrations, not forecasts: the design decides which behavior is cheapest, and
         participants find that path quickly.
       </p>

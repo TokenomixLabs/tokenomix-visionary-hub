@@ -6,7 +6,7 @@ import { ChapterFooting } from "./ChapterFooting";
 
 const questions = [
   { q: "Who owns the protocol layer?", n: "Ownership of the base rules is rarely the same as ownership of the experience built on top." },
-  { q: "Who owns the community or application layer?", n: "Participation economics can be governed locally without touching network rules." },
+  { q: "Who owns the community or application layer?", n: "Participation economics can be governed locally without touching network rules." },
   { q: "Who can set prices?", n: "Pricing authority is an economic power, and it can sit at more than one layer." },
   { q: "Who can change protocol-level fees?", n: "Fee authority determines who captures value as the system scales." },
   { q: "Who benefits from value creation?", n: "Beneficiaries should be identifiable before launch, not discovered afterwards." },
@@ -43,10 +43,10 @@ export const Ownership = () => (
           <span className="font-mono text-[0.65rem] tracking-[0.2em] text-accent/80">
             {String(i + 1).padStart(2, "0")}
           </span>
-          <h3 className="font-display text-lg font-medium leading-snug text-foreground md:text-xl">
+          <h3 className="font-display text-lg font-medium leading-snug text-balance text-foreground md:text-xl">
             {item.q}
           </h3>
-          <p className="text-sm leading-relaxed text-muted-foreground">{item.n}</p>
+          <p className="text-sm leading-relaxed text-muted-foreground 3xl:text-[1.02rem]">{item.n}</p>
         </Reveal>
       ))}
     </ol>

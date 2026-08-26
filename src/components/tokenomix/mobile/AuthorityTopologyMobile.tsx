@@ -32,7 +32,7 @@ export const AuthorityTopologyMobile = ({ className = "" }: { className?: string
         y="24"
         textAnchor="middle"
         className="fill-muted-foreground font-mono"
-        fontSize="11"
+        fontSize="12.5"
         letterSpacing="1.6"
       >
         AUTHORITY
@@ -94,17 +94,15 @@ export const AuthorityTopologyMobile = ({ className = "" }: { className?: string
         );
       })}
 
-      <text
-        x="16"
-        y="380"
-        className="fill-muted-foreground font-mono"
-        fontSize="11"
-        letterSpacing="1.6"
-      >
-        FOUR PLATES · FOUR SEPARATE MANDATES
+      {/* Split so the legend stays inside the frame at 390px. */}
+      <text x="16" y="366" className="fill-muted-foreground font-mono" fontSize="12" letterSpacing="1.4">
+        FOUR PLATES
+      </text>
+      <text x="16" y="384" className="fill-muted-foreground font-mono" fontSize="12" letterSpacing="1.4">
+        FOUR SEPARATE MANDATES
       </text>
     </svg>
-    <figcaption className="mt-4 font-mono text-[0.68rem] uppercase leading-relaxed tracking-[0.16em] text-muted-foreground">
+    <figcaption className="mt-4 diagram-caption">
       Each layer carries its own authority — fee policy, settlement, pricing, governance, claims.
       Interoperation across a dashed interface never transfers the mandate.
     </figcaption>

@@ -29,7 +29,7 @@ const HeroFallback = ({ active }: { active: boolean }) => (
         alt=""
         className="h-8 w-auto opacity-90 md:h-11"
       />
-      <p className="font-mono text-[0.62rem] uppercase tracking-[0.3em] text-muted-foreground md:text-[0.7rem]">
+      <p className="font-mono text-[0.72rem] uppercase tracking-[0.3em] text-muted-foreground md:text-[0.8rem]">
         Value · Ownership · Incentives · Governance
       </p>
     </div>
@@ -102,7 +102,9 @@ const VideoPlayer = () => {
 
   return (
     <div className="relative mt-4 w-full overflow-hidden bg-background">
-      <div className="relative h-[clamp(25rem,72svh,34rem)] sm:h-auto sm:aspect-video">
+      {/* Height is capped on every tier: on ultra-wide canvases a raw 16:9 frame
+          would open a ~1450px void whenever the video is slow or blocked. */}
+      <div className="relative h-[clamp(25rem,72svh,34rem)] sm:h-auto sm:aspect-video sm:max-h-[min(82svh,860px)]">
         <HeroFallback active={!ready} />
         <iframe
           ref={iframeRef}

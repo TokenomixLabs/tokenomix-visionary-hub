@@ -63,7 +63,7 @@ export const AgentEconomyNetworkMobile = ({ className = "" }: { className?: stri
         y="30"
         textAnchor="middle"
         className="fill-muted-foreground font-mono"
-        fontSize="11"
+        fontSize="12.5"
         letterSpacing="1.4"
       >
         PERMISSIONS
@@ -73,7 +73,7 @@ export const AgentEconomyNetworkMobile = ({ className = "" }: { className?: stri
         y="30"
         textAnchor="middle"
         className="fill-muted-foreground font-mono"
-        fontSize="11"
+        fontSize="12.5"
         letterSpacing="1.4"
       >
         PARTICIPANTS
@@ -125,7 +125,7 @@ export const AgentEconomyNetworkMobile = ({ className = "" }: { className?: stri
         x="24"
         y="352"
         className="fill-muted-foreground font-mono"
-        fontSize="11"
+        fontSize="12.5"
         letterSpacing="1.4"
       >
         ⋯ ATTRIBUTION TRAIL
@@ -134,13 +134,13 @@ export const AgentEconomyNetworkMobile = ({ className = "" }: { className?: stri
         x="24"
         y="378"
         className="fill-muted-foreground font-mono"
-        fontSize="11"
+        fontSize="12.5"
         letterSpacing="1.4"
       >
         ○ HUMAN   □ AGENT
       </text>
     </svg>
-    <figcaption className="mt-4 font-mono text-[0.68rem] uppercase leading-relaxed tracking-[0.16em] text-muted-foreground">
+    <figcaption className="mt-4 diagram-caption">
       Humans and agents are peers in the topology, not in authority. Spending, signing and
       rule-changing powers stay bounded, while attribution survives mixed contribution.
     </figcaption>

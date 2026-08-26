@@ -26,7 +26,7 @@ export const LayerSeamMobile = ({ className = "" }: { className?: string }) => (
       </defs>
 
       <line x1="272" y1="36" x2="272" y2="402" stroke="hsl(240 22% 24%)" strokeWidth="1.2" />
-      <text x="272" y="24" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="9" letterSpacing="1.4">
+      <text x="272" y="24" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="11.0" letterSpacing="1.4">
         AUTHORITY
       </text>
 
@@ -35,7 +35,7 @@ export const LayerSeamMobile = ({ className = "" }: { className?: string }) => (
         return (
           <g key={layer}>
             <rect x="16" y={y} width="218" height="48" rx="4" fill="url(#lsm-layer)" stroke="hsl(240 22% 26%)" strokeWidth="1.2" />
-            <text x="30" y={y + 29} className="fill-foreground font-mono" fontSize="10" letterSpacing="1.2">
+            <text x="30" y={y + 29} className="fill-foreground font-mono" fontSize="12.0" letterSpacing="1.2">
               {layer}
             </text>
             <line x1="234" y1={y + 24} x2="264" y2={y + 24} stroke="hsl(322 90% 62%)" strokeWidth="1.5" opacity="0.7" />
@@ -50,14 +50,14 @@ export const LayerSeamMobile = ({ className = "" }: { className?: string }) => (
         );
       })}
 
-      <text x="16" y="440" className="fill-muted-foreground font-mono" fontSize="10" letterSpacing="1.2">
+      <text x="16" y="440" className="fill-muted-foreground font-mono" fontSize="12.0" letterSpacing="1.2">
         EXPLICIT INTERFACES
       </text>
-      <text x="16" y="458" className="fill-muted-foreground font-mono" fontSize="10" letterSpacing="1.2">
+      <text x="16" y="458" className="fill-muted-foreground font-mono" fontSize="12.0" letterSpacing="1.2">
         SEPARATE AUTHORITY
       </text>
     </svg>
-    <figcaption className="mt-3 font-mono text-[0.68rem] uppercase leading-relaxed tracking-[0.16em] text-muted-foreground">
+    <figcaption className="mt-3 diagram-caption">
       Value crosses explicit interfaces. Authority remains scoped to its layer.
     </figcaption>
   </figure>

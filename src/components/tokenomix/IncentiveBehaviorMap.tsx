@@ -39,9 +39,9 @@ const Panel = ({
   return (
     <div className="panel bg-gradient-surface p-4">
       <div className="flex items-baseline justify-between">
-        <span className="eyebrow text-[0.6rem]">{label}</span>
+        <span className="eyebrow text-[0.72rem]">{label}</span>
         <span
-          className={`font-mono text-[0.58rem] uppercase tracking-[0.18em] ${
+          className={`font-mono text-[0.75rem] uppercase tracking-[0.18em] ${
             signal ? "text-signal" : "text-muted-foreground"
           }`}
         >
@@ -71,7 +71,7 @@ const Panel = ({
           x="16"
           y="48"
           className="fill-muted-foreground font-mono"
-          fontSize="7.5"
+          fontSize="9.5"
           letterSpacing="1.2"
         >
           CONTRIBUTION
@@ -81,10 +81,10 @@ const Panel = ({
         <line x1="34" y1="186" x2="266" y2="186" stroke="hsl(240 22% 20%)" />
         <text
           x="266"
-          y="198"
+          y="192"
           textAnchor="end"
           className="fill-muted-foreground font-mono"
-          fontSize="7"
+          fontSize="11"
           letterSpacing="1.2"
         >
           SUSTAINED PARTICIPATION →
@@ -161,7 +161,7 @@ const Panel = ({
               y="86"
               textAnchor="middle"
               className="fill-muted-foreground font-mono"
-              fontSize="7"
+              fontSize="9.0"
               letterSpacing="1.2"
             >
               RETURNS TO PARTICIPATION
@@ -189,7 +189,7 @@ const Panel = ({
               x="180"
               y="30"
               className="fill-muted-foreground font-mono"
-              fontSize="7"
+              fontSize="9.0"
               letterSpacing="1.2"
             >
               EXIT

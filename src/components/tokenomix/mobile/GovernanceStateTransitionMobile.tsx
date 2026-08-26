@@ -23,7 +23,7 @@ export const GovernanceStateTransitionMobile = ({ className = "" }: { className?
       <text x="121" y="43" textAnchor="middle" className="fill-foreground font-mono" fontSize="12.5" letterSpacing="1.6">
         STATE n
       </text>
-      <text x="121" y="60" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="11" letterSpacing="1.4">
+      <text x="121" y="60" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="12.5" letterSpacing="1.4">
         v1.4
       </text>
 
@@ -31,7 +31,7 @@ export const GovernanceStateTransitionMobile = ({ className = "" }: { className?
       <text x="121" y="323" textAnchor="middle" className="fill-foreground font-mono" fontSize="12.5" letterSpacing="1.6">
         STATE n+1
       </text>
-      <text x="121" y="340" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="11" letterSpacing="1.4">
+      <text x="121" y="340" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="12.5" letterSpacing="1.4">
         v1.5
       </text>
 
@@ -51,7 +51,7 @@ export const GovernanceStateTransitionMobile = ({ className = "" }: { className?
 
       {/* authority gate */}
       <line x1="40" y1="184" x2="202" y2="184" stroke="hsl(268 86% 70%)" strokeWidth="3.4" opacity="0.6" />
-      <text x="40" y="172" className="fill-foreground font-mono" fontSize="12" letterSpacing="1.6">
+      <text x="40" y="172" className="fill-foreground font-mono" fontSize="13.0" letterSpacing="1.6">
         AUTHORITY GATE
       </text>
 
@@ -63,7 +63,7 @@ export const GovernanceStateTransitionMobile = ({ className = "" }: { className?
         strokeWidth="2"
         strokeDasharray="5 8"
       />
-      <text x="16" y="258" className="fill-muted-foreground font-mono" fontSize="11" letterSpacing="1.4">
+      <text x="16" y="258" className="fill-muted-foreground font-mono" fontSize="12.5" letterSpacing="1.4">
         REJECTED
       </text>
 
@@ -76,15 +76,18 @@ export const GovernanceStateTransitionMobile = ({ className = "" }: { className?
         strokeDasharray="4 9"
         opacity="0.6"
       />
-      <text x="234" y="188" className="fill-muted-foreground font-mono" fontSize="11" letterSpacing="1.4">
+      <text x="234" y="188" className="fill-muted-foreground font-mono" fontSize="12.5" letterSpacing="1.4">
         OVERRIDE
       </text>
 
-      <text x="16" y="382" className="fill-muted-foreground font-mono" fontSize="11" letterSpacing="1.6">
-        ONE LEGITIMATE PATH · TWO DEAD ENDS
+      <text x="16" y="368" className="fill-muted-foreground font-mono" fontSize="12" letterSpacing="1.4">
+        ONE LEGITIMATE PATH
+      </text>
+      <text x="16" y="386" className="fill-muted-foreground font-mono" fontSize="12" letterSpacing="1.4">
+        TWO DEAD ENDS
       </text>
     </svg>
-    <figcaption className="mt-4 font-mono text-[0.68rem] uppercase leading-relaxed tracking-[0.16em] text-muted-foreground">
+    <figcaption className="mt-4 diagram-caption">
       A scoped proposal passes the gate and becomes a versioned rule. Rejection changes nothing.
       An administrative override reaches the new state without legitimacy.
     </figcaption>

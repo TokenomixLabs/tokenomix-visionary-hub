@@ -55,14 +55,26 @@ export const LayerSeam = ({ className = "" }: { className?: string }) => (
         );
       })}
 
+      {/* Two centred lines: a single run clipped the frame at tablet widths. */}
       <text
-        x="40"
-        y="252"
+        x="140"
+        y="240"
+        textAnchor="middle"
         className="fill-muted-foreground font-mono"
-        fontSize="7.5"
-        letterSpacing="1.4"
+        fontSize="11"
+        letterSpacing="1.2"
       >
-        EXPLICIT INTERFACES · SEPARATE AUTHORITY
+        EXPLICIT INTERFACES
+      </text>
+      <text
+        x="140"
+        y="256"
+        textAnchor="middle"
+        className="fill-muted-foreground font-mono"
+        fontSize="11"
+        letterSpacing="1.2"
+      >
+        SEPARATE AUTHORITY
       </text>
     </svg>
   </div>

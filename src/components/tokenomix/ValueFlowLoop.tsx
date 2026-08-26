@@ -115,7 +115,7 @@ export const ValueFlowLoop = ({ className = "" }: { className?: string }) => {
           y={leakFrom.y + 106}
           textAnchor="end"
           className="fill-muted-foreground font-mono"
-          fontSize="8"
+          fontSize="10.0"
           letterSpacing="1.4"
         >
           LEAKAGE
@@ -152,7 +152,7 @@ export const ValueFlowLoop = ({ className = "" }: { className?: string }) => {
                 y={p.y + dy}
                 textAnchor={anchor}
                 className="fill-muted-foreground font-mono"
-                fontSize="8.5"
+                fontSize="10.5"
                 letterSpacing="1.2"
               >
                 {label.toUpperCase()}

@@ -102,7 +102,7 @@ export const BehaviorEngine = ({ className = "" }: { className?: string }) => (
             y={s.y + s.dy}
             textAnchor={s.anchor}
             className="fill-foreground font-mono"
-            fontSize="9"
+            fontSize="11.0"
             letterSpacing="1.4"
           >
             {s.label}
@@ -118,7 +118,7 @@ export const BehaviorEngine = ({ className = "" }: { className?: string }) => (
           y={c.y}
           textAnchor={c.x === X1 - 4 ? "end" : "start"}
           className="fill-muted-foreground font-mono"
-          fontSize="8"
+          fontSize="10.0"
           letterSpacing="1.4"
         >
           {c.label}
@@ -130,13 +130,13 @@ export const BehaviorEngine = ({ className = "" }: { className?: string }) => (
         y={(Y0 + Y1) / 2 + 3}
         textAnchor="middle"
         className="fill-muted-foreground font-mono"
-        fontSize="8"
+        fontSize="10.0"
         letterSpacing="2"
       >
         BEHAVIOR ENGINE
       </text>
     </svg>
-    <figcaption className="mt-5 font-mono text-[0.68rem] uppercase leading-relaxed tracking-[0.16em] text-muted-foreground">
+    <figcaption className="mt-5 diagram-caption">
       Four stages, one circuit. The questions on the left are checkpoints on this loop.
     </figcaption>
   </figure>

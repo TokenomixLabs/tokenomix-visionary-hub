@@ -40,7 +40,7 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
             y="130"
             textAnchor="middle"
             className="fill-foreground font-mono"
-            fontSize="9"
+            fontSize="11.0"
             letterSpacing="1.4"
           >
             {s.label}
@@ -50,7 +50,7 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
             y="146"
             textAnchor="middle"
             className="fill-muted-foreground font-mono"
-            fontSize="8"
+            fontSize="10.0"
             letterSpacing="1.2"
           >
             {s.v}
@@ -74,7 +74,7 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
         y="58"
         textAnchor="middle"
         className="fill-muted-foreground font-mono"
-        fontSize="7.5"
+        fontSize="9.5"
         letterSpacing="1.4"
       >
         AUTHORITY GATE
@@ -99,11 +99,11 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
       />
       <g>
         <circle cx="140" cy="134" r="5" fill="hsl(240 32% 5%)" stroke="hsl(250 92% 72%)" strokeWidth="1.4" />
-        <text x="146" y="116" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="7" letterSpacing="1">
+        <text x="146" y="116" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="9.0" letterSpacing="1">
           SCOPED PROPOSAL
         </text>
         <circle cx="262" cy="134" r="5" fill="hsl(240 32% 5%)" stroke="hsl(322 90% 62%)" strokeWidth="1.4" />
-        <text x="262" y="116" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="7" letterSpacing="1">
+        <text x="262" y="116" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="9.0" letterSpacing="1">
           VERSIONED RULE
         </text>
       </g>
@@ -125,7 +125,7 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
         strokeDasharray="10 160"
         className="animate-leak-out"
       />
-      <text x="192" y="215" className="fill-muted-foreground font-mono" fontSize="7.5" letterSpacing="1.2">
+      <text x="192" y="215" className="fill-muted-foreground font-mono" fontSize="9.5" letterSpacing="1.2">
         REJECTED — NO STATE CHANGE
       </text>
 
@@ -138,7 +138,7 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
         strokeDasharray="3 7"
         opacity="0.55"
       />
-      <text x="210" y="16" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="7.5" letterSpacing="1.2">
+      <text x="210" y="16" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="9.5" letterSpacing="1.2">
         ADMIN OVERRIDE — BYPASSES LEGITIMACY
       </text>
 
@@ -153,7 +153,7 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
               y="270"
               textAnchor="middle"
               className="fill-muted-foreground font-mono"
-              fontSize="7.5"
+              fontSize="9.5"
               stroke="none"
               letterSpacing="1.2"
             >

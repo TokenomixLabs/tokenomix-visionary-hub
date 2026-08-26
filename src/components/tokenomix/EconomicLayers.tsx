@@ -26,7 +26,7 @@ const layers = [
     authority: "Network-level authority",
   },
   {
-    name: "Treasury, allocation & governance logic",
+    name: "Treasury, allocation & governance logic",
     scope: "Where value is held, how it is deployed, who may decide",
     authority: "Governed, scoped mandate",
   },
@@ -64,12 +64,12 @@ export const EconomicLayers = () => (
                 className="h-8 w-1 rounded-full bg-gradient-value"
                 style={{ opacity: 0.35 + i * 0.15 }}
               />
-              <h3 className="font-display text-base font-medium leading-snug text-foreground md:text-lg">
+              <h3 className="font-display text-base font-medium leading-snug text-balance text-foreground md:text-lg">
                 {layer.name}
               </h3>
             </div>
             <p className="text-sm leading-relaxed text-muted-foreground md:pl-0 pl-5">{layer.scope}</p>
-            <p className="pl-5 font-mono text-[0.65rem] uppercase tracking-[0.18em] text-accent/80 md:pl-0 md:text-right">
+            <p className="pl-5 font-mono text-[0.75rem] uppercase tracking-[0.18em] text-accent/90 md:pl-0 md:text-right">
               {layer.authority}
             </p>
           </Reveal>

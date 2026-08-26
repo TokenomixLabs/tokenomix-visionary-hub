@@ -61,7 +61,7 @@ export const BehaviorEngineMobile = ({ className = "" }: { className?: string })
                 x={RAIL + 24}
                 y={y + 5}
                 className="fill-foreground font-mono"
-                fontSize="12"
+                fontSize="13.0"
                 letterSpacing="1.6"
               >
                 {label}
@@ -74,13 +74,13 @@ export const BehaviorEngineMobile = ({ className = "" }: { className?: string })
           x="16"
           y="330"
           className="fill-muted-foreground font-mono"
-          fontSize="11"
+          fontSize="12.5"
           letterSpacing="1.6"
         >
           FOUR STAGES · ONE CIRCUIT
         </text>
       </svg>
-      <figcaption className="mt-4 font-mono text-[0.68rem] uppercase leading-relaxed tracking-[0.16em] text-muted-foreground">
+      <figcaption className="mt-4 diagram-caption">
         The return arc is where design happens. The questions below are checkpoints on this loop.
       </figcaption>
     </figure>
