@@ -102,7 +102,9 @@ const VideoPlayer = () => {
 
   return (
     <div className="relative mt-4 w-full overflow-hidden bg-background">
-      <div className="relative h-[clamp(25rem,72svh,34rem)] sm:h-auto sm:aspect-video">
+      {/* Height is capped on every tier: on ultra-wide canvases a raw 16:9 frame
+          would open a ~1450px void whenever the video is slow or blocked. */}
+      <div className="relative h-[clamp(25rem,72svh,34rem)] sm:h-auto sm:aspect-video sm:max-h-[min(82svh,860px)]">
         <HeroFallback active={!ready} />
         <iframe
           ref={iframeRef}
