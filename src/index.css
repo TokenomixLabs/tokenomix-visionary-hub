@@ -76,8 +76,19 @@
 }
 
 @layer components {
+  /* True micro-eyebrow: a label, never a sentence. Intentionally small. */
   .eyebrow {
     @apply font-mono text-[0.68rem] uppercase tracking-[0.28em] text-muted-foreground;
+  }
+
+  /* Real explanatory content next to a diagram — held at a readable floor and
+     stepped up again on wide desktops so it never reads as ghost text. */
+  .diagram-caption {
+    @apply font-mono text-[0.75rem] uppercase leading-relaxed tracking-[0.16em] text-muted-foreground 3xl:text-[0.83rem];
+  }
+
+  .legend-note {
+    @apply font-mono text-xs uppercase leading-relaxed tracking-[0.18em] text-muted-foreground 3xl:text-[0.8rem];
   }
 
   .rule-gradient {
