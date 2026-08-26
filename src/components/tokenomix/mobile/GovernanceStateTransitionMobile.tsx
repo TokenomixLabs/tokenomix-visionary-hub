@@ -83,6 +83,9 @@ export const GovernanceStateTransitionMobile = ({ className = "" }: { className?
       <text x="16" y="368" className="fill-muted-foreground font-mono" fontSize="12" letterSpacing="1.4">
         ONE LEGITIMATE PATH
       </text>
+      <text x="16" y="386" className="fill-muted-foreground font-mono" fontSize="12" letterSpacing="1.4">
+        TWO DEAD ENDS
+      </text>
     </svg>
     <figcaption className="mt-4 diagram-caption">
       A scoped proposal passes the gate and becomes a versioned rule. Rejection changes nothing.
