@@ -2,6 +2,7 @@ import { Section } from "./Section";
 import { Reveal } from "./Reveal";
 import { AuthorityTopology } from "./AuthorityTopology";
 import { AuthorityTopologyMobile } from "./mobile/AuthorityTopologyMobile";
+import { ChapterFooting } from "./ChapterFooting";
 
 const questions = [
   { q: "Who owns the protocol layer?", n: "Ownership of the base rules is rarely the same as ownership of the experience built on top." },
@@ -49,10 +50,6 @@ export const Ownership = () => (
         </Reveal>
       ))}
     </ol>
-    <Reveal delay={420}>
-      <p className="mt-8 max-w-2xl font-display text-lg leading-snug text-foreground">
-        Strong economies draw their boundaries in public.
-      </p>
-    </Reveal>
+    <ChapterFooting delay={420}>Strong economies draw their boundaries in public.</ChapterFooting>
   </Section>
 );

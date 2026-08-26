@@ -76,7 +76,7 @@ export const IntelligentEconomies = () => (
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
         </Reveal>
       ))}
-      <Reveal delay={440} className="bg-gradient-surface p-7">
+      <Reveal delay={180} className="bg-gradient-surface p-7 lg:col-span-2">
         <p className="eyebrow">Position</p>
         <p className="mt-5 font-display text-lg leading-snug text-foreground">
           Open research territory. Described as design work in progress, not as shipped infrastructure.

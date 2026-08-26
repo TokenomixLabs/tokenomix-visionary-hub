@@ -101,8 +101,8 @@ const VideoPlayer = () => {
   }, [isMuted]);
 
   return (
-    <div className="relative w-full overflow-hidden bg-background mt-4">
-      <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+    <div className="relative mt-4 w-full overflow-hidden bg-background">
+      <div className="relative h-[clamp(25rem,72svh,34rem)] sm:h-auto sm:aspect-video">
         <HeroFallback active={!ready} />
         <iframe
           ref={iframeRef}
@@ -126,7 +126,7 @@ const VideoPlayer = () => {
         variant="ghost"
         size="icon"
         onClick={toggleMute}
-        className="absolute z-[9999] bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full w-14 h-14 flex items-center justify-center bottom-8 right-8 border-2 border-white/30"
+        className="absolute bottom-6 right-6 z-[9999] flex h-12 w-12 items-center justify-center rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 sm:bottom-8 sm:right-8 sm:h-14 sm:w-14"
         aria-label={isMuted ? "Unmute video" : "Mute video"}
       >
         {isMuted ? <VolumeX size={28} className="text-white" /> : <Volume2 size={28} className="text-white" />}

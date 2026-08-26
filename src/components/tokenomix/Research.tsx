@@ -40,6 +40,7 @@ export const Research = () => (
         work — the questions that shape how value, ownership and governance get designed.
       </p>
     }
+    introClassName="max-w-4xl xl:mx-auto xl:text-center"
   >
     <div className="mt-16 lg:mt-20">
       <div className="border-t border-border/70">

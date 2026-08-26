@@ -2,6 +2,7 @@ import { Section } from "./Section";
 import { Reveal } from "./Reveal";
 import { GovernanceStateTransition } from "./GovernanceStateTransition";
 import { GovernanceStateTransitionMobile } from "./mobile/GovernanceStateTransitionMobile";
+import { ChapterFooting } from "./ChapterFooting";
 
 const steps = [
   { marker: "STATE n", label: "Current rule state", detail: "The economy as it operates today, legible to participants." },
@@ -101,11 +102,9 @@ export const Governance = () => (
           </Reveal>
         ))}
       </div>
-      <Reveal delay={360}>
-        <p className="mt-8 max-w-2xl font-display text-lg leading-snug text-foreground">
-          No model is correct everywhere. What matters is that the tradeoff was chosen, not inherited.
-        </p>
-      </Reveal>
+      <ChapterFooting delay={360}>
+        No model is correct everywhere. What matters is that the tradeoff was chosen, not inherited.
+      </ChapterFooting>
     </div>
   </Section>
 );
