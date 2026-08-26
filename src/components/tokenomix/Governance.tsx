@@ -55,7 +55,7 @@ export const Governance = () => (
               className="absolute left-0 top-0 hidden h-2 w-px bg-border md:block"
             />
             <span
-              className={`font-mono text-[0.65rem] tracking-[0.2em] ${
+              className={`font-mono text-[0.75rem] tracking-[0.2em] ${
                 i === steps.length - 1 ? "text-signal" : "text-accent/80"
               }`}
             >

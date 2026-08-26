@@ -69,7 +69,7 @@ export const EconomicLayers = () => (
               </h3>
             </div>
             <p className="text-sm leading-relaxed text-muted-foreground md:pl-0 pl-5">{layer.scope}</p>
-            <p className="pl-5 font-mono text-[0.65rem] uppercase tracking-[0.18em] text-accent/80 md:pl-0 md:text-right">
+            <p className="pl-5 font-mono text-[0.75rem] uppercase tracking-[0.18em] text-accent/90 md:pl-0 md:text-right">
               {layer.authority}
             </p>
           </Reveal>

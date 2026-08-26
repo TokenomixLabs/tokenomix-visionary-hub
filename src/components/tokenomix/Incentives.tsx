@@ -56,7 +56,7 @@ export const Incentives = () => (
             <div className="flex items-baseline justify-between gap-4">
               <span className="eyebrow">{system.name}</span>
               <span
-                className={`font-mono text-[0.65rem] uppercase tracking-[0.2em] ${
+                className={`font-mono text-[0.75rem] uppercase tracking-[0.2em] ${
                   system.tone === "signal" ? "text-signal" : "text-muted-foreground"
                 }`}
               >
@@ -106,7 +106,7 @@ export const Incentives = () => (
                 );
               })}
             </svg>
-            <p className="mt-3 font-mono text-[0.65rem] uppercase tracking-[0.18em] text-muted-foreground/70">
+            <p className="mt-3 font-mono text-[0.75rem] uppercase tracking-[0.18em] text-muted-foreground">
               Where standing accumulates
             </p>
 
