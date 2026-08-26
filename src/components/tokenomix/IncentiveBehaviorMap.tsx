@@ -81,10 +81,10 @@ const Panel = ({
         <line x1="34" y1="186" x2="266" y2="186" stroke="hsl(240 22% 20%)" />
         <text
           x="266"
-          y="198"
+          y="192"
           textAnchor="end"
           className="fill-muted-foreground font-mono"
-          fontSize="9.0"
+          fontSize="11"
           letterSpacing="1.2"
         >
           SUSTAINED PARTICIPATION →
