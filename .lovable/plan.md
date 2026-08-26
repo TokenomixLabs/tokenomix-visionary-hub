@@ -1,124 +1,59 @@
-# Tokenomix — Portfolio Art-Direction Release Audit
+# Independent Post-Correction Re-Proof — Tokenomix
 
-Read-only. No code changed. All prior GREEN verdicts revoked. Evidence: settled-state captures and computed measurements at 2560 / 2048 / 1920 / 1800 / 1700 / 1440 / 1280 / 1024 / 768 / 390.
+Read-only certification of current main, measured live at 2560 / 2048 / 1920 / 1800 / 1700 / 1440 / 1280 / 1024 / 768 / 390. Nothing in the previous pass was inherited; every gate was re-measured or re-viewed.
 
-## FINAL ART-DIRECTION VERDICT: NOT READY
+## Verdict
 
-Counts:
-- Headline widows/orphans: **7 distinct** (5 H2, 2 H3), the worst present at every width from 1024 up.
-- Under-composed / dead-space sections: **6**.
-- Sections that genuinely merit a new motion or system graphic: **3**.
+**GREEN WITH MINOR — with one MATERIAL cluster to clear first (diagram label overrun + ultra-wide headline leading).**
 
-Measured hard facts behind the verdict:
-- The layout container is capped at **1320px**. At 2560 that is 52% of canvas with **620px of black on each side**; at 2048, 355px per side.
-- Section headlines are frozen at **41.6px from 1024px all the way to 2560px**. Type never scales with the canvas. Only the first statement (67.2px) and the closer (60px) step up.
-- Page silhouette is one repeated device: intro + companion diagram, then a full-width ruled ledger. That pattern repeats in sections 01, 04, 05, 06, 07, 08, 09, 10.
+Counts: widows/orphans **1** (768/390 chapter footing), under-composed fields **4**, new regressions traceable to the fixes **3**, blockers **0**, overflow **0** at all ten widths.
 
----
+## Former gates — re-proved
+
+| Gate | Result |
+| --- | --- |
+| Ultra-wide shell / type scale | CLEAR. Container 1320 → 1520 (1700) → 1760 (2048+). H1 67.2 → 80 → 86.4px, H2 41.6 → 53.6 → 57.6px. No frozen type at 2560. |
+| Intelligent Economies grid | CLEAR. Seven cards + Position panel, zero empty bordered cells at 2560/1440/768/390. |
+| Reveal reliability | CLEAR. After a full scroll pass, 0 elements left at opacity 0 with height > 20px at every width; no half-painted tables or rails observed. |
+| Former widows (`wall.` `first.` `drift.` `human-only.` `in.`) | CLEAR. All resolve on-line; Final Statement reads "worth participating in." intact. |
+| Companion diagrams 04 / 05 / 07 | Present and legible in role; 04's plate labels are the defect below. |
+| Behavior Ledger (06) | CLEAR and genuinely semantic — stage names (Useful Action → Contribution → Incentive → Response) map Q1–Q7 onto the engine circuit, with a "left unanswered" consequence line. Not filler. |
+| Method Accumulating Structure (10) | CLEAR as a climax: the frame closes on a completed system boundary with a stated outcome line. |
+| Hero fallback cap | CLEAR. No void; video composition untouched. |
+| Final Statement emptiness / approved silhouettes | CLEAR, preserved. |
+| Horizontal overflow | CLEAR (0px) at all ten widths. |
 
 ## Defect board
 
-### D1 — Global / whole page, 2560 and 2048
-**Defect:** Content locked to 1320px inside a 2560 canvas with no ultra-wide tier; nav lockup also confined, so the logo sits ~620px in from the left edge and the nav ends ~620px short of the right.
-**Severity: BLOCKER.**
-**Why a human reads it as unfinished:** it looks like a 1400px site being viewed zoomed-out, not a composition made for the screen. The eye finds two enormous empty vertical bands framing everything, and the black is not doing anything — no rule, no index, no counterweight.
-**Smallest safe repair:** add an ultra-wide container tier (e.g. 1440 at ≥1700, 1600 at ≥2048) plus one ultra-wide type step so section H2 reaches ~52–56px at ≥1920. Optionally anchor the left band with a thin persistent chapter index rail (`01 … 11`) so the outer field becomes deliberate structure rather than leftover.
-**Present at:** 2048 yes, 1920 yes (milder), 1700 yes (mild), tablet/mobile no.
+**D1 — Ownership (04) authority-topology plate labels overrun their plates. 768, 1440, 1920, 2560. MATERIAL.**
+`MARKETPLACE / SERVICES`, `APPLICATION / COMMUNITY` and `PARTICIPANT / CONTRIBUTOR` extend past the right edge of the rounded plate they sit in, so the type appears to burst the box and collide with the connector stubs. A human reads this as a broken diagram, not a designed one. Smallest repair: widen the plate rects (or shorten to `MARKETPLACE`, `APPLICATION`, `PARTICIPANT` with the qualifier as a second smaller line) so every label sits inside its plate with padding.
 
-### D2 — Section 07 Intelligent Economies, seven-card grid
-**Defect:** Seven cards in a three-column tinted grid leave a **two-cell empty tinted rectangle** in the final row, with visible borders, so it reads as content that failed to load.
-**Severity: MATERIAL.**
-**Why:** a bordered, tinted, empty cell is the single most legible "missing content" signal on a page. Human viewers do not read it as whitespace.
-**Smallest safe repair:** make card 07 span the remaining two columns (mirror of the existing Position panel treatment), or move one card into the intro column to land a 3+3 grid.
-**Present at:** 2048 yes, 1920 yes, 1700 yes, 1440/1280 yes, tablet/mobile no (single column).
+**D2 — Ultra-wide headline leading collision. 2048, 2560. MATERIAL.**
+At 57.6px H2 with `leading-[1.1]`, descenders touch the following cap line — clearest on "Ownership is a system / rule, not a footnote." (the `y` of "system" grazes "rule"). Smallest repair: relax leading one step at `3xl`/`4xl` (e.g. `3xl:leading-[1.14]`).
 
-### D3 — Section 06 Design for Behavior, lower right field
-**Defect:** After the four-node engine diagram and its caption end (~y700), the question rail occupies only the left half. The result is a roughly **1200 x 600 completely empty field** in the lower right at ≥1440, growing to ~1600 wide at 2560.
-**Severity: MATERIAL.**
-**Why:** the section's own thesis is that an economy is a running engine, and the largest area of the frame is blank. It reads as a graphic that was planned and never delivered.
-**Smallest safe repair / graphic warranted — yes:**
-- Concept: **Behavior Ledger** — the seven questions on the left become live checkpoints on the existing engine circuit. A single value packet travels the loop USEFUL ACTION → CONTRIBUTION → INCENTIVE → RESPONSE; as the packet passes each stage, the matching question row on the left illuminates and a short consequence line writes itself into the right field ("unrewarded → behavior stops", "over-rewarded → abuse becomes profitable").
-- What moves: the packet, the stage highlight, the question-row emphasis, and a one-line consequence readout.
-- What it communicates: incentives are a circuit with checkpoints, and each unanswered question is a specific failure mode.
-- Register: **scroll-linked** (packet position mapped to section progress), with an ambient idle loop when the section is parked. No hover dependency.
-**Present at:** 2048 yes, 1920 yes, 1700 yes, mobile no (stacks).
+**D3 — Explanatory SVG labels below the legibility floor. MATERIAL (worst at 1440 and 768).**
+The 12px floor was applied to HTML captions but not to in-SVG labels, which scale with the diagram: Incentive/Behavior map renders `CONTRIBUTION` at 8.8px and `EXIT` at 8.4px at 1440; the 7-stage value topology renders its stage ring at 8.1–8.5px at 768. These read as ghost text. Smallest repair: raise those `fontSize` values so the rendered size (fontSize × svg scale) stays ≥ 11.5px at the narrowest rendered width.
 
-### D4 — Reveal states settling half-finished inside bordered panels
-**Defect:** In section 05 Economic Layers the five-row layer table sits in a bordered panel; at settled capture only three rows were painted, leaving ~200px of empty ruled panel. Section 10 Method shows the same: items 06–07 unpainted with the vertical rail continuing ~450px into nothing. Stagger delays reach ~490ms on top of a 700ms transition.
-**Severity: MATERIAL.**
-**Why:** unlike free-flowing text, a bordered container or a rail that runs past its last item makes the gap look like a load failure rather than an animation in progress.
-**Smallest safe repair:** cap the per-item stagger (~40ms, max ~200ms total), shorten the transition to ~450ms, and trigger the observer earlier (rootMargin ~15% below the fold) so rails and panels are complete before they are centred. Rails should be sized to painted items.
-**Present at:** 2048 yes, 1920 yes, 1700 yes, tablet/mobile yes.
+**D4 — Design for Behavior (06): new empty field under the question list. 1440–2560. MATERIAL (regression from the fix).**
+The Behavior Ledger column is far taller than the seven questions, leaving roughly 600px of dead left column below Q7 before the out-of-scope band. The fix cured the right void and created a left one. Smallest repair: let the questions column carry the out-of-scope band's first cell, or cap the ledger's height / drop the sticky offset so the two columns end within ~120px of each other.
 
-### D5 — Headline widows and orphans
-**Defect (7 distinct):**
-1. "Current research territory, not a client logo wall." → **"wall."** alone, centred, last line 10% of measure. Present 2560 → 1024.
-2. "Economies are behavior engines. Design the behavior first." → **"first."** alone. Present 2560 → 1024.
-3. "Value follows the paths you design. Everything else is drift." → **"drift."** alone at 1280.
-4. "When machines participate, economics stops being human-only." → **"human-only."** alone at 1024 and 390.
-5. "A design method, not a service menu." → orphan at 768.
-6. "Build an economy worth participating in." → **"in."** alone at 390.
-7. H3 orphans: "Who owns the community or application layer?" (1024) and "Treasury, allocation & governance logic" (390).
-**Severity: MATERIAL** (1 and 2 are centred, which makes the stranded word unmissable).
-**Why:** a single word alone under a centred display line is the classic "nobody art-directed this" tell.
-**Smallest safe repair:** `text-wrap: balance` on section headings plus non-breaking joins on the specific two-word tails; tune headline max-width per breakpoint rather than one global measure.
-**Present at:** 2048 yes (2), 1920 yes (2), 1700 yes (2), tablet 1, mobile 3.
+**D5 — Ownership (04) and Intelligent Economies (07) intro rows under-composed at 2560. MINOR.**
+Left text column ends ~250px above the diagram's baseline and the diagram's own column has ~200px of trailing air, so the row reads bottom-light. Smallest repair: add the chapter footing line or the diagram legend into the short column at `4xl`.
 
-### D6 — Companion diagrams top-anchored, leaving lower-right voids
-**Defect:** In sections 04, 05, 07 the diagram occupies only the upper portion of its column and sits left inside it, leaving 400–600px of empty canvas to its right and below before the ledger starts. Intro-to-ledger gaps measure ~140–200px at ≥1920.
-**Severity: MINOR.**
-**Why:** the diagram feels dropped in rather than composed against the text block; the void is not cinematic because a hard ruled ledger begins immediately underneath.
-**Smallest safe repair:** let diagrams fill their column width at ≥1700, and tighten the intro-to-ledger gap by ~30%.
-**Present at:** 2048 yes, 1920 yes, 1700 yes, mobile no.
+**D6 — Chapter footing widow. 768 and 390. MINOR.**
+"Strong economies draw their boundaries in / public." leaves a one-word last line. Smallest repair: non-breaking space between "in" and "public."
 
-### D7 — Microcopy too small for the canvas
-**Defect:** 17 elements below 12.5px carry real content. Worst: SVG legends and captions at **10.4px / 10.88px** ("Where standing accumulates", "Participation → contribution → attribution →"), muted-foreground on near-black, unchanged at 2560.
-**Severity: MINOR** (accessibility-adjacent).
-**Why:** at a 27" viewing distance the diagram legends — the part that makes each graphic legible — become grey texture.
-**Smallest safe repair:** floor diagram legends at 12px and step to 13–14px at ≥1700; lift caption colour one step.
-**Present at:** 2048 yes, 1920 yes, 1700 yes, mobile yes (9.92px hero tagline).
+**D7 — Method (10) structure labels crowd. 1440. MINOR.**
+`STRESS` sits between `VALIDATOR` and `TREASURY` with ~2px clearance, and the `OWNERSHIP` dashed frame runs under the `BUILDER` label. No clipping, but it reads as accidental. Smallest repair: nudge `STRESS` up-left and inset the ownership frame.
 
-### D8 — Sections 09 Research and 10 Method have no visual voice
-**Defect:** Both are centred head plus a plain ruled list, zero graphic, and both trail ~200–450px of empty canvas. Section 10 is the page's method climax and is visually the flattest thing on the page.
-**Severity: MINOR to MATERIAL** (weak climax before the closer).
-**Graphic warranted — yes, for 10 only:**
-- Concept: **Accumulating Structure** — as the seven method steps reveal, a small companion diagram assembles one element per step: actors appear as nodes, value flows draw as edges, rights render as boundary boxes, failure tests flash stress on the weakest edge, governance closes the loop, evolution scales the whole graph down and redraws it at 10x density.
-- What moves: one construction event per step, then a single scale-and-redraw at the final step.
-- What it communicates: the method is cumulative — the artefact is a finished system, not a checklist.
-- Register: **scroll-linked**, one-directional, holds its final state.
-- Section 09 should stay list-only; a graphic there would compete with the closer.
-**Present at:** all widths.
+**D8 — Research (09) detail column reads as ghost text. 1440–2560. MINOR.**
+13px muted descriptions sit ~300px right of their 24px titles; the pairing loses its bond and the small type looks faded. Smallest repair: raise the detail size one step at `3xl` and tighten the column gap.
 
-### D9 — Hero, mobile and ultra-wide
-**Defect:** In this sandbox Vimeo is network-blocked, so the branded fallback is what renders: at 2560 it is a **1456px-tall** near-black field with a centred logo lockup. Mobile is clamped to 560px and reads correctly.
-**Severity: MINOR / UNVERIFIED.**
-**Why:** at 2560 the fallback alone is a very long empty entrance; with video playing it is intentional and cinematic. Cannot be proven here.
-**Repair:** none in code. Cap fallback height at ~820px so a video failure never produces a 1456px void, and smoke-test playback plus one-tap unmute on the published domain.
-**Present at:** 2048/1920 yes (1168 / 1096px), mobile no.
+**D9 — Page length at small widths. 390 (24,194px) and 768 (21,226px). MINOR.**
+Roughly 62 phone screens end-to-end. Nothing is broken, but the mobile rhythm is long. Smallest repair: reduce the standard mobile section rhythm one step (`py-20` → `py-16` below `md`).
 
-### CLEAR — genuinely intentional emptiness, leave alone
-- **Section 11 Final Statement:** centred lockup, single gradient CTA, wide dark surround. This reads as a deliberate cinematic close at every width, 2560 included. Do not fill it.
-- **Section 01 headline block:** the 67.2px two-line statement with gradient second line is the strongest frame on the page.
-- **Footer:** correctly proportioned, disclaimer legible, truth-gating language ("Inquiry channel") honest and not misleading.
-- **Diagram silhouettes** (value topology, authority topology, layer seam, agent network, behavior engine): ownable, non-clichéd, on-brand. Keep as designed.
+**Checked and clear:** no duplicate/repetitive engine visuals (the ledger and the engine share vocabulary but not silhouette), no Behavior Ledger or Accumulating Structure label clipping at 768/390 (0 out-of-frame SVG labels at every width), no generic decorative animation added, no new grid-span awkwardness, no overflow, no console errors originating in app code (only Vimeo permissions-policy notices and one 401 from the Vimeo embed).
 
----
+## If you approve
 
-## Proposed fix pass (for approval, in priority order)
-
-1. Ultra-wide tier: container steps at ≥1700 / ≥2048, plus one headline size step at ≥1920 (D1).
-2. Close the seven-card hole in Intelligent Economies (D2).
-3. Reveal timing and rail sizing so no bordered panel or rail ever settles half-painted (D4).
-4. Headline balancing and per-breakpoint measures to clear all 7 widows (D5).
-5. Diagram column fill and gap tightening; legend type floor and contrast lift (D6, D7).
-6. Behavior Ledger scroll-linked graphic for section 06 (D3).
-7. Accumulating Structure scroll-linked graphic for section 10 (D8).
-8. Cap hero fallback height (D9).
-
-No copy, logo, hero asset, palette, typeface or diagram silhouette changes are proposed.
-
-### Technical notes
-- Container cap lives in `tailwind.config.ts` (`container`); heading scale lives in `Section.tsx`.
-- Reveal stagger and duration live in `src/components/tokenomix/Reveal.tsx` plus the per-item `delay={i * 60|70}` call sites.
-- Seven-card grid is `IntelligentEconomies.tsx`; behavior field is `DesignForBehavior.tsx` + `BehaviorEngine.tsx`; method rail is `Method.tsx`.
-- New graphics follow the existing pattern: desktop SVG component plus a portrait `mobile/` variant wired through `Section`'s `visual` / `mobileVisual` props.
+I will fix D1–D4 first (the MATERIAL cluster), then D6–D8, and re-prove the same ten widths. D5 and D9 are judgment calls — say the word if you want them in or out.
