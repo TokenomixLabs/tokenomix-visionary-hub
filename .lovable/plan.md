@@ -1,52 +1,71 @@
-# Tokenomix — Full-Page Visual Release Audit (read-only, re-run from scratch)
+# Tokenomix — Production Readiness Census (read-only audit)
 
-Fresh captures of the rendered homepage at 1700 / 1440 / 1280 / 1024 / 768 / 390, full top-to-bottom sequence, reveals pre-triggered then re-captured settled, plus measured hero geometry. Previous verdicts disregarded. No code changed.
+No code changed. Visual branch, logo, hero video (Vimeo 1047625994), diagrams and copy untouched.
 
-## OVERALL VERDICT: GREEN WITH FIXES
+## Deployed-domain state (measured, not inferred)
 
-Blockers: 0. Material: 4. Minor: 5. The page reads as a finished editorial system — chapter numbering, tone alternation, diagram vocabulary and truthfulness copy all hold, and there is zero horizontal overflow at every width. Four material defects are localized geometry, not design direction.
+- `https://tokenomix.io/` → 301 → `https://www.tokenomix.io/` (WWW canonical mapping works).
+- `https://www.tokenomix.io/` → 200, served by **Netlify** (`server: Netlify`, `x-nf-request-id`).
+- Live `<title>` is already `Tokenomix — Value Architecture for Intelligent Systems`, i.e. the **current approved site is deployed** — not an older consulting site. But the live page's `og:url` still reads `https://tokenomix-visionary-hub.lovable.app/`, confirming deployment parity with the current source (including its defects).
+- `/og-image.png` 200 image/png, `/robots.txt` 200, `/sitemap.xml` 200, brand logo PNG 200.
+- `/nonexistent-route` → 200 HTML (SPA fallback active, as configured).
 
-## BLOCKER
+## Census
 
-None. No section fails to render, no chapter is unreadable, no width breaks layout.
+| Item | State | Evidence |
+|---|---|---|
+| `<title>` (67 chars, on-brand) | READY | index.html:6 |
+| Meta description (200 chars — over the ~160 useful limit, will truncate in SERPs) | WRONG | index.html:7 |
+| `meta author` | READY | index.html:8 |
+| Canonical | WRONG — points at `tokenomix-visionary-hub.lovable.app` instead of `https://www.tokenomix.io/` | index.html:10 |
+| `og:title` / `og:description` / `og:type` / `og:site_name` | READY | index.html:12-15 |
+| `og:url` | WRONG — lovable.app host | index.html:16 |
+| `og:image` / `twitter:image` | WRONG host (asset itself exists and is valid) | index.html:17,21 |
+| OG image asset suitability | READY — 1200x629 PNG, 228 KB (1px under the 630 ideal, harmless) | public/og-image.png |
+| `twitter:card` / title / description | READY | index.html:18-20 |
+| Favicon (PNG) | READY but suboptimal — logo is a 500x75 wordmark, so it renders as an illegible sliver in a square tab icon | index.html:23, public/lovable-uploads/42221e45… |
+| `favicon.ico` | UNREFERENCED — file exists in `public/` but no `<link>` uses it | public/favicon.ico |
+| `apple-touch-icon` | MISSING | index.html |
+| `manifest.webmanifest` | MISSING | — |
+| `theme-color` | MISSING | index.html |
+| JSON-LD / schema | MISSING — no Organization or WebSite schema | index.html |
+| robots.txt | WRONG — `Sitemap:` line points at the lovable.app host | public/robots.txt:4 |
+| sitemap.xml | WRONG — `<loc>` is the lovable.app host; also no `<lastmod>` | public/sitemap.xml:4 |
+| Hardcoded lovable.app/preview/localhost | WRONG — 4 in index.html, 1 in robots.txt, 1 in sitemap.xml. No `localhost` or `id-preview` hardcodes anywhere in `src/` | see above |
+| `lovable-uploads/*` image paths in components | READY — these are real files in `public/`, served 200 on the live domain; not a preview dependency | HeroNavigation.tsx:36, HeroVideo.tsx:28, Footer.tsx:17 |
+| `cdn.gpteng.co/gptengineer.js` script tag in production HTML | WRONG for a production build — third-party editor script, extra request and external dependency on the public site | index.html:31 |
+| Stale legacy consulting wording | READY — no "consulting/advisory/strategy" legacy copy remains; only the intentional "not a pie chart" line | CategoryStatement.tsx:24 |
+| Build/hosting config | READY — `netlify.toml` build `npm run build`, publish `dist`, Node 18.19.0 | netlify.toml |
+| SPA routing | READY — `/*` → `/index.html` 200, verified live | netlify.toml:10-13 |
+| Publish directory | READY — `dist` matches Vite default | netlify.toml:6 |
+| Router surface | READY — single `/` route, no 404 route needed but also none defined | src/App.tsx |
+| Security/cache headers (HSTS, X-Frame-Options, long-cache for hashed assets) | MISSING | netlify.toml |
+| Video/embed production concerns | UNVERIFIED — Vimeo is blocked from this sandbox, so playback, fade-over-fallback and one-tap unmute can only be confirmed on the live domain (desktop + iOS Safari) | HeroVideo.tsx |
+| `NPM_FLAGS = "--legacy-peer-deps"` | UNVERIFIED — masks peer-dep conflicts; harmless today, worth revisiting | netlify.toml:3 |
 
-## MATERIAL (4)
+## Smallest safe fix set (code-fixable, no visual change)
 
-**M1 — Economic Layers (05): diagram fails at tablet and is absent on phone.**
-At 768 the desktop `LayerSeam` runs at roughly half its intended measure and its footing label truncates mid-word ("SEPARATE AUTHORI"). At 390 the section has no visual at all — headline, lead, then straight into the layer table. Why it matters: this is the only chapter in the page whose argument loses its diagram entirely on phones, so the "explicit interfaces / separate authority" idea exists only as words while every neighbouring chapter shows it. Clipped type also reads as a build defect.
-Smallest safe fix concept: add a portrait mobile variant for the layer seam and let the tablet range use it instead of the shrunken desktop SVG.
+1. `index.html:10,16,17,21` — repoint canonical, `og:url`, `og:image`, `twitter:image` to `https://www.tokenomix.io/`.
+2. `index.html:7` — trim meta description to ~155 chars, keeping the lead sentence.
+3. `public/robots.txt:4` and `public/sitemap.xml:4` — repoint to `https://www.tokenomix.io/`; add `<lastmod>`.
+4. `index.html` — add `apple-touch-icon`, `theme-color` (brand dark background), `link rel="icon"` for the existing `favicon.ico`, and a square favicon crop of the brand mark so the tab icon is legible.
+5. `index.html` — add Organization + WebSite JSON-LD (name, url `https://www.tokenomix.io/`, logo).
+6. `index.html:31` — remove the `cdn.gpteng.co` script from the shipped HTML (or leave it if editor tagging in preview is preferred; this is a judgment call, not a defect that breaks the site).
+7. `netlify.toml` — add a `[[headers]]` block: HSTS, `X-Content-Type-Options`, `Referrer-Policy`, and immutable caching for `/assets/*`.
 
-**M2 — Intelligent Economies (07): empty trailing grid cell reads as missing artwork.**
-Eight items in a 3-up grid leave the final cell blank; at 1440/1700 it renders as a tinted rectangle the size of a full card sitting beside the "Position" panel. Why it matters: an empty tinted panel inside a bordered grid is the classic "image failed to load" signature — the one place on the page that looks unfinished rather than restrained.
-Smallest safe fix concept: let the Position panel span the remaining columns so the grid closes.
+Optional, only if PWA-style installability is wanted: add `manifest.webmanifest`. Not needed for a one-page marketing site.
 
-**M3 — Mobile hero (390): 235px band, no brand entrance.**
-Measured: 826px at 1440 versus 235px at 390. The wordmark lockup, the four-word tagline wrapping to two lines and the round mute control are all compressed into a shallow letterbox, and the mute button crowds the right edge. Why it matters: on phones the site effectively opens on the Category headline; the hero stops functioning as a stage and the audio affordance reads as a stray floating button.
-Smallest safe fix concept: give the hero a minimum viewport-relative height on small screens and let the video cover it, with the lockup and control spaced to that taller frame.
+## Infrastructure / domain-binding / deployment (not code)
 
-**M4 — Chapter-end stranded lines with stacked voids.**
-"Most projects design layer one and hope the rest emerges." (01), "Strong economies draw their boundaries in public." (04), "Economic boundaries are not bureaucracy…" (05) and "No model is correct everywhere…" (08) each sit alone at the left with an empty right field, then a further large gap before the chapter's own bottom padding and the next chapter's top padding. Why it matters: four repetitions of the same pattern are the page's main source of oversized negative space and make transitions feel like something was removed.
-Smallest safe fix concept: treat these closers as a resolved footing — tighten the space above/below them and give them a rule or full-measure treatment instead of leaving them floating.
+- Domain + WWW canonical + SPA fallback are already correct and live. No DNS work required.
+- After the metadata fix deploys, force a re-scrape in a link-preview debugger (LinkedIn, Facebook, X, Slack) — crawlers cache the old lovable.app preview.
+- Submit `https://www.tokenomix.io/sitemap.xml` in Google Search Console after the sitemap host is corrected.
 
-## MINOR (5)
+## Production-domain smoke checks still required (cannot be done from the sandbox)
 
-**m1 — Research (09) and Method (10):** at 1440/1700 headline and lead occupy the left measure with the entire right half black, while every adjacent chapter pairs a headline with a diagram, so the composition implies a visual that never arrives.
-**m2 — Design for Behavior (06), after the Behavior Engine fix:** the upper-right dead field is genuinely resolved and the circuit reads distinctly from the loop and rail motifs. Two residual items: at 1024–1280 the caption floats far below the diagram while the left column under the lead is empty, and the animated pink dash settles parked as an asymmetric stub on one edge rather than at a corner.
-**m3 — Late reveal arrival:** the trailing summary tiles ("Feedback loop" in 02, "Position" in 07) resolve about half a second behind their grids; on fast scroll they are briefly blank panels. Settled state is correct.
-**m4 — Repeated silhouettes:** two bordered tile grids (02, 07) plus four numbered rails (04, 08, 09, 10) flatten the middle of the page slightly. Not a defect on its own.
-**m5 — 390 Governance caption** runs beneath the back-to-top control at the right edge.
+1. Hero video plays and fades over the branded fallback on desktop Chrome and iOS Safari.
+2. One-tap mute/unmute works on both.
+3. Social preview renders the OG image after a forced re-scrape.
+4. Reduced-motion setting still yields a legible hero.
 
-## CLEAR
-
-- Hero → body handoff at desktop and tablet: the gradient seam into Category reads intentional.
-- Category Statement composition at all widths, including the large topology visual at 768.
-- Incentives (03) A/B comparison, including the mini standing rails, which survive mobile intact.
-- Ownership (04) ledger, Governance (08) state rail plus tradeoff table, Method (10) sequenced rail.
-- Mobile completeness: purpose-built portrait variants for value flow, authority topology, governance state transition, behavior engine and human+agent economy all render fully, captioned and legible at 390 — they preserve the argument rather than shrinking the desktop art. Only Economic Layers (M1) is missing one.
-- Closing rhythm: Final Statement → single strong CTA → footer with sections, tagline, copyright and the investment-advice disclaimer. Ends deliberately.
-- No clipped typography anywhere except M1; no horizontal overflow at 1700/1440/1280/1024/768/390.
-- Truth states: "Out of scope", "Structural illustrations, not forecasts", "Position — open research territory", the Research independence note and the footer disclaimer are all visible and intact. Nothing on screen implies shipped infrastructure, clients or metrics. Only watch item: the "Inquiry channel" CTA is the strongest button on the page, so its behaviour must stay an honest mail/contact path.
-
-## Narrow pass warranted?
-
-Yes — one geometry-only pass covering M1–M4 plus m1, m2 and m3. No redesign, no copy changes, no hero video / logo / brand / colour / typography changes.
+**Verdict: source code is GREEN WITH FIXES** — all defects are metadata/host-string level; nothing structural, visual, or copy-related blocks production.
