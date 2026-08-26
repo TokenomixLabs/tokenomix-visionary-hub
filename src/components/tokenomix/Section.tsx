@@ -89,6 +89,15 @@ export const Section = ({
     </Reveal>
   ) : null;
 
+  /* Chapter headline: steps up on ultra-wide canvases so it never freezes at a
+     1024px size inside a 2560px frame. text-balance clears stranded words. */
+  const headingClass =
+    "font-display text-3xl font-semibold leading-[1.1] tracking-tight text-balance text-foreground sm:text-4xl md:text-[2.6rem] 3xl:text-[3.35rem] 4xl:text-[3.6rem]";
+  const wideHeadingClass =
+    "font-display text-4xl font-semibold leading-[1.06] tracking-tight text-balance text-foreground sm:text-5xl md:text-6xl lg:text-[4.2rem] 3xl:text-[5rem] 4xl:text-[5.4rem]";
+  const leadClass =
+    "mt-6 space-y-4 text-base leading-relaxed text-pretty text-muted-foreground md:text-lg 3xl:mt-7 3xl:text-xl";
+
   const textBlock = (
     <div>
       {(eyebrow || index) && (
@@ -97,15 +106,11 @@ export const Section = ({
         </Reveal>
       )}
       <Reveal delay={60}>
-        <Heading className="font-display text-3xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-4xl md:text-[2.6rem]">
-          {title}
-        </Heading>
+        <Heading className={headingClass}>{title}</Heading>
       </Reveal>
       {lead && (
         <Reveal delay={120}>
-          <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-            {lead}
-          </div>
+          <div className={leadClass}>{lead}</div>
         </Reveal>
       )}
     </div>
@@ -119,10 +124,10 @@ export const Section = ({
       <div className="container mx-auto">
         {visual ? (
           <div
-            className={`grid items-center gap-12 lg:gap-16 ${
+            className={`grid items-center gap-12 lg:gap-16 3xl:gap-24 ${
               visualWeight === "light"
-                ? "lg:grid-cols-[1.25fr_0.75fr]"
-                : "lg:grid-cols-[1fr_1fr]"
+                ? "lg:grid-cols-[1.25fr_0.75fr] 3xl:grid-cols-[1.1fr_0.9fr]"
+                : "lg:grid-cols-[1fr_1fr] 3xl:grid-cols-[0.95fr_1.05fr]"
             }`}
           >
             <div className={visualSide === "left" ? "lg:order-2" : ""}>
@@ -133,7 +138,7 @@ export const Section = ({
                 portrait mobileVisual carries the argument instead. */}
             <Reveal
               delay={140}
-              className={`hidden md:block ${visualSide === "left" ? "lg:order-1" : ""}`}
+              className={`hidden w-full md:block ${visualSide === "left" ? "lg:order-1" : ""}`}
             >
               {visual}
             </Reveal>
@@ -146,15 +151,11 @@ export const Section = ({
               </div>
             </Reveal>
             <Reveal delay={60}>
-              <Heading className="font-display text-4xl font-semibold leading-[1.06] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-[4.2rem]">
-                {title}
-              </Heading>
+              <Heading className={wideHeadingClass}>{title}</Heading>
             </Reveal>
             {lead && (
               <Reveal delay={120}>
-                <div className={`mt-6 space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg ${leadContainer}`}>
-                  {lead}
-                </div>
+                <div className={`${leadClass} ${leadContainer}`}>{lead}</div>
               </Reveal>
             )}
             {mobileVisualBlock}
@@ -167,15 +168,11 @@ export const Section = ({
               </Reveal>
             )}
             <Reveal delay={60}>
-              <Heading className="font-display text-3xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-4xl md:text-[2.6rem]">
-                {title}
-              </Heading>
+              <Heading className={headingClass}>{title}</Heading>
             </Reveal>
             {lead && (
               <Reveal delay={120}>
-                <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-                  {lead}
-                </div>
+                <div className={leadClass}>{lead}</div>
               </Reveal>
             )}
             {mobileVisualBlock}
