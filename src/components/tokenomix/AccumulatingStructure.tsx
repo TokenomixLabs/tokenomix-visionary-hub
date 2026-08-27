@@ -142,9 +142,10 @@ export const AccumulatingStructure = ({ step, className = "" }: AccumulatingStru
               strokeWidth="1.6"
               strokeDasharray="5 5"
             />
-            <text x="118" y="204" fontSize="12" letterSpacing="1.4" fill="hsl(var(--signal))" className="font-mono">
+            <text x="172" y="196" fontSize="12" letterSpacing="1.4" fill="hsl(var(--signal))" className="font-mono">
               STRESS
             </text>
+
           </g>
 
           {/* 02 — actors */}
