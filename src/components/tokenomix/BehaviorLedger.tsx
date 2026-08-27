@@ -46,11 +46,12 @@ export const BehaviorLedger = ({ active, className = "" }: BehaviorLedgerProps) 
         </div>
 
         <svg
-          viewBox="0 0 320 470"
+          viewBox="0 0 320 428"
           role="img"
           aria-label="The seven design questions shown as checkpoints on the behavior engine circuit, each with the consequence of leaving it unanswered."
-          className="mt-6 w-full"
+          className="mx-auto mt-6 w-full max-w-[330px]"
         >
+
           {/* engine spine */}
           <line
             x1={SPINE_X}
