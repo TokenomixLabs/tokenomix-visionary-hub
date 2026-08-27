@@ -74,16 +74,17 @@ export const BehaviorLedger = ({ active, className = "" }: BehaviorLedgerProps) 
           />
           <text
             x={SPINE_X - 52}
-            y={TOP + 190}
+            y={TOP + 170}
             fontSize="12"
             letterSpacing="1.6"
             fill="hsl(var(--muted-foreground))"
-            transform={`rotate(-90 ${SPINE_X - 52} ${TOP + 190})`}
+            transform={`rotate(-90 ${SPINE_X - 52} ${TOP + 170})`}
             textAnchor="middle"
             className="font-mono"
           >
             FEEDBACK
           </text>
+
 
           {/* stage bands */}
           {stages.map((stage, s) => {
