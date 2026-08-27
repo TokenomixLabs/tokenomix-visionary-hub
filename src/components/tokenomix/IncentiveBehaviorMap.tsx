@@ -159,14 +159,15 @@ const Panel = ({
             />
             <text
               x="140"
-              y="86"
+              y="84"
               textAnchor="middle"
               className="fill-muted-foreground font-mono"
-              fontSize="9.0"
-              letterSpacing="1.2"
+              fontSize="13"
+              letterSpacing="1.1"
             >
               RETURNS TO PARTICIPATION
             </text>
+
           </>
         ) : (
           <>
