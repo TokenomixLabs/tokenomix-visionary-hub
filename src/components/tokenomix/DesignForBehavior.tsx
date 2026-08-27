@@ -79,7 +79,7 @@ export const DesignForBehavior = () => {
                 what it permits, and what it can become.
               </p>
               <p className="mt-7 border-t border-border/70 pt-6 font-display text-lg leading-snug text-balance text-foreground md:text-xl">
-                Speculation is a side effect of a system. It is a poor foundation for one.
+                Speculation is a side effect of a&nbsp;system. It is a poor foundation for&nbsp;one.
               </p>
             </aside>
           </Reveal>
