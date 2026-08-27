@@ -80,7 +80,7 @@ export const Section = ({
   const Heading = headingLevel;
 
   const rhythm =
-    tier === "pillar" ? "py-28 md:py-40 3xl:py-48" : "py-20 md:py-28 3xl:py-36";
+    tier === "pillar" ? "py-24 md:py-40 3xl:py-48" : "py-16 md:py-28 3xl:py-36";
   const chapterTone = tone === "tint" ? "border-t border-border/60 bg-surface/30" : "";
 
   const mobileVisualBlock = mobileVisual ? (
@@ -90,13 +90,15 @@ export const Section = ({
   ) : null;
 
   /* Chapter headline: steps up on ultra-wide canvases so it never freezes at a
-     1024px size inside a 2560px frame. text-balance clears stranded words. */
+     1024px size inside a 2560px frame. Leading relaxes one step with the size so
+     descenders never graze the following cap line. text-balance clears widows. */
   const headingClass =
-    "font-display text-3xl font-semibold leading-[1.1] tracking-tight text-balance text-foreground sm:text-4xl md:text-[2.6rem] 3xl:text-[3.35rem] 4xl:text-[3.6rem]";
+    "font-display text-3xl font-semibold leading-[1.1] tracking-tight text-balance text-foreground sm:text-4xl md:text-[2.6rem] 3xl:text-[3.35rem] 3xl:leading-[1.16] 4xl:text-[3.6rem] 4xl:leading-[1.18]";
   const wideHeadingClass =
-    "font-display text-4xl font-semibold leading-[1.06] tracking-tight text-balance text-foreground sm:text-5xl md:text-6xl lg:text-[4.2rem] 3xl:text-[5rem] 4xl:text-[5.4rem]";
+    "font-display text-4xl font-semibold leading-[1.06] tracking-tight text-balance text-foreground sm:text-5xl md:text-6xl lg:text-[4.2rem] 3xl:text-[5rem] 3xl:leading-[1.12] 4xl:text-[5.4rem] 4xl:leading-[1.14]";
   const leadClass =
     "mt-6 space-y-4 text-base leading-relaxed text-pretty text-muted-foreground md:text-lg 3xl:mt-7 3xl:text-xl";
+
 
   const textBlock = (
     <div>
