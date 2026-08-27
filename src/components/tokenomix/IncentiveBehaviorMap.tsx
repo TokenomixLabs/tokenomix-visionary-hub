@@ -188,14 +188,15 @@ const Panel = ({
               className="animate-leak-out"
             />
             <text
-              x="180"
+              x="182"
               y="30"
               className="fill-muted-foreground font-mono"
-              fontSize="9.0"
-              letterSpacing="1.2"
+              fontSize="13"
+              letterSpacing="1.1"
             >
               EXIT
             </text>
+
           </>
         )}
       </svg>
