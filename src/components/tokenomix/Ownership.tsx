@@ -50,6 +50,9 @@ export const Ownership = () => (
         </Reveal>
       ))}
     </ol>
-    <ChapterFooting delay={420}>Strong economies draw their boundaries in public.</ChapterFooting>
+    <ChapterFooting delay={420}>
+      Strong economies draw their boundaries in&nbsp;public.
+    </ChapterFooting>
+
   </Section>
 );
