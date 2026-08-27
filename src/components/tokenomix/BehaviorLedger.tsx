@@ -27,7 +27,7 @@ const stages = ["Useful action", "Contribution", "Incentive", "Response"];
 
 const SPINE_X = 66;
 const TOP = 44;
-const GAP = 52;
+const GAP = 58;
 
 
 export const BehaviorLedger = ({ active, className = "" }: BehaviorLedgerProps) => {
@@ -46,10 +46,10 @@ export const BehaviorLedger = ({ active, className = "" }: BehaviorLedgerProps) 
         </div>
 
         <svg
-          viewBox="0 0 320 392"
+          viewBox="0 0 320 428"
           role="img"
           aria-label="The seven design questions shown as checkpoints on the behavior engine circuit, each with the consequence of leaving it unanswered."
-          className="mx-auto mt-6 w-full max-w-[330px]"
+          className="mx-auto mt-6 w-full max-w-[380px]"
         >
 
           {/* engine spine */}
