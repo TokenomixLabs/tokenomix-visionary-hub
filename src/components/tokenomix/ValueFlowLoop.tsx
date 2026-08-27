@@ -112,14 +112,15 @@ export const ValueFlowLoop = ({ className = "" }: { className?: string }) => {
         />
         <text
           x="384"
-          y={leakFrom.y + 106}
+          y={leakFrom.y + 108}
           textAnchor="end"
           className="fill-muted-foreground font-mono"
-          fontSize="10.0"
-          letterSpacing="1.4"
+          fontSize="14.5"
+          letterSpacing="1.1"
         >
           LEAKAGE
         </text>
+
 
         {/* stage nodes */}
         {stages.map((label, i) => {
