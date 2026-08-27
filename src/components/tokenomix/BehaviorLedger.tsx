@@ -26,8 +26,9 @@ const checkpoints = [
 const stages = ["Useful action", "Contribution", "Incentive", "Response"];
 
 const SPINE_X = 66;
-const TOP = 46;
-const GAP = 66;
+const TOP = 44;
+const GAP = 58;
+
 
 export const BehaviorLedger = ({ active, className = "" }: BehaviorLedgerProps) => {
   const reached = Math.min(Math.max(active, 0), checkpoints.length);
