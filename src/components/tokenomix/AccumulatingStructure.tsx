@@ -105,15 +105,16 @@ export const AccumulatingStructure = ({ step, className = "" }: AccumulatingStru
 
           {/* 04 — rights clusters */}
           <g style={{ transition: t }} opacity={on(4)}>
-            <rect x="72" y="82" width="150" height="104" rx="8" fill="none" stroke="hsl(var(--accent) / 0.4)" strokeDasharray="3 5" />
-            <text x="76" y="76" fontSize="12" letterSpacing="1.4" fill="hsl(var(--accent))" className="font-mono">
+            <rect x="70" y="88" width="152" height="100" rx="8" fill="none" stroke="hsl(var(--accent) / 0.4)" strokeDasharray="3 5" />
+            <text x="70" y="80" fontSize="12" letterSpacing="1.4" fill="hsl(var(--accent))" className="font-mono">
               OWNERSHIP
             </text>
-            <rect x="242" y="160" width="126" height="104" rx="8" fill="none" stroke="hsl(var(--accent) / 0.4)" strokeDasharray="3 5" />
-            <text x="246" y="154" fontSize="12" letterSpacing="1.4" fill="hsl(var(--accent))" className="font-mono">
+            <rect x="244" y="162" width="124" height="100" rx="8" fill="none" stroke="hsl(var(--accent) / 0.4)" strokeDasharray="3 5" />
+            <text x="244" y="154" fontSize="12" letterSpacing="1.4" fill="hsl(var(--accent))" className="font-mono">
               AUTHORITY
             </text>
           </g>
+
 
           {/* 03 — flows */}
           <g style={{ transition: t }} opacity={on(3)}>
