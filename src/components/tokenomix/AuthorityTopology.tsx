@@ -2,27 +2,35 @@
  * Authority topology: economic layers with distinct authority domains attached.
  * Interoperation across layers does not imply shared authority.
  * Conceptual architecture — Tokenomix owns none of these layers.
+ *
+ * Labels are set on two lines inside each plate so no name can burst its box or
+ * collide with the authority connector stubs at any rendered width.
  */
 
+const PLATE_X = 14;
+const PLATE_W = 202;
+const PLATE_H = 50;
+const PLATE_RIGHT = PLATE_X + PLATE_W;
+
 const layers = [
-  { name: "Protocol / network", y: 46 },
-  { name: "Marketplace / services", y: 110 },
-  { name: "Application / community", y: 174 },
-  { name: "Participant / contributor", y: 238 },
+  { top: "Protocol", bottom: "Network", y: 44 },
+  { top: "Marketplace", bottom: "Services", y: 108 },
+  { top: "Application", bottom: "Community", y: 172 },
+  { top: "Participant", bottom: "Contributor", y: 236 },
 ];
 
 const domains = [
-  { name: "Fee policy", layer: 0, x: 250 },
-  { name: "Settlement rules", layer: 0, x: 250 },
-  { name: "Pricing", layer: 1, x: 250 },
-  { name: "Governance", layer: 2, x: 250 },
-  { name: "Claims & rights", layer: 3, x: 250 },
+  { name: "Fee policy", layer: 0, x: 252 },
+  { name: "Settlement rules", layer: 0, x: 252 },
+  { name: "Pricing", layer: 1, x: 252 },
+  { name: "Governance", layer: 2, x: 252 },
+  { name: "Claims & rights", layer: 3, x: 252 },
 ];
 
 export const AuthorityTopology = ({ className = "" }: { className?: string }) => (
-  <div className={`relative ${className}`}>
+  <figure className={`m-0 ${className}`}>
     <svg
-      viewBox="0 0 420 300"
+      viewBox="0 0 420 306"
       className="h-auto w-full"
       role="img"
       aria-label="Layered map showing economic layers and the distinct authority domains attached to each"
@@ -35,32 +43,41 @@ export const AuthorityTopology = ({ className = "" }: { className?: string }) =>
       </defs>
 
       {layers.map((layer, i) => (
-        <g key={layer.name}>
+        <g key={layer.top}>
           <rect
-            x="14"
+            x={PLATE_X}
             y={layer.y}
-            width="196"
-            height="44"
+            width={PLATE_W}
+            height={PLATE_H}
             rx="5"
             fill="url(#at-plane)"
             stroke="hsl(240 22% 24%)"
           />
           <text
-            x="28"
-            y={layer.y + 26}
+            x={PLATE_X + 16}
+            y={layer.y + 21}
             className="fill-foreground font-mono"
-            fontSize="11.0"
-            letterSpacing="1.6"
+            fontSize="11.5"
+            letterSpacing="1.3"
           >
-            {layer.name.toUpperCase()}
+            {layer.top.toUpperCase()}
+          </text>
+          <text
+            x={PLATE_X + 16}
+            y={layer.y + 38}
+            className="fill-muted-foreground font-mono"
+            fontSize="11.5"
+            letterSpacing="1.3"
+          >
+            {layer.bottom.toUpperCase()}
           </text>
           {/* bounded interface between planes */}
           {i < layers.length - 1 && (
             <line
-              x1="14"
-              y1={layer.y + 54}
-              x2="210"
-              y2={layer.y + 54}
+              x1={PLATE_X}
+              y1={layer.y + 57}
+              x2={PLATE_RIGHT}
+              y2={layer.y + 57}
               stroke="hsl(240 22% 20%)"
               strokeDasharray="2 6"
             />
@@ -71,18 +88,19 @@ export const AuthorityTopology = ({ className = "" }: { className?: string }) =>
       {/* authority connectors */}
       {domains.map((domain, i) => {
         const layer = layers[domain.layer];
-        const y = layer.y + 22;
+        const y = layer.y + 25;
+        const ty = 46 + i * 52;
         return (
           <g key={domain.name}>
             <path
-              d={`M 210 ${y} C ${domain.x - 30} ${y}, ${domain.x - 30} ${44 + i * 52}, ${domain.x} ${44 + i * 52}`}
+              d={`M ${PLATE_RIGHT} ${y} C ${domain.x - 30} ${y}, ${domain.x - 30} ${ty}, ${domain.x} ${ty}`}
               fill="none"
               stroke="hsl(250 92% 72%)"
               strokeWidth="1.1"
               opacity="0.35"
             />
             <path
-              d={`M 210 ${y} C ${domain.x - 30} ${y}, ${domain.x - 30} ${44 + i * 52}, ${domain.x} ${44 + i * 52}`}
+              d={`M ${PLATE_RIGHT} ${y} C ${domain.x - 30} ${y}, ${domain.x - 30} ${ty}, ${domain.x} ${ty}`}
               fill="none"
               stroke="hsl(322 90% 62%)"
               strokeWidth="1.8"
@@ -93,18 +111,18 @@ export const AuthorityTopology = ({ className = "" }: { className?: string }) =>
             />
             <circle
               cx={domain.x}
-              cy={44 + i * 52}
+              cy={ty}
               r="4"
               fill="hsl(240 32% 5%)"
               stroke="hsl(322 90% 62%)"
               strokeWidth="1.4"
             />
             <text
-              x={domain.x + 10}
-              y={47 + i * 52}
+              x={domain.x + 11}
+              y={ty + 4}
               className="fill-muted-foreground font-mono"
-              fontSize="10.0"
-              letterSpacing="1.2"
+              fontSize="11.5"
+              letterSpacing="1.1"
             >
               {domain.name.toUpperCase()}
             </text>
@@ -113,14 +131,18 @@ export const AuthorityTopology = ({ className = "" }: { className?: string }) =>
       })}
 
       <text
-        x="14"
-        y="292"
+        x={PLATE_X}
+        y="300"
         className="fill-muted-foreground font-mono"
-        fontSize="9.5"
-        letterSpacing="1.4"
+        fontSize="11.5"
+        letterSpacing="1.2"
       >
         AUTHORITY IS SCOPED PER LAYER
       </text>
     </svg>
-  </div>
+    <figcaption className="mt-5 diagram-caption">
+      Four layers, four separate mandates — fee policy, settlement, pricing, governance, claims.
+      Interoperation across a dashed interface never transfers authority.
+    </figcaption>
+  </figure>
 );

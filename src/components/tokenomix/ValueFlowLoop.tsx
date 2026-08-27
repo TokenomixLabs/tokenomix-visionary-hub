@@ -112,21 +112,23 @@ export const ValueFlowLoop = ({ className = "" }: { className?: string }) => {
         />
         <text
           x="384"
-          y={leakFrom.y + 106}
+          y={leakFrom.y + 108}
           textAnchor="end"
           className="fill-muted-foreground font-mono"
-          fontSize="10.0"
-          letterSpacing="1.4"
+          fontSize="14.5"
+          letterSpacing="1.1"
         >
           LEAKAGE
         </text>
+
 
         {/* stage nodes */}
         {stages.map((label, i) => {
           const p = point(i);
           const anchor = p.x > CX + 12 ? "start" : p.x < CX - 12 ? "end" : "middle";
-          const dx = anchor === "start" ? 14 : anchor === "end" ? -14 : 0;
-          const dy = p.y < CY ? -12 : 18;
+          const dx = anchor === "start" ? 16 : anchor === "end" ? -16 : 0;
+          const dy = p.y < CY ? -14 : 22;
+
           return (
             <g key={label}>
               <circle
@@ -152,11 +154,12 @@ export const ValueFlowLoop = ({ className = "" }: { className?: string }) => {
                 y={p.y + dy}
                 textAnchor={anchor}
                 className="fill-muted-foreground font-mono"
-                fontSize="10.5"
-                letterSpacing="1.2"
+                fontSize="14.5"
+                letterSpacing="1.1"
               >
                 {label.toUpperCase()}
               </text>
+
             </g>
           );
         })}

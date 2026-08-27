@@ -26,8 +26,9 @@ const checkpoints = [
 const stages = ["Useful action", "Contribution", "Incentive", "Response"];
 
 const SPINE_X = 66;
-const TOP = 46;
-const GAP = 66;
+const TOP = 44;
+const GAP = 58;
+
 
 export const BehaviorLedger = ({ active, className = "" }: BehaviorLedgerProps) => {
   const reached = Math.min(Math.max(active, 0), checkpoints.length);
@@ -45,11 +46,12 @@ export const BehaviorLedger = ({ active, className = "" }: BehaviorLedgerProps) 
         </div>
 
         <svg
-          viewBox="0 0 320 470"
+          viewBox="0 0 320 428"
           role="img"
           aria-label="The seven design questions shown as checkpoints on the behavior engine circuit, each with the consequence of leaving it unanswered."
-          className="mt-6 w-full"
+          className="mx-auto mt-6 w-full max-w-[380px]"
         >
+
           {/* engine spine */}
           <line
             x1={SPINE_X}
@@ -72,16 +74,17 @@ export const BehaviorLedger = ({ active, className = "" }: BehaviorLedgerProps) 
           />
           <text
             x={SPINE_X - 52}
-            y={TOP + 190}
-            fontSize="12"
+            y={TOP + 170}
+            fontSize="13.5"
             letterSpacing="1.6"
             fill="hsl(var(--muted-foreground))"
-            transform={`rotate(-90 ${SPINE_X - 52} ${TOP + 190})`}
+            transform={`rotate(-90 ${SPINE_X - 52} ${TOP + 170})`}
             textAnchor="middle"
             className="font-mono"
           >
             FEEDBACK
           </text>
+
 
           {/* stage bands */}
           {stages.map((stage, s) => {
@@ -103,7 +106,7 @@ export const BehaviorLedger = ({ active, className = "" }: BehaviorLedgerProps) 
                 <text
                   x={SPINE_X + 18}
                   y={y - 18}
-                  fontSize="12"
+                  fontSize="13.5"
                   letterSpacing="1.6"
                   fill={on ? "hsl(var(--foreground))" : "hsl(var(--muted-foreground))"}
                   className="font-mono"
@@ -137,7 +140,7 @@ export const BehaviorLedger = ({ active, className = "" }: BehaviorLedgerProps) 
                 <text
                   x={SPINE_X + 86}
                   y={y + 4}
-                  fontSize="12.5"
+                  fontSize="13.5"
                   letterSpacing="1.5"
                   fill={on ? "hsl(var(--foreground))" : "hsl(var(--muted-foreground))"}
                   className="font-mono"

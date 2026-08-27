@@ -69,10 +69,10 @@ const Panel = ({
         </g>
         <text
           x="16"
-          y="48"
+          y="46"
           className="fill-muted-foreground font-mono"
-          fontSize="9.5"
-          letterSpacing="1.2"
+          fontSize="13"
+          letterSpacing="1.1"
         >
           CONTRIBUTION
         </text>
@@ -81,14 +81,15 @@ const Panel = ({
         <line x1="34" y1="186" x2="266" y2="186" stroke="hsl(240 22% 20%)" />
         <text
           x="266"
-          y="192"
+          y="197"
           textAnchor="end"
           className="fill-muted-foreground font-mono"
-          fontSize="11"
-          letterSpacing="1.2"
+          fontSize="13"
+          letterSpacing="1.1"
         >
           SUSTAINED PARTICIPATION →
         </text>
+
 
         {/* standing spine */}
         <path d={spine} fill="none" stroke={`url(#ibm-${variant})`} strokeWidth="1.5" opacity="0.7" />
@@ -158,14 +159,15 @@ const Panel = ({
             />
             <text
               x="140"
-              y="86"
+              y="84"
               textAnchor="middle"
               className="fill-muted-foreground font-mono"
-              fontSize="9.0"
-              letterSpacing="1.2"
+              fontSize="13"
+              letterSpacing="1.1"
             >
               RETURNS TO PARTICIPATION
             </text>
+
           </>
         ) : (
           <>
@@ -186,14 +188,15 @@ const Panel = ({
               className="animate-leak-out"
             />
             <text
-              x="180"
+              x="182"
               y="30"
               className="fill-muted-foreground font-mono"
-              fontSize="9.0"
-              letterSpacing="1.2"
+              fontSize="13"
+              letterSpacing="1.1"
             >
               EXIT
             </text>
+
           </>
         )}
       </svg>
@@ -204,7 +207,7 @@ const Panel = ({
 };
 
 export const IncentiveBehaviorMap = ({ className = "" }: { className?: string }) => (
-  <div className={`grid gap-4 sm:grid-cols-2 ${className}`}>
+  <div className={`grid gap-4 xl:grid-cols-2 ${className}`}>
     <Panel
       variant="a"
       label="System A"

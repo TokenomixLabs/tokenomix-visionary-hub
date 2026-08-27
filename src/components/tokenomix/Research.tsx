@@ -48,7 +48,7 @@ export const Research = () => (
           <Reveal
             key={theme.domain}
             delay={i * 70}
-            className="group grid gap-3 border-b border-border/70 py-7 transition-colors duration-500 hover:bg-surface/50 md:grid-cols-[auto_1fr_1.2fr] md:items-baseline md:gap-10 md:px-2"
+            className="group grid gap-3 border-b border-border/70 py-7 transition-colors duration-500 hover:bg-surface/50 md:grid-cols-[auto_1fr_1fr] md:items-baseline md:gap-8 md:px-2 3xl:gap-10"
           >
             <span className="font-mono text-[0.65rem] tracking-[0.2em] text-accent/70">
               {String(i + 1).padStart(2, "0")}
@@ -56,8 +56,11 @@ export const Research = () => (
             <h3 className="font-display text-xl font-medium leading-snug text-foreground md:text-2xl">
               {theme.domain}
             </h3>
-            <p className="text-sm leading-relaxed text-muted-foreground 3xl:text-[1.02rem]">{theme.note}</p>
+            <p className="text-sm leading-relaxed text-foreground/75 md:text-base 3xl:text-[1.08rem]">
+              {theme.note}
+            </p>
           </Reveal>
+
         ))}
       </div>
       <Reveal delay={480}>

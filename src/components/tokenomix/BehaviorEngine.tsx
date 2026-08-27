@@ -10,11 +10,12 @@ const Y0 = 86;
 const Y1 = 254;
 
 const stages = [
-  { x: X0, y: Y0, label: "USEFUL ACTION", anchor: "start" as const, dx: 0, dy: -16 },
-  { x: X1, y: Y0, label: "CONTRIBUTION", anchor: "end" as const, dx: 0, dy: -16 },
-  { x: X1, y: Y1, label: "INCENTIVE", anchor: "end" as const, dx: 0, dy: 24 },
-  { x: X0, y: Y1, label: "RESPONSE", anchor: "start" as const, dx: 0, dy: 24 },
+  { x: X0, y: Y0, label: "USEFUL ACTION", anchor: "start" as const, dx: -14, dy: -16 },
+  { x: X1, y: Y0, label: "CONTRIBUTION", anchor: "end" as const, dx: 14, dy: -16 },
+  { x: X1, y: Y1, label: "INCENTIVE", anchor: "end" as const, dx: 14, dy: 26 },
+  { x: X0, y: Y1, label: "RESPONSE", anchor: "start" as const, dx: -14, dy: 26 },
 ];
+
 
 const checkpoints = [
   { x: X0 + 60, y: Y0 - 44, label: "ABUSE?" },
@@ -102,7 +103,7 @@ export const BehaviorEngine = ({ className = "" }: { className?: string }) => (
             y={s.y + s.dy}
             textAnchor={s.anchor}
             className="fill-foreground font-mono"
-            fontSize="11.0"
+            fontSize="13.5"
             letterSpacing="1.4"
           >
             {s.label}
@@ -118,7 +119,7 @@ export const BehaviorEngine = ({ className = "" }: { className?: string }) => (
           y={c.y}
           textAnchor={c.x === X1 - 4 ? "end" : "start"}
           className="fill-muted-foreground font-mono"
-          fontSize="10.0"
+          fontSize="12.5"
           letterSpacing="1.4"
         >
           {c.label}
@@ -130,7 +131,7 @@ export const BehaviorEngine = ({ className = "" }: { className?: string }) => (
         y={(Y0 + Y1) / 2 + 3}
         textAnchor="middle"
         className="fill-muted-foreground font-mono"
-        fontSize="10.0"
+        fontSize="12.5"
         letterSpacing="2"
       >
         BEHAVIOR ENGINE
