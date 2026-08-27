@@ -61,7 +61,7 @@ export const BehaviorEngineMobile = ({ className = "" }: { className?: string })
                 x={RAIL + 24}
                 y={y + 5}
                 className="fill-foreground font-mono"
-                fontSize="13.0"
+                fontSize="14.5"
                 letterSpacing="1.6"
               >
                 {label}
@@ -74,7 +74,7 @@ export const BehaviorEngineMobile = ({ className = "" }: { className?: string })
           x="16"
           y="330"
           className="fill-muted-foreground font-mono"
-          fontSize="12.5"
+          fontSize="14"
           letterSpacing="1.6"
         >
           FOUR STAGES · ONE CIRCUIT

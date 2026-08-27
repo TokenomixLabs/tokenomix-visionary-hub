@@ -98,7 +98,7 @@ export const AgentEconomyNetwork = ({ className = "" }: { className?: string }) 
         y="40"
         textAnchor="end"
         className="fill-muted-foreground font-mono"
-        fontSize="9.5"
+        fontSize="11"
         letterSpacing="1.4"
       >
         PERMISSION BOUNDARY
@@ -151,7 +151,7 @@ export const AgentEconomyNetwork = ({ className = "" }: { className?: string }) 
         x="20"
         y="290"
         className="fill-muted-foreground font-mono"
-        fontSize="9.5"
+        fontSize="11"
         letterSpacing="1.4"
       >
         ○ HUMAN   □ AGENT   — CONTRIBUTION   ⋯ ATTRIBUTION TRAIL

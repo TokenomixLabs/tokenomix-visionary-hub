@@ -207,7 +207,7 @@ const Panel = ({
 };
 
 export const IncentiveBehaviorMap = ({ className = "" }: { className?: string }) => (
-  <div className={`grid gap-4 sm:grid-cols-2 ${className}`}>
+  <div className={`grid gap-4 xl:grid-cols-2 ${className}`}>
     <Panel
       variant="a"
       label="System A"
