@@ -102,7 +102,7 @@ export const BehaviorEngine = ({ className = "" }: { className?: string }) => (
             y={s.y + s.dy}
             textAnchor={s.anchor}
             className="fill-foreground font-mono"
-            fontSize="11.0"
+            fontSize="12.5"
             letterSpacing="1.4"
           >
             {s.label}
@@ -118,7 +118,7 @@ export const BehaviorEngine = ({ className = "" }: { className?: string }) => (
           y={c.y}
           textAnchor={c.x === X1 - 4 ? "end" : "start"}
           className="fill-muted-foreground font-mono"
-          fontSize="10.0"
+          fontSize="11.5"
           letterSpacing="1.4"
         >
           {c.label}
@@ -130,7 +130,7 @@ export const BehaviorEngine = ({ className = "" }: { className?: string }) => (
         y={(Y0 + Y1) / 2 + 3}
         textAnchor="middle"
         className="fill-muted-foreground font-mono"
-        fontSize="10.0"
+        fontSize="11.5"
         letterSpacing="2"
       >
         BEHAVIOR ENGINE
