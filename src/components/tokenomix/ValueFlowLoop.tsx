@@ -126,8 +126,9 @@ export const ValueFlowLoop = ({ className = "" }: { className?: string }) => {
         {stages.map((label, i) => {
           const p = point(i);
           const anchor = p.x > CX + 12 ? "start" : p.x < CX - 12 ? "end" : "middle";
-          const dx = anchor === "start" ? 14 : anchor === "end" ? -14 : 0;
-          const dy = p.y < CY ? -12 : 18;
+          const dx = anchor === "start" ? 16 : anchor === "end" ? -16 : 0;
+          const dy = p.y < CY ? -14 : 22;
+
           return (
             <g key={label}>
               <circle
