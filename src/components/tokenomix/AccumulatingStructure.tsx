@@ -81,7 +81,7 @@ export const AccumulatingStructure = ({ step, className = "" }: AccumulatingStru
               stroke="hsl(var(--border))"
               strokeWidth="1"
             />
-            <text x="40" y="34" fontSize="12" letterSpacing="1.6" fill="hsl(var(--muted-foreground))" className="font-mono">
+            <text x="40" y="34" fontSize="14" letterSpacing="1.6" fill="hsl(var(--muted-foreground))" className="font-mono">
               SYSTEM BOUNDARY
             </text>
           </g>
@@ -98,7 +98,7 @@ export const AccumulatingStructure = ({ step, className = "" }: AccumulatingStru
               strokeWidth="1"
               strokeDasharray="4 6"
             />
-            <text x="212" y="308" fontSize="12" letterSpacing="1.6" textAnchor="middle" fill="hsl(var(--primary))" className="font-mono">
+            <text x="212" y="308" fontSize="14" letterSpacing="1.6" textAnchor="middle" fill="hsl(var(--primary))" className="font-mono">
               GOVERNANCE LOOP
             </text>
           </g>
@@ -106,11 +106,11 @@ export const AccumulatingStructure = ({ step, className = "" }: AccumulatingStru
           {/* 04 — rights clusters */}
           <g style={{ transition: t }} opacity={on(4)}>
             <rect x="70" y="88" width="152" height="100" rx="8" fill="none" stroke="hsl(var(--accent) / 0.4)" strokeDasharray="3 5" />
-            <text x="70" y="80" fontSize="12" letterSpacing="1.4" fill="hsl(var(--accent))" className="font-mono">
+            <text x="70" y="80" fontSize="14" letterSpacing="1.4" fill="hsl(var(--accent))" className="font-mono">
               OWNERSHIP
             </text>
             <rect x="244" y="162" width="124" height="100" rx="8" fill="none" stroke="hsl(var(--accent) / 0.4)" strokeDasharray="3 5" />
-            <text x="244" y="154" fontSize="12" letterSpacing="1.4" fill="hsl(var(--accent))" className="font-mono">
+            <text x="244" y="154" fontSize="14" letterSpacing="1.4" fill="hsl(var(--accent))" className="font-mono">
               AUTHORITY
             </text>
           </g>
@@ -142,7 +142,7 @@ export const AccumulatingStructure = ({ step, className = "" }: AccumulatingStru
               strokeWidth="1.6"
               strokeDasharray="5 5"
             />
-            <text x="172" y="196" fontSize="12" letterSpacing="1.4" fill="hsl(var(--signal))" className="font-mono">
+            <text x="172" y="196" fontSize="14" letterSpacing="1.4" fill="hsl(var(--signal))" className="font-mono">
               STRESS
             </text>
 
@@ -157,7 +157,7 @@ export const AccumulatingStructure = ({ step, className = "" }: AccumulatingStru
                 <text
                   x={n.x}
                   y={n.y - 14}
-                  fontSize="12"
+                  fontSize="14"
                   letterSpacing="1.4"
                   textAnchor="middle"
                   fill="hsl(var(--foreground))"

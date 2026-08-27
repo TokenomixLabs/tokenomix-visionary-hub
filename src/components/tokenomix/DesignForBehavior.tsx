@@ -48,7 +48,7 @@ export const DesignForBehavior = () => {
                   as="li"
                   key={q}
                   delay={i * 40}
-                  className="group flex items-baseline gap-6 border-b border-border/60 py-5"
+                  className="group flex items-baseline gap-6 border-b border-border/60 py-5 lg:py-6"
                 >
                   <span
                     className={`font-mono text-xs transition-colors duration-500 ${
