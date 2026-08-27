@@ -154,11 +154,12 @@ export const ValueFlowLoop = ({ className = "" }: { className?: string }) => {
                 y={p.y + dy}
                 textAnchor={anchor}
                 className="fill-muted-foreground font-mono"
-                fontSize="10.5"
-                letterSpacing="1.2"
+                fontSize="14.5"
+                letterSpacing="1.1"
               >
                 {label.toUpperCase()}
               </text>
+
             </g>
           );
         })}
