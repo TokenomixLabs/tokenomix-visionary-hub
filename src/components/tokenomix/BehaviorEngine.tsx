@@ -10,11 +10,12 @@ const Y0 = 86;
 const Y1 = 254;
 
 const stages = [
-  { x: X0, y: Y0, label: "USEFUL ACTION", anchor: "start" as const, dx: 0, dy: -16 },
-  { x: X1, y: Y0, label: "CONTRIBUTION", anchor: "end" as const, dx: 0, dy: -16 },
-  { x: X1, y: Y1, label: "INCENTIVE", anchor: "end" as const, dx: 0, dy: 24 },
-  { x: X0, y: Y1, label: "RESPONSE", anchor: "start" as const, dx: 0, dy: 24 },
+  { x: X0, y: Y0, label: "USEFUL ACTION", anchor: "start" as const, dx: -14, dy: -16 },
+  { x: X1, y: Y0, label: "CONTRIBUTION", anchor: "end" as const, dx: 14, dy: -16 },
+  { x: X1, y: Y1, label: "INCENTIVE", anchor: "end" as const, dx: 14, dy: 26 },
+  { x: X0, y: Y1, label: "RESPONSE", anchor: "start" as const, dx: -14, dy: 26 },
 ];
+
 
 const checkpoints = [
   { x: X0 + 60, y: Y0 - 44, label: "ABUSE?" },
