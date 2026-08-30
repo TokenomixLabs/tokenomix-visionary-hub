@@ -32,7 +32,7 @@ export const Governance = () => (
     }
     tier="pillar"
     tone="tint"
-    visual={<GovernanceStateTransition className="mx-auto max-w-[28rem] lg:max-w-none" />}
+    visual={<GovernanceStateTransition className="mx-auto max-w-[30rem]" />}
     mobileVisual={<GovernanceStateTransitionMobile />}
     visualSide="right"
   >

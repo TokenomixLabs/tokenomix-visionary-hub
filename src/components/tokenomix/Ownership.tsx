@@ -27,7 +27,7 @@ export const Ownership = () => (
     }
     tier="pillar"
     tone="tint"
-    visual={<AuthorityTopology className="mx-auto max-w-[28rem] lg:max-w-none" />}
+    visual={<AuthorityTopology className="mx-auto max-w-[30rem]" />}
     mobileVisual={<AuthorityTopologyMobile />}
     visualSide="right"
   >
