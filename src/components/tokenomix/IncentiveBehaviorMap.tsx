@@ -163,7 +163,8 @@ const Panel = ({
               y="84"
               textAnchor="middle"
               className="fill-muted-foreground font-mono"
-              fontSize="13"
+              fontSize="10"
+
               letterSpacing="1.1"
             >
               RETURNS TO PARTICIPATION
