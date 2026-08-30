@@ -69,9 +69,10 @@ const NodeMark = ({ node, i }: { node: Node; i: number }) => {
 export const AgentEconomyNetwork = ({ className = "" }: { className?: string }) => (
   <div className={`relative ${className}`}>
     <svg
-      viewBox="0 0 400 300"
+      viewBox="0 0 400 316"
       className="h-auto w-full"
       role="img"
+
       aria-label="Abstract network of human and machine participants exchanging contribution events within permission boundaries"
     >
       <defs>
