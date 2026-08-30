@@ -99,11 +99,11 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
       />
       <g>
         <circle cx="140" cy="134" r="5" fill="hsl(240 32% 5%)" stroke="hsl(250 92% 72%)" strokeWidth="1.4" />
-        <text x="142" y="100" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="11" letterSpacing="1">
+        <text x="138" y="100" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="11" letterSpacing="0.4">
           SCOPED PROPOSAL
         </text>
         <circle cx="262" cy="134" r="5" fill="hsl(240 32% 5%)" stroke="hsl(322 90% 62%)" strokeWidth="1.4" />
-        <text x="246" y="122" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="11" letterSpacing="1">
+        <text x="250" y="122" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="11" letterSpacing="0.4">
           VERSIONED RULE
         </text>
       </g>
