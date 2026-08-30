@@ -148,15 +148,29 @@ export const AgentEconomyNetwork = ({ className = "" }: { className?: string }) 
         strokeDasharray="480"
         className="animate-trace-sweep motion-settle"
       />
+      {/* Legend on two centred lines: the single run overran the frame and
+          truncated the last term at every width. */}
       <text
-        x="20"
+        x="200"
         y="290"
+        textAnchor="middle"
         className="fill-muted-foreground font-mono"
-        fontSize="11"
+        fontSize="11.5"
         letterSpacing="1.4"
       >
-        ○ HUMAN   □ AGENT   — CONTRIBUTION   ⋯ ATTRIBUTION TRAIL
+        ○ HUMAN   □ AGENT
       </text>
+      <text
+        x="200"
+        y="308"
+        textAnchor="middle"
+        className="fill-muted-foreground font-mono"
+        fontSize="11.5"
+        letterSpacing="1.4"
+      >
+        — CONTRIBUTION   ⋯ ATTRIBUTION TRAIL
+      </text>
+
     </svg>
   </div>
 );
