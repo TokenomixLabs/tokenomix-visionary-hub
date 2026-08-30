@@ -21,14 +21,14 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
 
       {/* states */}
       {[
-        { x: 18, label: "STATE n", v: "v1.4" },
-        { x: 326, label: "STATE n+1", v: "v1.5" },
+        { x: 18, label: "STATE n", v: "v1.4", w: 76 },
+        { x: 314, label: "STATE n+1", v: "v1.5", w: 90 },
       ].map((s, i) => (
         <g key={s.label}>
           <rect
             x={s.x}
             y="104"
-            width="76"
+            width={s.w}
             height="60"
             rx="5"
             fill="hsl(240 28% 8%)"
