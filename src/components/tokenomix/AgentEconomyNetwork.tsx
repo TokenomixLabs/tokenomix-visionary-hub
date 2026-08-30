@@ -69,9 +69,10 @@ const NodeMark = ({ node, i }: { node: Node; i: number }) => {
 export const AgentEconomyNetwork = ({ className = "" }: { className?: string }) => (
   <div className={`relative ${className}`}>
     <svg
-      viewBox="0 0 400 300"
+      viewBox="0 0 400 316"
       className="h-auto w-full"
       role="img"
+
       aria-label="Abstract network of human and machine participants exchanging contribution events within permission boundaries"
     >
       <defs>
@@ -147,15 +148,29 @@ export const AgentEconomyNetwork = ({ className = "" }: { className?: string }) 
         strokeDasharray="480"
         className="animate-trace-sweep motion-settle"
       />
+      {/* Legend on two centred lines: the single run overran the frame and
+          truncated the last term at every width. */}
       <text
-        x="20"
+        x="200"
         y="290"
+        textAnchor="middle"
         className="fill-muted-foreground font-mono"
-        fontSize="11"
+        fontSize="11.5"
         letterSpacing="1.4"
       >
-        ○ HUMAN   □ AGENT   — CONTRIBUTION   ⋯ ATTRIBUTION TRAIL
+        ○ HUMAN   □ AGENT
       </text>
+      <text
+        x="200"
+        y="308"
+        textAnchor="middle"
+        className="fill-muted-foreground font-mono"
+        fontSize="11.5"
+        letterSpacing="1.4"
+      >
+        — CONTRIBUTION   ⋯ ATTRIBUTION TRAIL
+      </text>
+
     </svg>
   </div>
 );

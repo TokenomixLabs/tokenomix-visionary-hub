@@ -89,7 +89,7 @@ export const Method = () => {
         </div>
 
         <Reveal delay={120} className="hidden md:block">
-          <AccumulatingStructure step={step} className="lg:sticky lg:top-28" />
+          <AccumulatingStructure step={step} className="mx-auto w-full max-w-[30rem] lg:sticky lg:top-28" />
         </Reveal>
       </div>
     </Section>

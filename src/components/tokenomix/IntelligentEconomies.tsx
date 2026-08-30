@@ -53,7 +53,7 @@ export const IntelligentEconomies = () => (
       </p>
     }
     tier="pillar"
-    visual={<AgentEconomyNetwork className="mx-auto max-w-[27rem] lg:max-w-none" />}
+    visual={<AgentEconomyNetwork className="mx-auto max-w-[27rem]" />}
     mobileVisual={<AgentEconomyNetworkMobile />}
     visualSide="left"
   >

@@ -48,7 +48,7 @@ export const ValueArchitecture = () => (
     }
     tier="pillar"
     tone="tint"
-    visual={<ValueFlowLoop className="mx-auto max-w-[26rem] lg:max-w-none" />}
+    visual={<ValueFlowLoop className="mx-auto max-w-[30rem]" />}
     mobileVisual={<ValueFlowLoopMobile />}
     visualSide="right"
   >

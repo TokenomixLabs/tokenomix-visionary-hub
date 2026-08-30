@@ -43,7 +43,7 @@ export const EconomicLayers = () => (
         anything without changing everything. Coherent systems keep their interfaces explicit.
       </p>
     }
-    visual={<LayerSeam className="mx-auto max-w-[22rem] lg:max-w-none" />}
+    visual={<LayerSeam className="mx-auto max-w-[22rem]" />}
     mobileVisual={<LayerSeamMobile />}
     visualSide="right"
     visualWeight="light"
