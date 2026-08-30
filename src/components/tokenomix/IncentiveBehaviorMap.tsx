@@ -49,7 +49,7 @@ const Panel = ({
         </span>
       </div>
 
-      <svg viewBox="0 0 280 200" className="mt-2 h-auto w-full" aria-hidden="true">
+      <svg viewBox="0 0 280 212" className="mt-2 h-auto w-full" aria-hidden="true">
         <defs>
           <linearGradient id={`ibm-${variant}`} x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stopColor="hsl(235 88% 64%)" stopOpacity="0.8" />
@@ -71,7 +71,7 @@ const Panel = ({
           x="16"
           y="46"
           className="fill-muted-foreground font-mono"
-          fontSize="13"
+          fontSize="10"
           letterSpacing="1.1"
         >
           CONTRIBUTION
@@ -81,14 +81,15 @@ const Panel = ({
         <line x1="34" y1="186" x2="266" y2="186" stroke="hsl(240 22% 20%)" />
         <text
           x="266"
-          y="197"
+          y="202"
           textAnchor="end"
           className="fill-muted-foreground font-mono"
-          fontSize="13"
+          fontSize="10"
           letterSpacing="1.1"
         >
           SUSTAINED PARTICIPATION →
         </text>
+
 
 
         {/* standing spine */}
