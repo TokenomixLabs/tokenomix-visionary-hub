@@ -21,14 +21,14 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
 
       {/* states */}
       {[
-        { x: 18, label: "STATE n", v: "v1.4" },
-        { x: 326, label: "STATE n+1", v: "v1.5" },
+        { x: 18, label: "STATE n", v: "v1.4", w: 76 },
+        { x: 314, label: "STATE n+1", v: "v1.5", w: 90 },
       ].map((s, i) => (
         <g key={s.label}>
           <rect
             x={s.x}
             y="104"
-            width="76"
+            width={s.w}
             height="60"
             rx="5"
             fill="hsl(240 28% 8%)"
@@ -36,7 +36,7 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
             strokeWidth="1.2"
           />
           <text
-            x={s.x + 38}
+            x={s.x + s.w / 2 - 1}
             y="130"
             textAnchor="middle"
             className="fill-foreground font-mono"
@@ -46,7 +46,7 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
             {s.label}
           </text>
           <text
-            x={s.x + 38}
+            x={s.x + s.w / 2 - 1}
             y="146"
             textAnchor="middle"
             className="fill-muted-foreground font-mono"
@@ -71,7 +71,7 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
       />
       <text
         x="190"
-        y="58"
+        y="66"
         textAnchor="middle"
         className="fill-muted-foreground font-mono"
         fontSize="11"
@@ -82,14 +82,14 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
 
       {/* legitimate path */}
       <path
-        d="M 94 134 L 132 134 C 158 134, 162 134, 186 134 M 194 134 C 240 134, 280 134, 326 134"
+        d="M 94 134 L 132 134 C 158 134, 162 134, 186 134 M 194 134 C 240 134, 280 134, 314 134"
         fill="none"
         stroke="url(#gst-path)"
         strokeWidth="1.6"
         opacity="0.8"
       />
       <path
-        d="M 94 134 L 186 134 M 194 134 L 326 134"
+        d="M 94 134 L 186 134 M 194 134 L 314 134"
         fill="none"
         stroke="hsl(322 90% 62%)"
         strokeWidth="2.6"
@@ -99,11 +99,11 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
       />
       <g>
         <circle cx="140" cy="134" r="5" fill="hsl(240 32% 5%)" stroke="hsl(250 92% 72%)" strokeWidth="1.4" />
-        <text x="146" y="116" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="11" letterSpacing="1">
+        <text x="138" y="100" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="11" letterSpacing="0.4">
           SCOPED PROPOSAL
         </text>
         <circle cx="262" cy="134" r="5" fill="hsl(240 32% 5%)" stroke="hsl(322 90% 62%)" strokeWidth="1.4" />
-        <text x="262" y="116" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="11" letterSpacing="1">
+        <text x="250" y="122" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="11" letterSpacing="0.4">
           VERSIONED RULE
         </text>
       </g>
@@ -131,7 +131,7 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
 
       {/* arbitrary override — bypasses the gate, marked illegitimate */}
       <path
-        d="M 94 120 C 150 22, 260 22, 326 118"
+        d="M 94 120 C 150 22, 260 22, 320 118"
         fill="none"
         stroke="hsl(356 76% 56%)"
         strokeWidth="1.2"
