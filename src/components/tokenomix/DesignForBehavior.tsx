@@ -30,7 +30,7 @@ export const DesignForBehavior = () => {
         </p>
       }
       tone="tint"
-      visual={<BehaviorEngine />}
+      visual={<BehaviorEngine className="mx-auto max-w-[28rem]" />}
       mobileVisual={<BehaviorEngineMobile />}
     >
       {/* Questions read down the left and the scope band closes that column, so the
