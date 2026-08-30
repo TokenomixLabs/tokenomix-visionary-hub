@@ -193,7 +193,7 @@ const Panel = ({
               x="182"
               y="30"
               className="fill-muted-foreground font-mono"
-              fontSize="13"
+              fontSize="10"
               letterSpacing="1.1"
             >
               EXIT
