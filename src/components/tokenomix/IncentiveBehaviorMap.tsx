@@ -208,8 +208,11 @@ const Panel = ({
   );
 };
 
+/* Width is capped so the in-SVG explanatory labels render inside a stable
+   11.5–15px band instead of scaling with the column. */
 export const IncentiveBehaviorMap = ({ className = "" }: { className?: string }) => (
-  <div className={`grid gap-4 xl:grid-cols-2 ${className}`}>
+  <div className={`mx-auto grid w-full max-w-[26rem] gap-4 ${className}`}>
+
     <Panel
       variant="a"
       label="System A"
