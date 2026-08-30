@@ -71,7 +71,7 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
       />
       <text
         x="190"
-        y="58"
+        y="66"
         textAnchor="middle"
         className="fill-muted-foreground font-mono"
         fontSize="11"
@@ -103,7 +103,7 @@ export const GovernanceStateTransition = ({ className = "" }: { className?: stri
           SCOPED PROPOSAL
         </text>
         <circle cx="262" cy="134" r="5" fill="hsl(240 32% 5%)" stroke="hsl(322 90% 62%)" strokeWidth="1.4" />
-        <text x="256" y="122" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="11" letterSpacing="1">
+        <text x="246" y="122" textAnchor="middle" className="fill-muted-foreground font-mono" fontSize="11" letterSpacing="1">
           VERSIONED RULE
         </text>
       </g>
