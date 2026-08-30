@@ -13,7 +13,8 @@ const systems = [
       "Rule changes happen at administrative discretion",
       "Early positioning outweighs sustained work",
     ],
-    behavior: "Participants optimise for exit timing. Contribution becomes a cost, not a path.",
+    behavior:
+      "Participants optimise for exit timing. Contribution becomes a cost, not\u00A0a\u00A0path.",
   },
   {
     name: "System B",
@@ -26,7 +27,7 @@ const systems = [
       "Long-horizon alignment outweighs early capture",
     ],
     behavior:
-      "Participants optimise for usefulness. The cheapest way to gain standing is to do the work.",
+      "Participants optimise for usefulness. The cheapest way to gain standing is to do\u00A0the\u00A0work.",
   },
 ];
 

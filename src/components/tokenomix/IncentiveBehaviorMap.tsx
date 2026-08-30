@@ -209,19 +209,20 @@ const Panel = ({
 };
 
 /* Width is capped so the in-SVG explanatory labels render inside a stable
-   11.5–15px band instead of scaling with the column. */
+   11.5–15px band instead of scaling with the column. The 3xl step is the
+   widest cap that keeps effective label size under 15px. */
 export const IncentiveBehaviorMap = ({ className = "" }: { className?: string }) => (
-  <div className={`mx-auto grid w-full max-w-[26rem] gap-4 ${className}`}>
+  <div className={`mx-auto grid w-full max-w-[26rem] gap-4 3xl:max-w-[28rem] ${className}`}>
 
     <Panel
       variant="a"
       label="System A"
-      caption="Standing settles at the earliest positions. Later work barely moves the system."
+      caption={"Standing settles at the earliest positions. Later work barely moves\u00A0the\u00A0system."}
     />
     <Panel
       variant="b"
       label="System B"
-      caption="Standing keeps forming where work happens, and value re-enters participation."
+      caption={"Standing keeps forming where work happens, and value re-enters\u00A0participation."}
     />
   </div>
 );
