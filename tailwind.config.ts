@@ -55,6 +55,12 @@ export default {
           DEFAULT: "hsl(var(--signal))",
           foreground: "hsl(var(--signal-foreground))",
         },
+        cyan: {
+          DEFAULT: "hsl(var(--cyan))",
+        },
+        magenta: {
+          DEFAULT: "hsl(var(--magenta))",
+        },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
@@ -84,11 +90,13 @@ export default {
       },
       backgroundImage: {
         "gradient-value": "var(--gradient-value)",
+        "gradient-spectrum": "var(--gradient-spectrum)",
         "gradient-surface": "var(--gradient-surface)",
       },
       boxShadow: {
         architectural: "var(--shadow-architectural)",
         signal: "var(--shadow-signal)",
+        spectrum: "var(--shadow-spectrum)",
       },
       animation: {
         "fade-in": "fadeIn 0.7s ease-out both",
