@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import logoAsset from "@/assets/tokenomix-lockup.png.asset.json";
 
 const links = [
   { label: "Architecture", id: "architecture" },
@@ -34,7 +33,7 @@ export const HeroNavigation = () => {
       >
         <a href="#top" className="flex items-center" aria-label="Tokenomix home">
           <img
-            src={logoAsset.url}
+            src="/tokenomix-logo.png"
             alt="Tokenomix"
             className="h-7 w-auto md:h-8"
           />

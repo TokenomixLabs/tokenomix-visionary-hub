@@ -1,4 +1,3 @@
-import logoAsset from "@/assets/tokenomix-lockup.png.asset.json";
 const sections = [
   { label: "Architecture", id: "architecture" },
   { label: "Incentives", id: "incentives" },
@@ -15,7 +14,7 @@ export const Footer = () => (
       <div className="grid gap-12 md:grid-cols-[1.2fr_1fr]">
         <div>
           <img
-            src={logoAsset.url}
+            src="/tokenomix-logo.png"
             alt="Tokenomix"
             className="h-7 w-auto"
           />
