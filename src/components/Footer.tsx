@@ -14,7 +14,7 @@ export const Footer = () => (
       <div className="grid gap-12 md:grid-cols-[1.2fr_1fr]">
         <div>
           <img
-            src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png"
+            src="/tokenomix-logo.png"
             alt="Tokenomix"
             className="h-7 w-auto"
           />

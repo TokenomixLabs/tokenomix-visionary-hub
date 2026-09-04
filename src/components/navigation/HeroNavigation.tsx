@@ -33,7 +33,7 @@ export const HeroNavigation = () => {
       >
         <a href="#top" className="flex items-center" aria-label="Tokenomix home">
           <img
-            src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png"
+            src="/tokenomix-logo.png"
             alt="Tokenomix"
             className="h-7 w-auto md:h-8"
           />

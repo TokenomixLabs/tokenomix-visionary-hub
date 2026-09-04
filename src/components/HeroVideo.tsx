@@ -25,7 +25,7 @@ const HeroFallback = ({ active }: { active: boolean }) => (
     <div className="absolute left-1/2 top-1/2 h-[min(680px,92vw)] w-[min(680px,92vw)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/10 blur-3xl" />
     <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 px-6 text-center">
       <img
-        src="/lovable-uploads/42221e45-c411-4ac5-b292-863962892b37.png"
+        src="/tokenomix-logo.png"
         alt=""
         className="h-8 w-auto opacity-90 md:h-11"
       />
