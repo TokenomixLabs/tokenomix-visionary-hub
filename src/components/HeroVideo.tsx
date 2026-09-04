@@ -27,7 +27,7 @@ const HeroFallback = ({ active }: { active: boolean }) => (
       <img
         src="/tokenomix-logo.png"
         alt=""
-        className="h-8 w-auto opacity-90 md:h-11"
+        className="h-16 w-auto opacity-90 md:h-24"
       />
       <p className="font-mono text-[0.72rem] uppercase tracking-[0.3em] text-muted-foreground md:text-[0.8rem]">
         Value · Ownership · Incentives · Governance

@@ -16,7 +16,7 @@ export const Footer = () => (
           <img
             src="/tokenomix-logo.png"
             alt="Tokenomix"
-            className="h-7 w-auto"
+            className="h-12 w-auto md:h-14"
           />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
             Designing how value, ownership, incentives and governance actually work inside intelligent

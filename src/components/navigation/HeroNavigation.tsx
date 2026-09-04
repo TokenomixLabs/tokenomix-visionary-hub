@@ -35,7 +35,7 @@ export const HeroNavigation = () => {
           <img
             src="/tokenomix-logo.png"
             alt="Tokenomix"
-            className="h-7 w-auto md:h-8"
+            className="h-12 w-auto md:h-16"
           />
         </a>
 
