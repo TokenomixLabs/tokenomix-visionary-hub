@@ -1,4 +1,4 @@
-import { VideoHero } from "@/components/VideoHero";
+import { SystemHero } from "@/components/hero/SystemHero";
 import { CategoryStatement } from "@/components/tokenomix/CategoryStatement";
 import { ValueArchitecture } from "@/components/tokenomix/ValueArchitecture";
 import { Incentives } from "@/components/tokenomix/Incentives";
@@ -15,7 +15,7 @@ import { BackToTop } from "@/components/BackToTop";
 
 const Index = () => (
   <main className="min-h-screen bg-background">
-    <VideoHero />
+    <SystemHero />
     <CategoryStatement />
     <ValueArchitecture />
     <Incentives />

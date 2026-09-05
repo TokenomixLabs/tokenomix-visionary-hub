@@ -16,7 +16,6 @@ export const CategoryStatement = () => (
     index="01"
     eyebrow="Category"
     titleWide
-    headingLevel="h1"
     introClassName="mx-auto max-w-6xl"
     leadClassName="max-w-5xl"
     title={
