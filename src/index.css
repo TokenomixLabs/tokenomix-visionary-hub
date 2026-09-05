@@ -42,10 +42,16 @@
 
     --grid-line: 240 30% 16%;
 
+    /* Spectrum poles sampled from the approved Tokenomix mark: cold aperture (left), warm aperture (right). */
+    --cyan: 198 100% 66%;
+    --magenta: 304 100% 71%;
+
     --gradient-value: linear-gradient(115deg, hsl(var(--primary)), hsl(var(--accent)) 55%, hsl(var(--signal)));
+    --gradient-spectrum: linear-gradient(90deg, hsl(var(--cyan)), hsl(var(--primary)) 34%, hsl(var(--accent)) 64%, hsl(var(--magenta)));
     --gradient-surface: linear-gradient(160deg, hsl(240 28% 10% / 0.9), hsl(240 32% 6% / 0.6));
     --shadow-architectural: 0 24px 80px -32px hsl(var(--primary) / 0.55);
     --shadow-signal: 0 0 0 1px hsl(var(--accent) / 0.25), 0 20px 60px -30px hsl(var(--accent) / 0.6);
+    --shadow-spectrum: 0 18px 50px -22px hsl(var(--accent) / 0.75), 0 0 0 1px hsl(var(--cyan) / 0.18);
 
     --radius: 0.4rem;
   }
@@ -113,11 +119,71 @@
     -webkit-text-fill-color: transparent;
   }
 
+  .text-gradient-spectrum {
+    background: var(--gradient-spectrum);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   /* Explanatory motion runs a few cycles, then settles into a readable static state. */
   .motion-settle {
     animation-iteration-count: 3;
     animation-fill-mode: forwards;
   }
+}
+
+/* ------------------------------------------------------------------------
+   Hero — Governed Equilibrium sequence.
+   Every keyframe only defines its FROM state: an element's resting styles ARE
+   its final, fully-resolved state. The sequence explains the system once
+   (~7s), then the scene is static. Under reduced motion the animation is
+   removed entirely, so the resolved state is what renders immediately.
+   ------------------------------------------------------------------------ */
+.ge-anim {
+  animation-duration: var(--d, 900ms);
+  animation-delay: var(--t, 0ms);
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;
+}
+.ge-fade { animation-name: ge-fade; }
+.ge-rise { animation-name: ge-rise; }
+.ge-draw {
+  stroke-dasharray: var(--len);
+  stroke-dashoffset: 0;
+  animation-name: ge-draw;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ge-grow { animation-name: ge-grow; }
+.ge-extend { animation-name: ge-extend; transform-origin: left center; }
+.ge-node { animation-name: ge-node; }
+.ge-light { animation-name: ge-light; }
+.ge-pulse {
+  opacity: 0;
+  animation-name: ge-pulse;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes ge-fade { from { opacity: 0; } }
+@keyframes ge-rise { from { opacity: 0; transform: translateY(14px); } }
+@keyframes ge-draw { from { stroke-dashoffset: var(--len); } }
+@keyframes ge-grow { from { transform: scaleY(0); } }
+@keyframes ge-extend { from { transform: scaleX(0); } }
+@keyframes ge-node {
+  0% { opacity: 0; transform: scale(0.2); }
+  55% { opacity: 1; transform: scale(1.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes ge-light { from { opacity: 0.18; } }
+@keyframes ge-pulse {
+  0% { opacity: 0; transform: translateX(0); }
+  12% { opacity: 1; }
+  88% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(var(--travel)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ge-anim { animation: none !important; }
 }
 
 /* Mobile touch optimization */
