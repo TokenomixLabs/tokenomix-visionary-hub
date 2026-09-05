@@ -15,18 +15,18 @@ const stages = [
 const railLabel =
   "whitespace-nowrap font-mono text-[0.72rem] uppercase tracking-[0.16em] text-muted-foreground sm:tracking-[0.24em] 3xl:text-[0.8rem]";
 
-/* Below lg the two end labels take their own row so the stage rail never has
-   to share 720px with them; from lg they bracket the rail on one line. */
+/* Below xl the two end labels take their own row so the stage rail never has
+   to share the width with them; from xl they bracket the rail on one line. */
 export const HeroRail = () => (
   <div className="relative border-t border-border/60">
     <div className="container mx-auto py-5 md:py-6">
-      <div className="ge-anim ge-fade flex items-center justify-between gap-6 lg:hidden" style={at(5800, 900)}>
+      <div className="ge-anim ge-fade flex items-center justify-between gap-6 xl:hidden" style={at(5800, 900)}>
         <span className={railLabel}>Architect value</span>
         <span className={railLabel}>Govern intelligence</span>
       </div>
 
-      <div className="mt-4 grid items-center gap-y-3 lg:mt-0 lg:grid-cols-[auto_1fr_auto] lg:gap-x-10 xl:gap-x-14">
-        <span className={`${railLabel} ge-anim ge-fade hidden lg:block`} style={at(5800, 900)}>
+      <div className="mt-4 grid items-center gap-y-3 xl:mt-0 xl:grid-cols-[auto_1fr_auto] xl:gap-x-14">
+        <span className={`${railLabel} ge-anim ge-fade hidden xl:block`} style={at(5800, 900)}>
           Architect value
         </span>
 
@@ -63,7 +63,7 @@ export const HeroRail = () => (
           ))}
         </ol>
 
-        <span className={`${railLabel} ge-anim ge-fade hidden lg:block`} style={at(5800, 900)}>
+        <span className={`${railLabel} ge-anim ge-fade hidden xl:block`} style={at(5800, 900)}>
           Govern intelligence
         </span>
       </div>

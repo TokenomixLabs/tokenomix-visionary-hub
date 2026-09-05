@@ -26,7 +26,7 @@ export const SystemHero = () => (
     </div>
 
     <div className="container relative mx-auto flex flex-1 flex-col pb-14 pt-28 md:pt-32 lg:pb-16 lg:pt-36 3xl:pt-44">
-      <div className="relative grid flex-1 gap-14 lg:grid-cols-[minmax(0,42fr)_minmax(0,58fr)] lg:gap-10 xl:gap-14 3xl:gap-20">
+      <div className="relative grid flex-1 gap-14 lg:grid-cols-[minmax(0,40fr)_minmax(0,60fr)] lg:gap-10 xl:grid-cols-[minmax(0,42fr)_minmax(0,58fr)] xl:gap-14 3xl:gap-20">
         {/* Copy */}
         <div className="flex flex-col lg:min-h-full">
           <div className="lg:my-auto">

@@ -71,10 +71,10 @@ const ports = {
   br: polar(45),
 };
 const anchors = {
-  tl: { x: 222, y: 120 },
-  tr: { x: 778, y: 120 },
-  bl: { x: 222, y: 680 },
-  br: { x: 778, y: 680 },
+  tl: { x: 232, y: 120 },
+  tr: { x: 768, y: 120 },
+  bl: { x: 232, y: 680 },
+  br: { x: 768, y: 680 },
 };
 const connector = (p: { x: number; y: number }, a: { x: number; y: number }) => {
   const sx = a.x < CX ? -1 : 1;
@@ -301,7 +301,7 @@ const CalloutBody = ({
   tone: "cold" | "warm";
 }) => (
   <div className={align === "right" ? "text-right" : "text-left"}>
-    <p className="font-mono text-[0.78rem] font-medium uppercase tracking-[0.24em] text-foreground 3xl:text-[0.88rem]">
+    <p className="font-mono text-[0.78rem] font-medium uppercase tracking-[0.24em] text-foreground lg:tracking-[0.18em] xl:tracking-[0.24em] 3xl:text-[0.88rem]">
       {title}
     </p>
     <span
@@ -310,7 +310,7 @@ const CalloutBody = ({
         align === "right" ? "ml-auto" : ""
       }`}
     />
-    <ul className="mt-2.5 space-y-1 font-mono text-[0.74rem] uppercase leading-none tracking-[0.2em] text-muted-foreground 3xl:text-[0.82rem]">
+    <ul className="mt-2.5 space-y-1 font-mono text-[0.74rem] uppercase leading-none tracking-[0.2em] text-muted-foreground lg:tracking-[0.15em] xl:tracking-[0.2em] 3xl:text-[0.82rem]">
       {items.map((item) => (
         <li key={item}>{item}</li>
       ))}
@@ -324,7 +324,7 @@ export const GovernedEquilibrium = ({ className = "" }: { className?: string }) 
     <div className="relative hidden md:block">
       <Diagram idPrefix="ge-d" />
       {callouts.map((c, i) => {
-        const x = c.side === "left" ? "21%" : "79%";
+        const x = c.side === "left" ? "22%" : "78%";
         const y = c.row === "top" ? "15%" : "85%";
         return (
           <div
