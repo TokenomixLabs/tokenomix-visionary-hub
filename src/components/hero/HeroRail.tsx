@@ -13,23 +13,25 @@ const stages = [
 ];
 
 const railLabel =
-  "font-mono text-[0.72rem] uppercase tracking-[0.24em] text-muted-foreground 3xl:text-[0.8rem]";
+  "whitespace-nowrap font-mono text-[0.72rem] uppercase tracking-[0.16em] text-muted-foreground sm:tracking-[0.24em] 3xl:text-[0.8rem]";
 
+/* Below lg the two end labels take their own row so the stage rail never has
+   to share 720px with them; from lg they bracket the rail on one line. */
 export const HeroRail = () => (
   <div className="relative border-t border-border/60">
     <div className="container mx-auto py-5 md:py-6">
-      <div className="ge-anim ge-fade flex items-center justify-between gap-6 md:hidden" style={at(5800, 900)}>
+      <div className="ge-anim ge-fade flex items-center justify-between gap-6 lg:hidden" style={at(5800, 900)}>
         <span className={railLabel}>Architect value</span>
         <span className={railLabel}>Govern intelligence</span>
       </div>
 
-      <div className="mt-4 grid items-center gap-y-3 md:mt-0 md:grid-cols-[auto_1fr_auto] md:gap-x-10 lg:gap-x-14">
-        <span className={`${railLabel} ge-anim ge-fade hidden md:block`} style={at(5800, 900)}>
+      <div className="mt-4 grid items-center gap-y-3 lg:mt-0 lg:grid-cols-[auto_1fr_auto] lg:gap-x-10 xl:gap-x-14">
+        <span className={`${railLabel} ge-anim ge-fade hidden lg:block`} style={at(5800, 900)}>
           Architect value
         </span>
 
         <ol className="relative flex flex-wrap items-center gap-x-6 gap-y-3 md:flex-nowrap md:justify-between md:gap-x-4">
-          {/* connecting hairline, desktop only */}
+          {/* connecting hairline, from tablet up */}
           <span
             aria-hidden="true"
             className="ge-anim ge-extend pointer-events-none absolute inset-x-0 top-1/2 hidden h-px bg-gradient-spectrum opacity-40 md:block"
@@ -49,7 +51,7 @@ export const HeroRail = () => (
                   boxShadow: `0 0 10px ${stage.color}, 0 0 2px ${stage.color}`,
                 }}
               />
-              <span className="font-mono text-[0.74rem] uppercase tracking-[0.22em] text-foreground/90 3xl:text-[0.82rem]">
+              <span className="whitespace-nowrap font-mono text-[0.74rem] uppercase tracking-[0.2em] text-foreground/90 3xl:text-[0.82rem]">
                 {stage.label}
               </span>
               {i < stages.length - 1 && (
@@ -61,7 +63,7 @@ export const HeroRail = () => (
           ))}
         </ol>
 
-        <span className={`${railLabel} ge-anim ge-fade hidden md:block`} style={at(5800, 900)}>
+        <span className={`${railLabel} ge-anim ge-fade hidden lg:block`} style={at(5800, 900)}>
           Govern intelligence
         </span>
       </div>

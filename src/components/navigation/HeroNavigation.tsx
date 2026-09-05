@@ -40,12 +40,14 @@ export const HeroNavigation = () => {
         </a>
 
         <div className="hidden items-center lg:flex xl:gap-4 3xl:gap-6">
+          {/* At lg the six labels share the row with the full-size lockup, so the
+              tracking sits one step tighter until xl gives it room again. */}
           <ul className="flex items-center gap-0.5 xl:gap-1">
             {links.map((link) => (
               <li key={link.id}>
                 <a
                   href={`#${link.id}`}
-                  className="rounded-sm px-2.5 py-2 font-mono text-[0.7rem] uppercase tracking-[0.16em] text-muted-foreground transition-colors duration-300 hover:text-foreground xl:px-3"
+                  className="whitespace-nowrap rounded-sm px-2 py-2 font-mono text-[0.7rem] uppercase tracking-[0.11em] text-muted-foreground transition-colors duration-300 hover:text-foreground xl:px-3 xl:tracking-[0.16em]"
                 >
                   {link.label}
                 </a>

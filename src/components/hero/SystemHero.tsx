@@ -37,7 +37,7 @@ export const SystemHero = () => (
               </p>
             </div>
 
-            <h1 className="mt-7 font-display text-[clamp(2.35rem,3.6vw+0.5rem,4.6rem)] font-bold uppercase leading-[0.98] tracking-[-0.02em] text-foreground">
+            <h1 className="mt-7 font-display text-[clamp(2.35rem,3.6vw+0.5rem,4.6rem)] font-bold uppercase leading-[0.98] tracking-[-0.02em] text-foreground 4xl:text-[4.9rem]">
               <span className="ge-anim ge-rise block" style={at(120, 900)}>
                 The economy
               </span>
